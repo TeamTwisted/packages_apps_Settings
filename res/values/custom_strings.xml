@@ -275,4 +275,7 @@
     <string name="navigation_bar_size_42_dp">42 dp</string>
     <string name="navigation_bar_size_0_dp">0 dp (off)</string>
 
+    <!-- Font size sample text -->
+    <string name="font_size_sample">Font Size</string>
+
 </resources>
