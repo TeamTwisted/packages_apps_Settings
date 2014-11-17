@@ -24,4 +24,9 @@
     <string name="volbtn_music_controls_title">Playback control</string>
     <string name="volbtn_music_controls_summary">When the screen is off, long pressing the volume keys will seek music tracks</string>
     <string name="notification_light_screen_on">Lights with screen on</string>
+
+    <!-- Kill app long-press back -->
+    <string name="kill_app_longpress_back">Kill app back button</string>
+    <string name="kill_app_longpress_back_summary">Kill the foreground app by long-pressing the back button</string>
+
 </resources>
