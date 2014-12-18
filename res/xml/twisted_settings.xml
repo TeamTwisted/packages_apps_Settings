@@ -84,6 +84,13 @@
         android:key="keyboard_input_settings"
         android:fragment="com.android.settings.slim.InputMethodsSettings"
         android:title="@string/title_keyboard_input" />	
+    
+    <com.android.settings.slim.SystemSettingSwitchPreference
+        android:key="volbtn_music_controls"
+        android:title="@string/volbtn_music_controls_title"
+        android:summary="@string/volbtn_music_controls_summary"
+        android:defaultValue="true" />
+
   </PreferenceCategory>
     
 </PreferenceScreen>
