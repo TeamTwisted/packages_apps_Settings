@@ -146,4 +146,9 @@
     <!-- Button settings  -->
     <string name="button_settings_title">Buttons</string>
     
+    <!-- Volume keys skip track -->
+    <string name="volbtn_music_controls_title">Playback control</string>
+    <string name="volbtn_music_controls_summary">When the screen is off, long pressing the volume keys will seek music tracks</string>
+
+    
 </resources>
