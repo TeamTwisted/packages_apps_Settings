@@ -56,6 +56,12 @@ android:id="@+id/twisted_statusbar"
 android:fragment="com.android.settings.twisted.StatusBarSettings"
 android:title="@string/statusbar_tweak_title"
 android:summary="@string/statusbar_tweak_summary"/>
+
+       <PreferenceScreen
+           android:key="network_traffic_settings"
+           android:title="@string/network_traffic_title"
+           android:fragment="com.android.settings.benzo.NetworkTrafficSettings" />
+       
 <!-- Display -->
 <PreferenceScreen
 android:key="twisted_display"
