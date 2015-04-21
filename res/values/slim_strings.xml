@@ -1242,5 +1242,7 @@
     
      <!-- Chamber of Secrets -->
      <string name="chamber_title">Chamber of secrets</string>
-     <string name="chamber_toast">The chamber of secrets has opened</string>    
+     <string name="chamber_toast">The chamber of secrets has opened</string> 
+     
+     <string name="qs_tile_heads_up">Heads up</string>
 </resources>

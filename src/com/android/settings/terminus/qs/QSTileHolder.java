@@ -149,10 +149,14 @@ public class QSTileHolder {
                 resourceName = "ic_qs_led_on";
                 stringId = R.string.qs_tile_led;
                 break;
-	    case QSConstants.TILE_REBOOT:
-		resourceName = "ic_qs_reboot";
-		stringId = R.string.qs_tile_reboot;
-	    break;  
+	    	case QSConstants.TILE_REBOOT:
+				resourceName = "ic_qs_reboot";
+				stringId = R.string.qs_tile_reboot;
+	    		break;
+            case QSConstants.TILE_HEADS_UP:
+                resourceName = "ic_qs_heads_up_on";
+                stringId = R.string.qs_tile_heads_up;
+                break;
             default:
                 return null;
         }
