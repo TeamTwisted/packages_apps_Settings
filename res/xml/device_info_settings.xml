@@ -156,4 +156,10 @@
                 android:title="@string/selinux_status"
                 android:summary="@string/selinux_status_enforcing"/>
 
+        <!-- Twisted build date -->
+        <Preference android:key="build_date"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/build_date"
+                android:summary="@string/build_date_default" />
+
 </PreferenceScreen>
