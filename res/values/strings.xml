@@ -6050,41 +6050,4 @@
    <string name="imei_information_summary">IMEI relative information</string>
    <string name="slot_number">(Slot<xliff:g id="slot_num">%1$d</xliff:g>)</string>
 
-   <!-- Generic strings -->
-   <string name="font_size_sample">Sample</string>
-
-    <!-- Network traffic -->
-    <string name="network_traffic_title">Network traffic</string>
-    <string name="show_network_traffic_state">Status bar traffic monitor</string>
-    <string name="network_traffic_summary">Enable various network traffic options in statusbar</string>
-    <string name="show_network_traffic_unit">Display unit</string>
-    <string name="show_network_traffic_frequency">Update interval</string>
-    <string name="show_network_traffic_disable">Disabled</string>
-    <string name="show_network_traffic_up">Outgoing</string>
-    <string name="show_network_traffic_down">Incoming</string>
-    <string name="show_network_traffic_all">Outgoing and incoming</string>
-    <string name="show_network_traffic_bit">Bits per second</string>
-    <string name="show_network_traffic_byte">Bytes per second</string>
-    <string name="show_network_traffic_500">500 ms</string>
-    <string name="show_network_traffic_1000">1000 ms</string>
-    <string name="show_network_traffic_1500">1500 ms</string>
-    <string name="show_network_traffic_2000">2000 ms</string>
-    <string name="network_traffic_autohide">Auto hide</string>
-    <string name="network_traffic_autohide_summary">Hide the traffic monitor when there is no activity</string>
-    <string name="network_traffic_autohide_threshold">Inactivity threshold</string> 
-
-    <!-- Navigation Bar -->
-    <string name="navigation_bar_title">Navigation bar</string>
-
-    <!-- Navigation Bar Height -->
-    <string name="navigation_bar_height">Height</string>
-    <string name="navigation_bar_height_48">48dp (default)</string>
-    <string name="navigation_bar_height_44">44dp</string>
-    <string name="navigation_bar_height_40">40dp</string>
-    <string name="navigation_bar_height_36">36dp</string>
-    <string name="navigation_bar_height_32">32dp</string>
-    <string name="navigation_bar_height_28">28dp</string>
-    <string name="navigation_bar_height_24">24dp</string>
-    <string name="navigation_bar_height_20">20dp</string>
-    <string name="navigation_bar_height_0">0dp (hide)</string>
 </resources>
