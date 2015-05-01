@@ -99,6 +99,7 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
     private Preference mNotificationAccess;
     private boolean mSecure;
     private int mLockscreenSelectedValue;
+    private Preference mHeadsUp;
     private ComponentName mSuppressor;
     private int mRingerMode = -1;
 
@@ -144,6 +145,8 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
 
         mNotificationAccess = findPreference(KEY_NOTIFICATION_ACCESS);
         refreshNotificationListeners();
+
+        mHeadsUp = findPreference(Settings.System.HEADS_UP_NOTIFICATION);
         updateRingerMode();
         updateEffectsSuppressor();
     }
@@ -160,6 +163,11 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
         for (VolumeSeekBarPreference volumePref : mVolumePrefs) {
             volumePref.onActivityResume();
         }
+
+        boolean headsUpEnabled = Settings.System.getInt(
+                getContentResolver(), Settings.System.HEADS_UP_NOTIFICATION, 1) != 0;
+        mHeadsUp.setSummary(headsUpEnabled
+                ? R.string.summary_heads_up_enabled : R.string.summary_heads_up_disabled);
     }
 
     @Override
