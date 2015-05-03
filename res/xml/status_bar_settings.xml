@@ -30,4 +30,14 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+            android:title="@string/status_bar_options_title" />
+
+    <SwitchPreference
+            android:key="status_bar_brightness_control"
+            android:title="@string/status_bar_toggle_brightness"
+            android:summary="@string/status_bar_toggle_brightness_summary"
+            android:persistent="false"
+            android:defaultValue="false" />
+
 </PreferenceScreen>
