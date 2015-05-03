@@ -2086,6 +2086,11 @@
             </intent-filter>
         </activity>
 
+	
+        <!-- BUILD TWEAKS START -->
+        <activity android:name=".twisted.TwistedSettings" />
+        <!-- BUILD TWEAKS END -->
+	
         <provider
             android:name=".search.SettingsSearchIndexablesProvider"
             android:authorities="com.android.settings"

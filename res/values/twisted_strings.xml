@@ -7,6 +7,8 @@
     <string name="lcd_density_default">Device default</string>
     <string name="lcd_density_unsupported">Unsupported</string>
     <string name="restarting_ui">Restarting</string>
+    
+    <string name="twisted_settings_title">Twisted Tweaks</string>
 
     <!-- SuperSU header name - the app hides itself from launcher based on this resource name being present in com.android.settings -->
     <string name="supersu_title">SuperSU</string>
@@ -45,7 +47,7 @@
     <string name="network_traffic_autohide_threshold">Inactivity threshold</string> 
 
     <!-- Navigation Bar -->
-    <string name="navigation_bar_title">Navigation bar</string>
+    <string name="navigation_bar_title">NavBar Height</string>
     
     <!-- Navigation Bar Height -->
     <string name="navigation_bar_height">Navigation bar height</string>
@@ -61,4 +63,15 @@
     <string name="navigation_bar_height_24">24dp</string>
     <string name="navigation_bar_height_20">20dp</string>
     <string name="navigation_bar_height_0">0dp (hide)</string>
+    
+   <!-- BitSyko Layers -->
+   <string name="bitsyko_layers">Layers</string>
+   
+      <string name="nav_bar_setting">Navigation Bar</string>
+   <string name="status_bar_setting">Status Bar</string>
+   <string name="notif_sound_setting">Notifications</string>
+   <string name="systemwide_setting">System</string>
+   <string name="kantjer_layers_title">Layers Backup</string>
+   <string name="adaway_title">AdAway</string>
+
 </resources>

@@ -71,6 +71,62 @@
 
     </dashboard-category>
 
+    <!-- PERSONAL -->
+    <dashboard-category
+            android:id="@+id/personal_section"
+            android:title="@string/header_category_personal" >
+
+    <!-- twisted -->
+        <dashboard-tile
+                android:id="@+id/twisted_settings"
+                android:icon="@drawable/ic_twisted_settings_interface"
+                android:fragment="com.android.settings.twisted.TwistedSettings"
+                android:title="@string/twisted_settings_title" />
+
+        <dashboard-tile
+                android:id="@+id/bitsyko_layers"
+                android:icon="@drawable/ic_bitsyko_layers"
+                android:title="@string/bitsyko_layers">     
+		<intent
+		  android:action="android.intent.action.MAIN"
+		  android:targetPackage="com.lovejoy777.rroandlayersmanager"
+		  android:targetClass="com.lovejoy777.rroandlayersmanager.menu" />
+        </dashboard-tile>	
+
+        <dashboard-tile	
+	    android:icon="@drawable/ic_wps_dark"
+	    android:id="@+id/kantjer_layers"
+	    android:title="@string/kantjer_layers_title">
+	    <intent
+	      android:action="android.intent.action.MAIN"
+	      android:targetPackage="com.kantjer.xda.layers"
+	      android:targetClass="net.dinglisch.android.tasker.Kid" />
+        </dashboard-tile>	
+
+	<!-- AdAway -->
+        <dashboard-tile
+	android:id="@+id/adaway_settings"
+		android:title="@string/adaway_title"
+		android:icon="@drawable/ic_adaway" >
+		<intent
+		android:action="android.intent.action.MAIN"
+		android:targetClass="org.adaway.ui.BaseActivity"
+		  android:targetPackage="org.adaway" />
+        </dashboard-tile>
+	
+        <!-- SuperSU -->
+        <dashboard-tile
+                android:id="@+id/supersu_settings"
+                android:icon="@drawable/ic_settings_supersu"
+                android:title="@string/supersu_title">
+                <intent
+                    android:action="android.intent.action.MAIN"
+                    android:targetPackage="eu.chainfire.supersu"
+                    android:targetClass="eu.chainfire.supersu.MainActivity" />
+        </dashboard-tile>
+
+    </dashboard-category>
+    
     <!-- DEVICE -->
     <dashboard-category
             android:id="@+id/device_section"
@@ -147,14 +203,7 @@
             <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING" />
         </dashboard-tile>
 
-    </dashboard-category>
-
-    <!-- PERSONAL -->
-    <dashboard-category
-            android:id="@+id/personal_section"
-            android:title="@string/header_category_personal" >
-
-        <!-- Location -->
+	<!-- Location -->
         <dashboard-tile
                 android:id="@+id/location_settings"
                 android:title="@string/location_settings_title"
@@ -232,17 +281,6 @@
                 android:fragment="com.android.settings.DevelopmentSettings"
                 android:icon="@drawable/ic_settings_development_exposed"
                 />
-
-        <!-- SuperSU -->
-        <dashboard-tile
-                android:id="@+id/supersu_settings"
-                android:icon="@drawable/ic_settings_supersu"
-                android:title="@string/supersu_title">
-                <intent
-                    android:action="android.intent.action.MAIN"
-                    android:targetPackage="eu.chainfire.supersu"
-                    android:targetClass="eu.chainfire.supersu.MainActivity" />
-        </dashboard-tile>
 
         <!-- About Device -->
         <dashboard-tile

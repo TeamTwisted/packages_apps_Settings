@@ -20,7 +20,7 @@
     <string name="default_string">Default</string>
 
     <!-- Sound settings -->
-    <string name="advanced_sound_title">Advanced options</string>
+    <string name="advanced_sound_title">Advanced Sound options</string>
     <string name="sound_title">Sound</string>
 
     <!-- Safe headset volume restore checkbox -->
@@ -101,7 +101,7 @@
     <string name="app_notification_no_ongoing_on_keyguard_summary">Never show ongoing notifications from this app on the lockscreen</string>
 
     <!-- Keyboard and Input ASS methods  -->
-    <string name="title_keyboard_input">Advanced options</string>
+    <string name="title_keyboard_input">Keyboard Settings</string>
     <string name="disable_fullscreen_keyboard_title">Disable fullscreen keyboard</string>
     <string name="disable_fullscreen_keyboard_summary">Landscape keyboard will never take up entire screen</string>
     <string name="volume_key_cursor_control_title">Volume key cursor control</string>
