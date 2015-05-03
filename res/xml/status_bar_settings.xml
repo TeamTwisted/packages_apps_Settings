@@ -40,4 +40,10 @@
             android:persistent="false"
             android:defaultValue="false" />
 
+    <com.android.settings.slim.SystemSettingSwitchPreference
+            android:key="double_tap_sleep_gesture"
+            android:title="@string/double_tap_to_sleep_title"
+            android:summary="@string/double_tap_to_sleep_summary"
+            android:defaultValue="true" />
+
 </PreferenceScreen>
