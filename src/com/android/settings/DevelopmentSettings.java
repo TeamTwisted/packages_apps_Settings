@@ -145,6 +145,9 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private static final String OPENGL_TRACES_KEY = "enable_opengl_traces";
 
+    private static final String ROOT_ACCESS_KEY = "root_access";
+    private static final String ROOT_ACCESS_PROPERTY = "persist.sys.root_access";
+
     private static final String IMMEDIATELY_DESTROY_ACTIVITIES_KEY
             = "immediately_destroy_activities";
     private static final String APP_PROCESS_LIMIT_KEY = "app_process_limit";
@@ -225,6 +228,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private SwitchPreference mUseAwesomePlayer;
     private SwitchPreference mUSBAudio;
+
     private SwitchPreference mImmediatelyDestroyActivities;
 
     private ListPreference mAppProcessLimit;
