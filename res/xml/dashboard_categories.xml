@@ -79,13 +79,13 @@
     <!-- twisted -->
         <dashboard-tile
                 android:id="@+id/twisted_settings"
-                android:icon="@drawable/ic_twisted_settings_interface"
+                android:icon="@drawable/ic_twisted_settings_interface_exposed"
                 android:fragment="com.android.settings.twisted.TwistedSettings"
                 android:title="@string/twisted_settings_title" />
 
         <dashboard-tile
                 android:id="@+id/bitsyko_layers"
-                android:icon="@drawable/ic_bitsyko_layers"
+                android:icon="@drawable/ic_bitsyko_layers_exposed"
                 android:title="@string/bitsyko_layers">     
 		<intent
 		  android:action="android.intent.action.MAIN"
@@ -94,7 +94,7 @@
         </dashboard-tile>	
 
         <dashboard-tile	
-	    android:icon="@drawable/ic_wps_dark"
+	    android:icon="@drawable/ic_wps_dark_exposed"
 	    android:id="@+id/kantjer_layers"
 	    android:title="@string/kantjer_layers_title">
 	    <intent
@@ -107,7 +107,7 @@
         <dashboard-tile
 	android:id="@+id/adaway_settings"
 		android:title="@string/adaway_title"
-		android:icon="@drawable/ic_adaway" >
+		android:icon="@drawable/ic_adaway_exposed" >
 		<intent
 		android:action="android.intent.action.MAIN"
 		android:targetClass="org.adaway.ui.BaseActivity"
@@ -117,7 +117,7 @@
         <!-- SuperSU -->
         <dashboard-tile
                 android:id="@+id/supersu_settings"
-                android:icon="@drawable/ic_settings_supersu"
+                android:icon="@drawable/ic_settings_supersu_exposed"
                 android:title="@string/supersu_title">
                 <intent
                     android:action="android.intent.action.MAIN"
