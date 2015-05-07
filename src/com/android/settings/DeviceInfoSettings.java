@@ -81,7 +81,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_SAFETY_LEGAL = "safetylegal";
     private static final String KEY_MOD_BUILD_DATE = "build_date";
     private static final String KEY_UBER_AND = "uber_android";
-    private static final String KEY_UBER_KERNEL = "uber_kernel";
     private static final String KEY_UBER_FLAGS = "uber_flags";
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
@@ -104,13 +103,10 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         setStringSummary(KEY_DEVICE_MODEL, Build.MODEL);
         setStringSummary(KEY_BUILD_NUMBER, Build.DISPLAY);
         findPreference(KEY_BUILD_NUMBER).setEnabled(true);
-        setStringSummary(KEY_KERNEL_VERSION, getFormattedKernelVersion());
-        findPreference(KEY_KERNEL_VERSION).setEnabled(true);
-        findPreference(KEY_UBER_KERNEL).setEnabled(true);
+        findPreference(KEY_KERNEL_VERSION).setSummary(getFormattedKernelVersion());
         findPreference(KEY_UBER_FLAGS).setEnabled(true);
         setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
         setValueSummary(KEY_UBER_AND, "ro.uber.android");
-        setValueSummary(KEY_UBER_KERNEL, "ro.uber.kernel");
         setValueSummary(KEY_UBER_FLAGS, "ro.uber.flags");
 
         if (!SELinux.isSELinuxEnabled()) {

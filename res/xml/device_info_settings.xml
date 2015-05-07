@@ -134,11 +134,6 @@
                 android:title="@string/uber_android"
                 android:summary="@string/uber_android_default" />
 
-        <Preference android:key="uber_kernel"
-                style="?android:preferenceInformationStyle"
-                android:title="@string/uber_kernel"
-                android:summary="@string/uber_kernel_default" />
-
         <Preference android:key="uber_flags"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/uber_flags"
