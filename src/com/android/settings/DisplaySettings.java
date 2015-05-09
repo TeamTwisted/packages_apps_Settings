@@ -174,24 +174,23 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         if(!getResources().getBoolean(
                 com.android.internal.R.bool.config_unplugTurnsOnScreen)) {
                 mWakeUpOptions.removePreference(mWakeUpWhenPluggedOrUnplugged);
-                counter++;
+                prefSet.removePreference(mWakeUpOptions);
         } else {
             mWakeUpWhenPluggedOrUnplugged.setChecked(Settings.System.getInt(resolver,
                         Settings.System.WAKEUP_WHEN_PLUGGED_UNPLUGGED, 1) == 1);
             mWakeUpWhenPluggedOrUnplugged.setOnPreferenceChangeListener(this);
         }
-
         boolean proximityCheckOnWait = getResources().getBoolean(
                 com.android.internal.R.bool.config_proximityCheckOnWake);
         if (!proximityCheckOnWait) {
-            counter++;
-            mWakeUpOptions.removePreference(findPreference(KEY_PROXIMITY_WAKE));
+            //counter++;
+            //mWakeUpOptions.removePreference(findPreference(KEY_PROXIMITY_WAKE));
             Settings.System.putInt(getContentResolver(), Settings.System.PROXIMITY_ON_WAKE, 1);
         }
 
-        if (counter == 3) {
-            prefSet.removePreference(mWakeUpOptions);
-        }
+        //if (counter == 3) {
+            //prefSet.removePreference(mWakeUpOptions);
+        //}
     }
 
     private static boolean allowAllRotations(Context context) {
