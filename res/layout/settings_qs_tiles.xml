@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2013 Slimroms
+<!--
+     Copyright (C) 2015 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,13 +14,16 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:padding="16dp"
+    android:background="#ddd">
 
-<resources>
-    <item type="id" name="drag_handle" />
-    <dimen name="fab_line_width">2dp</dimen>
+    <com.android.settings.terminus.qs.DraggableGridView
+        android:id="@+id/qs_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-    <!-- Custom Tiles -->
-    <dimen name="qs_tile_max_size">120dp</dimen>
-    <dimen name="qs_tile_max_padding">10dp</dimen>
-    <dimen name="qs_tile_dragged_z">10dp</dimen>
-</resources>
+</FrameLayout>
