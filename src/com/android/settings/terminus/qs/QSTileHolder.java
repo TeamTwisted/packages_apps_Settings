@@ -110,6 +110,10 @@ public class QSTileHolder {
                 resourceName = "ic_qs_battery_saver_on";
                 stringId = R.string.qs_battery_saver_tile;
                 break;
+            case QSConstants.TILE_SYNC:
+                resourceName = "ic_qs_sync_on";
+                stringId = R.string.qs_sync_tile;
+                break;
             case QSConstants.TILE_BRIGHTNESS:
                 resourceName = "ic_qs_brightness_auto_off_alpha";
                 stringId = R.string.qs_brightness_tile;

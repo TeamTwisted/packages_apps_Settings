@@ -34,6 +34,7 @@
     <string name="qs_tile_notifications">Notifications</string>
     <string name="qs_tile_nfc">NFC</string>
     <string name="qs_tile_compass">Compass</string>
+    <string name="qs_sync_tile">Sync</string>
     <string name="qs_tile_data">Mobile data</string>
     <string name="qs_battery_saver_tile">Battery saver</string>
     <string name="qs_brightness_tile">Brightness</string>
