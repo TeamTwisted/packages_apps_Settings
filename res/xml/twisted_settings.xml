@@ -117,6 +117,10 @@
         android:title="@string/power_menu_expanded_desktop"
         android:fragment="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />
 
+        <PreferenceScreen
+                android:key="privacy_guard_manager"
+                android:title="@string/privacy_guard_manager_title"
+                android:fragment="com.android.settings.terminus.privacyguard.PrivacyGuardManager" />
   </PreferenceCategory>
     
 </PreferenceScreen>

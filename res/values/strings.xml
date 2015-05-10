@@ -6050,7 +6050,7 @@
    <string name="imei_information_summary">IMEI relative information</string>
    <string name="slot_number">(Slot<xliff:g id="slot_num">%1$d</xliff:g>)</string>
 
-    <!-- Privacy Guard -->
+   <!-- Privacy Guard -->
     <string name="privacy_guard_dlg_title">Enable privacy guard?</string>
     <string name="privacy_guard_enable_dlg_text">When privacy guard is enabled, %s will not be able to access personal data such as contacts, messages, location or call logs.</string>
     <string name="privacy_guard_enable_dlg_system_app_text">When enabling privacy guard for the built-in app %s, the app will not be able to access personal data such as contacts, messages, location or call logs. This may cause other apps to misbehave.</string>
