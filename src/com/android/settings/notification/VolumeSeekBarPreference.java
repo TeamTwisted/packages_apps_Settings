@@ -135,7 +135,7 @@ public class VolumeSeekBarPreference extends SeekBarPreference
                 @Override
                 public void onStopTrackingTouch(SeekBar seekBar) {
                     final boolean volumeAdjustSound = Settings.System.getInt(getContext().getContentResolver(),
-                            Settings.System.VOLUME_ADJUST_SOUND, 1) == 1;
+                            Settings.System.VOLUME_ADJUST_SOUND_ENABLED, 1) == 1;
                     // if play adjust sound
                     if (volumeAdjustSound) {
                         super.onStopTrackingTouch(seekBar);
