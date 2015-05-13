@@ -62,4 +62,12 @@
     <string name="link_volume_option_title">Link ring and notification volumes</string>
     <string name="notification_volume_option_title">Notification volume</string>
     <string name="ring_notification_volume_option_tile">Ring and notification volume</string>
+
+    <!-- Allow lights -->
+    <string name="allow_lights_title">Allow notification lights</string>
+
+    <!--Quick unlock -->
+    <string name="unlock_quick_unlock_control_title">Quick unlock</string>
+    <string name="unlock_quick_unlock_control_summary">Unlock automatically when the correct PIN/password is entered</string>
+
 </resources>
