@@ -31,5 +31,10 @@
             android:entryValues="@array/smart_pulldown_values"
             android:persistent="false" />
 
+    <PreferenceScreen
+            android:key="notification_drawer_settings"
+            android:title="@string/notification_drawer_title"
+            android:fragment="com.android.settings.terminus.NotificationDrawerSettings" />
+
 </PreferenceScreen>
 

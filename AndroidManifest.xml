@@ -127,6 +127,21 @@
             </intent-filter>
         </activity>
 
+	<!-- Pseudo-activity used to provide an intent-filter entry point to QS settings -->
+	<activity android:name="Settings$QSTilesSettingsActivity"
+		android:label="@string/qs_order_title"
+		android:taskAffinity=""
+		android:excludeFromRecents="true">
+		<intent-filter>
+		<action android:name="android.intent.action.MAIN" />
+		<category android:name="android.intent.category.DEFAULT" />
+		</intent-filter>
+		<meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+		android:value="com.android.settings.terminus.qs.QSTiles" />
+		<meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
+                android:resource="@id/display_settings" />
+	</activity>
+
         <!-- Wireless Controls -->
 
         <activity android:name="Settings$WirelessSettingsActivity"
@@ -2024,6 +2039,20 @@
 
         <activity android:name=".notificationlight.NotificationLightSettings" />
         <activity android:name=".notificationlight.BatteryLightSettings" />
+
+        <!-- Expanded desktop settings activity. -->
+        <activity android:name="Settings$ExpandedDesktopSettingsActivity"
+                android:label="@string/power_menu_expanded_desktop"
+                android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />
+            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
+                android:resource="@id/display_settings" />
+        </activity>
 
         <receiver android:name=".widget.SettingsAppWidgetProvider"
                 android:label="@string/gadget_title"
