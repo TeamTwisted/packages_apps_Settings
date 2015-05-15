@@ -79,6 +79,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_WAKEUP_CATEGORY = "category_wakeup_options";
     private static final String KEY_PROXIMITY_WAKE = "proximity_on_wake";
 
+    private static final String KEY_VOLUME_WAKE = "pref_volume_wake";
+
     private static final int DLG_GLOBAL_CHANGE_WARNING = 1;
 
     private static final String ROTATION_ANGLE_0 = "0";
@@ -103,6 +105,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private Preference mScreenSaverPreference;
     private SwitchPreference mLiftToWakePreference;
     private SwitchPreference mAutoBrightnessPreference;
+    private SwitchPreference mVolumeWake;
 
     private ContentObserver mAccelerometerRotationObserver =
             new ContentObserver(new Handler()) {
@@ -199,6 +202,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         //if (counter == 3) {
             //prefSet.removePreference(mWakeUpOptions);
         //}
+
+        mVolumeWake = (SwitchPreference) findPreference(KEY_VOLUME_WAKE);
+        mVolumeWake.setChecked(Settings.System.getInt(resolver,
+                Settings.System.VOLUME_WAKE_SCREEN, 0) == 1);
+        mVolumeWake.setOnPreferenceChangeListener(this);
     }
 
     private static boolean allowAllRotations(Context context) {
@@ -451,6 +459,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             } catch (NumberFormatException e) {
                 Log.e(TAG, "could not persist screen timeout setting", e);
             }
+        }
+        if (KEY_VOLUME_WAKE.equals(key)) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.VOLUME_WAKE_SCREEN,
+                    (Boolean) objValue ? 1 : 0);
         }
         if (KEY_FONT_SIZE.equals(key)) {
             writeFontSizePreference(objValue);
