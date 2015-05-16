@@ -20,6 +20,9 @@
     <string name="heads_up_blacklist_title">Blacklist</string>
     <string name="heads_up_disabled_notice">To allow applications to display interactive notifications in a pop-up window on your screen, enable Heads up.</string>
 
+    <!-- Power menu category -->
+    <string name="display_category_power_options_title">Power menu options</string>
+
     <!-- Power menu -->
     <string name="power_menu_title">Power menu</string>
     <string name="power_menu_reboot_title">Reboot menu</string>
