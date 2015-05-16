@@ -38,6 +38,11 @@
         android:fragment="com.android.settings.slim.StatusBar"
         android:title="@string/status_bar_title" />
 
+                <PreferenceScreen
+                    android:key="animation_settings"
+                    android:title="@string/animation_title"
+                    android:fragment="com.android.settings.euphoria.animation.AnimationSettings" />
+
 <!-- Network Traffic -->	
 	<PreferenceScreen
 		android:key="network_traffic_state"
@@ -121,6 +126,15 @@
                 android:key="privacy_guard_manager"
                 android:title="@string/privacy_guard_manager_title"
                 android:fragment="com.android.settings.terminus.privacyguard.PrivacyGuardManager" />
+        <PreferenceScreen
+                android:key="wakelock_blocker"
+                android:fragment="com.android.settings.terminus.WakeLockBlocker"
+                android:title="@string/wakelock_blocker_title" />
+
+    <PreferenceScreen
+        android:fragment="com.android.settings.chroma.PowerMenuActions"
+        android:key="power_menu_general_category"
+        android:title="@string/power_menu_title" />
   </PreferenceCategory>
     
 </PreferenceScreen>
