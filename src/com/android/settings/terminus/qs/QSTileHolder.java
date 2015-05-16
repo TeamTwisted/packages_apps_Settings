@@ -17,9 +17,12 @@ package com.android.settings.terminus.qs;
 
 import android.content.Context;
 
+import android.text.TextUtils;
 import com.android.internal.util.cm.QSConstants;
 import com.android.internal.util.cm.QSUtils;
 import com.android.settings.R;
+
+import java.util.Arrays;
 
 /**
  * This class holds the icon, the name - or the string the user sees,
@@ -121,6 +124,18 @@ public class QSTileHolder {
             case QSConstants.TILE_EXPANDED_DESKTOP:
                 resourceName = "ic_qs_expanded_desktop";
                 stringId = R.string.qs_expanded_desktop_tile;
+                break;
+            case QSConstants.TILE_SCREEN_TIMEOUT:
+                resourceName = "ic_qs_screen_timeout_vector";
+                stringId = R.string.qs_tile_screen_timeout;
+                break;
+            case QSConstants.TILE_SCREEN_OFF:
+                resourceName = "ic_qs_power";
+                stringId = R.string.qs_screen_off_tile;
+                break;
+            case QSConstants.TILE_USB_TETHER:
+                resourceName = "ic_qs_usb_tether_on";
+                stringId = R.string.qs_tile_usb_tether;
                 break;
             default:
                 return null;
