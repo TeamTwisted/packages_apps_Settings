@@ -38,6 +38,11 @@
         android:fragment="com.android.settings.slim.StatusBar"
         android:title="@string/status_bar_title" />
 
+                <PreferenceScreen
+                    android:key="animation_settings"
+                    android:title="@string/animation_title"
+                    android:fragment="com.android.settings.euphoria.animation.AnimationSettings" />
+
 <!-- Network Traffic -->	
 	<PreferenceScreen
 		android:key="network_traffic_state"
