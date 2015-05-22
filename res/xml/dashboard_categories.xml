@@ -86,7 +86,7 @@
         <!-- Kernel Adiutor -->
         <dashboard-tile
             android:id="@+id/kernel_adiutor"
-            android:icon="@drawable/ic_settings_performance"
+            android:icon="@drawable/ic_settings_performance_exposed"
             android:title="@string/kerneladiutor_title">
             <intent
                 android:action="android.intent.action.MAIN"
