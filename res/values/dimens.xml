@@ -108,11 +108,11 @@
     <dimen name="dashboard_cell_gap_x">0dp</dimen>
     <dimen name="dashboard_cell_gap_y">0dp</dimen>
 
-    <!-- Dashboard padding in its container -->
-    <dimen name="dashboard_padding_start">0dp</dimen>
-    <dimen name="dashboard_padding_end">0dp</dimen>
-    <dimen name="dashboard_padding_top">0dp</dimen>
-    <dimen name="dashboard_padding_bottom">0dp</dimen>
+    <!-- Dashboard padding in its container --><!-- Original 0dp-->
+    <dimen name="dashboard_padding_start">6dp</dimen>
+    <dimen name="dashboard_padding_end">6dp</dimen>
+    <dimen name="dashboard_padding_top">6dp</dimen>
+    <dimen name="dashboard_padding_bottom">6dp</dimen>
 
     <!-- Dashboard category padding start / end -->
     <dimen name="dashboard_category_padding_start">0dp</dimen>
