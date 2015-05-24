@@ -76,13 +76,13 @@
             android:title="@string/qs_brightness_slider_title"
             android:defaultValue="true"/>
 
-    <com.android.settings.slim.SecureSettingSwitchPreference
+    <com.android.settings.slim.SystemSettingSwitchPreference
             android:key="quick_settings_vibrate"
             android:title="@string/quick_settings_vibrate_title"
             android:summary="@string/quick_settings_vibrate_summary"
             android:defaultValue="false"/>
 
-    <com.android.settings.slim.SecureSettingSwitchPreference
+    <com.android.settings.slim.SystemSettingSwitchPreference
             android:key="quick_settings_collapse_panel"
             android:title="@string/quick_settings_collapse_title"
             android:summary="@string/quick_settings_collapse_summary"
