@@ -45,18 +45,15 @@ import android.app.Activity;
 import android.app.ActivityManagerNative;
 import android.app.Dialog;
 import android.app.IActivityManager;
-import android.provider.Settings;
  
 public class TwistedSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
  	
   private static final String KEY_LCD_DENSITY = "lcd_density";
   private static final String TAG = "DisplaySettings";
-  private static final String KILL_APP_LONGPRESS_BACK = "kill_app_longpress_back";
-  
+ 
   private static final String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";
-  
-  private SwitchPreference mKillAppLongPressBack;
+
   private ListPreference mLcdDensityPreference;	
   private SwitchPreference mStatusBarBrightnessControl;
 
@@ -79,13 +76,6 @@ public class TwistedSettings extends SettingsPreferenceFragment implements
                             Settings.System.STATUS_BAR_BRIGHTNESS_CONTROL, 0) == 1));
         mStatusBarBrightnessControl.setOnPreferenceChangeListener(this);
 
-        // kill-app long press back
-        mKillAppLongPressBack = (SwitchPreference) findPreference(KILL_APP_LONGPRESS_BACK);
-        mKillAppLongPressBack.setOnPreferenceChangeListener(this);
-        int killAppLongPressBack = Settings.Secure.getInt(getContentResolver(),
-                KILL_APP_LONGPRESS_BACK, 0);
-        mKillAppLongPressBack.setChecked(killAppLongPressBack != 0);
-        
 	// lcd densitty
         mLcdDensityPreference = (ListPreference) findPreference(KEY_LCD_DENSITY);
         int defaultDensity = DisplayMetrics.DENSITY_DEVICE;
@@ -194,21 +184,14 @@ public class TwistedSettings extends SettingsPreferenceFragment implements
                 Log.e(TAG, "could not persist display density setting", e);
             }
         }
-
-        if (preference == mKillAppLongPressBack) {
-            boolean value = (Boolean) objValue;
-            Settings.Secure.putInt(getContentResolver(), KILL_APP_LONGPRESS_BACK,
-                    value ? 1 : 0);
-            return true;
-        }
-        
-        else if (preference == mStatusBarBrightnessControl) {
+        if (preference == mStatusBarBrightnessControl) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.STATUS_BAR_BRIGHTNESS_CONTROL,
                     (Boolean) objValue ? 1 : 0);
             return true;
         }
   return false;
+
   }
   
      @Override
