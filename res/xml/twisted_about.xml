@@ -29,7 +29,7 @@
  
     <PreferenceScreen
         android:title="aow1980"
-                android:icon="@drawable/allen">
+        android:icon="@drawable/allen">
                 <intent
                         android:action="android.intent.action.VIEW"
                         android:data="http://forum.xda-developers.com/member.php?u=5497766" />
