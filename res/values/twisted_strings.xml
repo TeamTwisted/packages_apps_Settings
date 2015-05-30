@@ -70,8 +70,10 @@
       <string name="nav_bar_setting">Navigation Bar</string>
    <string name="status_bar_setting">Status Bar</string>
    <string name="notif_sound_setting">Notifications</string>
-   <string name="systemwide_setting">System</string>
+   <string name="systemwide_setting">System-Wide</string>
    <string name="kantjer_layers_title">Layers Backup</string>
    <string name="adaway_title">AdAway</string>
+   <string name="misc_setting">Miscellaneous</string>
+   <string name="twisted_menu_about">About Twisted Android Project</string>   
 
 </resources>
