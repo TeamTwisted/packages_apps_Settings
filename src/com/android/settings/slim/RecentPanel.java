@@ -99,7 +99,7 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
             String hex = ColorPickerPreference.convertToARGB(
                     Integer.valueOf(String.valueOf(newValue)));
             if (hex.equals("#00ffffff")) {
-                preference.setSummary(R.string.trds_default_color);
+                preference.setSummary(R.string.default_string);
             } else {
                 preference.setSummary(hex);
             }
@@ -112,7 +112,7 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
             String hex = ColorPickerPreference.convertToARGB(
                     Integer.valueOf(String.valueOf(newValue)));
             if (hex.equals("#00ffffff")) {
-                preference.setSummary(R.string.trds_default_color);
+                preference.setSummary(R.string.default_string);
             } else {
                 preference.setSummary(hex);
             }
@@ -125,7 +125,7 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
             String hex = ColorPickerPreference.convertToARGB(
                     Integer.valueOf(String.valueOf(newValue)));
             if (hex.equals("#00ffffff")) {
-                preference.setSummary(R.string.trds_default_color);
+                preference.setSummary(R.string.default_string);
             } else {
                 preference.setSummary(hex);
             }
@@ -189,15 +189,15 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
         Settings.System.putInt(getContentResolver(),
                 Settings.System.RECENT_PANEL_BG_COLOR, DEFAULT_BACKGROUND_COLOR);
         mRecentPanelBgColor.setNewPreviewColor(DEFAULT_BACKGROUND_COLOR);
-        mRecentPanelBgColor.setSummary(R.string.trds_default_color);
+        mRecentPanelBgColor.setSummary(R.string.default_string);
         Settings.System.putInt(getContentResolver(),
                 Settings.System.RECENT_CARD_BG_COLOR, DEFAULT_BACKGROUND_COLOR);
         mRecentCardBgColor.setNewPreviewColor(DEFAULT_BACKGROUND_COLOR);
-        mRecentCardBgColor.setSummary(R.string.trds_default_color);
+        mRecentCardBgColor.setSummary(R.string.default_string);
         Settings.System.putInt(getContentResolver(),
                 Settings.System.RECENT_CARD_TEXT_COLOR, DEFAULT_BACKGROUND_COLOR);
         mRecentCardTextColor.setNewPreviewColor(DEFAULT_BACKGROUND_COLOR);
-        mRecentCardTextColor.setSummary(R.string.trds_default_color);
+        mRecentCardTextColor.setSummary(R.string.default_string);
     }
 
     private void updateRecentPanelPreferences() {
@@ -223,7 +223,7 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
                 Settings.System.RECENT_PANEL_BG_COLOR, 0x00ffffff);
         String hexColor = String.format("#%08x", (0x00ffffff & intColor));
         if (hexColor.equals("#00ffffff")) {
-            mRecentPanelBgColor.setSummary(R.string.trds_default_color);
+            mRecentPanelBgColor.setSummary(R.string.default_string);
         } else {
             mRecentPanelBgColor.setSummary(hexColor);
         }
@@ -237,7 +237,7 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
                 Settings.System.RECENT_CARD_BG_COLOR, 0x00ffffff);
         String hexColorCard = String.format("#%08x", (0x00ffffff & intColorCard));
         if (hexColorCard.equals("#00ffffff")) {
-            mRecentCardBgColor.setSummary(R.string.trds_default_color);
+            mRecentCardBgColor.setSummary(R.string.default_string);
         } else {
             mRecentCardBgColor.setSummary(hexColorCard);
         }
