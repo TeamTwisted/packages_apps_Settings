@@ -640,6 +640,7 @@
 <!--Quick unlock -->
 <string name="unlock_quick_unlock_control_title">Quick unlock</string>
 <string name="unlock_quick_unlock_control_summary">Unlock automatically when the correct PIN/password is entered</string>
+
 <string name="shortcut_action_menu_big">Menu Big</string>
 
     <!-- Recent panel -->
@@ -663,5 +664,8 @@
     <!-- ATTENTION: RTL languages need to replace left with right -->
     <string name="recent_panel_lefty_mode_title">Show on the left edge</string>
     <string name="recent_panel_lefty_mode_summary">Show recent apps panel on the left edge</string>
+
+    <!-- Sound & notification > Other sounds: Title for the option enabling sound on volume slide adjust. [CHAR LIMIT=30] -->
+    <string name="volume_adjust_sound_title">Volume slider sound</string></resources>
 
 </resources>
