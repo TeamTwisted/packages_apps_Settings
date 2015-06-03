@@ -944,4 +944,7 @@
     <string name="lockscreen_wallpaper_title">Wallpaper</string>
     <string name="lockscreen_wallpaper_summary">Set lockscreen wallpaper</string>
 
+    <!-- WiFi auto-configure priorities -->
+    <string name="wifi_auto_config_priorities">Automatic priority</string>
+
 </resources>
