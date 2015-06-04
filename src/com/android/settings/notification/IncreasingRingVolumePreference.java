@@ -191,11 +191,11 @@ public class IncreasingRingVolumePreference extends Preference implements
 
     private void onStartSample() {
         if (!isSamplePlaying() && mRingtone != null) {
-//            try {
-//                mRingtone.play();
-//            } catch (Throwable e) {
-//                Log.w(TAG, "Error playing ringtone", e);
-//            }
+            try {
+                mRingtone.play();
+            } catch (Throwable e) {
+                Log.w(TAG, "Error playing ringtone", e);
+            }
             mHandler.removeMessages(MSG_STOP_SAMPLE);
             mHandler.sendMessageDelayed(mHandler.obtainMessage(MSG_STOP_SAMPLE), 2000);
         }
