@@ -642,7 +642,7 @@
 <string name="unlock_quick_unlock_control_summary">Unlock automatically when the correct PIN/password is entered</string>
 
     <!-- Sound & notification > Other sounds: Title for the option enabling sound on volume slide adjust. [CHAR LIMIT=30] -->
-    <string name="volume_adjust_sound_title">Volume slider sound</string></resources>
+    <string name="volume_adjust_sound_title">Volume slider sound</string>
 
 <string name="shortcut_action_menu_big">Menu Big</string>
 

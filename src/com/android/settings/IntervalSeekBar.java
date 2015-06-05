@@ -10,7 +10,7 @@ import android.widget.SeekBar;
  * Custom SeekBar that allows setting both a minimum and maximum value.
  * This also handles floating point values (to 2 decimal places) through
  * integer conversions.
- */
+ */ 	
 public class IntervalSeekBar extends SeekBar {
     private float mMin;
     private float mMax;
@@ -23,8 +23,8 @@ public class IntervalSeekBar extends SeekBar {
         TypedArray seekBarType = context.obtainStyledAttributes(attrs,
                 R.styleable.IntervalSeekBar, 0, 0);
 
-        mMax = seekBarType.getFloat(R.styleable.IntervalSeekBar_max, 1.5f);
-        mMin = seekBarType.getFloat(R.styleable.IntervalSeekBar_min, 0.5f);
+        mMax = seekBarType.getFloat(R.styleable.IntervalSeekBar_Max, 1.5f);
+        mMin = seekBarType.getFloat(R.styleable.IntervalSeekBar_Min, 0.5f);
         mDefault = seekBarType.getFloat(R.styleable.IntervalSeekBar_defaultValue, 1.0f);
 
         int digits = seekBarType.getInt(R.styleable.IntervalSeekBar_digits, 0);
@@ -44,8 +44,8 @@ public class IntervalSeekBar extends SeekBar {
 
     /*
      * Converts from SeekBar units (which the SeekBar uses), to scale units
-     *  (which are saved).
-     *  This operation is the inverse of setFontScaling.
+     * (which are saved).
+     * This operation is the inverse of setFontScaling.
      */
     public float getProgressFloat() {
         return (getProgress() / mMultiplier) + mMin;
@@ -85,3 +85,4 @@ public class IntervalSeekBar extends SeekBar {
         mMin = min;
     }
 }
+
