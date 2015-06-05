@@ -123,7 +123,12 @@
   <PreferenceCategory
          android:key="systemwide_settings"
          android:title="@string/systemwide_setting" >
-         
+
+    <PreferenceScreen
+        android:key="recent_panel"
+        android:fragment="com.android.settings.slim.RecentPanel"
+        android:title="@string/recent_panel_category" />
+
       <!-- LCD -->		  
      <ListPreference
           android:key="lcd_density"
