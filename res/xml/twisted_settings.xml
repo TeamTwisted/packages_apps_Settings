@@ -173,8 +173,16 @@
             <extra android:name="actionEntries" android:value="shortcut_action_power_menu_entries" />
             <extra android:name="fragment" android:value="com.android.settings.slim.fragments.PowerMenuFragment" />
     </PreferenceScreen>
-    
-<!-- IME -->		
+
+    <!-- ScreenRecorder -->
+        <PreferenceScreen
+            android:key="screen_recorder"
+            android:title="@string/screen_recorder_title"
+            android:summary="@string/screen_recorder_summary"
+            android:fragment="com.android.settings.slim.ScreenRecorderSettings" >
+        </PreferenceScreen>   
+
+    <!-- IME -->		
     <PreferenceScreen
         android:key="keyboard_input_settings"
         android:fragment="com.android.settings.slim.InputMethodsSettings"

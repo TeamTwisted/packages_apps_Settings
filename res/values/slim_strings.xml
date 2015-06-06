@@ -654,6 +654,7 @@
     <string name="shortcut_action_sound">Sound</string>
     <string name="shortcut_action_users">Users</string>
     <string name="shortcut_action_lockdown">Lock now</string>
+
     <!-- Recent panel -->
     <string name="recent_panel_category">Recent apps panel</string>
     <string name="use_slim_recents_title">SlimRecents</string>
