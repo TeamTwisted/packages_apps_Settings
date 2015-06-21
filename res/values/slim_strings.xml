@@ -643,6 +643,12 @@
 
 <string name="shortcut_action_menu_big">Menu Big</string>
 
+    <string name="shortcut_action_airplane">Airplane mode</string>
+    <string name="shortcut_action_power_off">Power off</string>
+    <string name="shortcut_action_reboot">Reboot</string>
+    <string name="shortcut_action_sound">Sound</string>
+    <string name="shortcut_action_users">Users</string>
+    <string name="shortcut_action_lockdown">Lock now</string>
     <!-- Recent panel -->
     <string name="recent_panel_category">Recent apps panel</string>
     <string name="use_slim_recents_title">Slim recents</string>
@@ -665,5 +671,6 @@
     <string name="recent_panel_lefty_mode_summary">Show recent apps panel on the left edge</string>
     
     <string name="volume_adjust_sound_title">Volume</string>
-    <string name="qs_tile_led">LED Tile</string>    
+    <string name="qs_tile_led">LED Tile</string>
+    <string name="power_menu_title">Power Menu</string>     
 </resources>
