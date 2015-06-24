@@ -23,6 +23,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Resources;
+import android.hardware.CmHardwareManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiInfo;
@@ -197,7 +198,7 @@ public class Status extends PreferenceActivity {
 
         updateConnectivity();
 
-        String serial = Build.SERIAL;
+        String serial = getSerialNumber();
         if (serial != null && !serial.equals("")) {
             setSummaryText(KEY_SERIAL_NUMBER, serial);
         } else {
@@ -353,4 +354,15 @@ public class Status extends PreferenceActivity {
 
         return h + ":" + pad(m) + ":" + pad(s);
     }
+
+    private String getSerialNumber() {
+        CmHardwareManager cmHardwareManager =
+                (CmHardwareManager) getSystemService(Context.CMHW_SERVICE);
+        if (cmHardwareManager.isSupported(CmHardwareManager.FEATURE_SERIAL_NUMBER)) {
+            return cmHardwareManager.getSerialNumber();
+        } else {
+            return Build.SERIAL;
+        }
+    }
+
 }
