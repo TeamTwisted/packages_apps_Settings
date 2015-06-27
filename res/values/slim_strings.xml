@@ -132,6 +132,8 @@
 <string name="show_enter_key_summary">Force keyboard to show enter instead of emoticon key</string>
 <string name="ime_switcher_notify">Selector notification</string>
 <string name="ime_switcher_notify_summary">Display input method selector notification</string>
+    <string name="show_ime_arrows_title">Show arrow keys while typing</string>
+    <string name="show_ime_arrows_summary">Display left and right cursor buttons in navigation bar while typing. Longpress to navigate up/down. Overrides IME switcher and menu buttons.</string>
 <!-- Status bar -->
 <string name="status_bar_title">Battery, Clock and Date</string>
 <string name="status_bar_style_title">Style</string>

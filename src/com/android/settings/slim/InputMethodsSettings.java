@@ -49,6 +49,7 @@ public class InputMethodsSettings extends SettingsPreferenceFragment implements
     private static final String KEYBOARD_ROTATION_TOGGLE = "keyboard_rotation_toggle";
     private static final String KEYBOARD_ROTATION_TIMEOUT = "keyboard_rotation_timeout";
     private static final String SHOW_ENTER_KEY = "show_enter_key";
+    private static final String STATUS_BAR_IME_ARROWS = "status_bar_ime_arrows";
 
     private static final int KEYBOARD_ROTATION_TIMEOUT_DEFAULT = 5000; // 5s
 
@@ -58,6 +59,7 @@ public class InputMethodsSettings extends SettingsPreferenceFragment implements
     private SwitchPreference mKeyboardRotationToggle;
     private ListPreference mKeyboardRotationTimeout;
     private SwitchPreference mShowEnterKey;
+    private SwitchPreference mStatusBarImeArrows;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -105,6 +107,12 @@ public class InputMethodsSettings extends SettingsPreferenceFragment implements
         mShowEnterKey.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.FORMAL_TEXT_INPUT, 0) == 1);
         mShowEnterKey.setOnPreferenceChangeListener(this);
+
+        mStatusBarImeArrows = (SwitchPreference) findPreference(STATUS_BAR_IME_ARROWS);
+        mStatusBarImeArrows.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.STATUS_BAR_IME_ARROWS, 0) == 1);
+        mStatusBarImeArrows.setOnPreferenceChangeListener(this);
+
     }
 
     public void updateRotationTimeout(int timeout) {
@@ -165,6 +173,10 @@ public class InputMethodsSettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getContentResolver(),
                     Settings.System.KEYBOARD_ROTATION_TIMEOUT, timeout);
             updateRotationTimeout(timeout);
+            return true;
+        } else if (preference == mStatusBarImeArrows) {
+            Settings.System.putInt(getContentResolver(),
+                Settings.System.STATUS_BAR_IME_ARROWS, (Boolean) objValue ? 1 : 0);
             return true;
         }
         return false;
