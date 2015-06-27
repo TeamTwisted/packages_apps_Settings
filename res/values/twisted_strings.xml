@@ -76,4 +76,6 @@
    <string name="misc_setting">Miscellaneous</string>
    <string name="twisted_menu_about">About Twisted Android Project</string>   
 
+   <string name="qs_tile_reboot">Reboot</string>
+   
 </resources>
