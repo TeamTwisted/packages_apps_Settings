@@ -105,5 +105,7 @@ public class Settings extends SettingsActivity {
     public static class QSTilesSettingsActivity extends SettingsActivity { /* empty */ }
 
     public static class LiveDisplayActivity extends SettingsActivity { /* empty */ }
+
+    public static class WifiCallingSettingsActivity extends SettingsActivity { /* empty */ }
 }
 
