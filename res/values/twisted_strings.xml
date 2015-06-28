@@ -67,7 +67,7 @@
    <!-- BitSyko Layers -->
    <string name="bitsyko_layers">Layers</string>
    
-      <string name="nav_bar_setting">Navigation Bar</string>
+   <string name="nav_bar_setting">Navigation Bar</string>
    <string name="status_bar_setting">Status Bar</string>
    <string name="notif_sound_setting">Notifications</string>
    <string name="systemwide_setting">System-Wide</string>
@@ -75,6 +75,15 @@
    <string name="adaway_title">AdAway</string>
    <string name="misc_setting">Miscellaneous</string>
    <string name="twisted_menu_about">About Twisted Android Project</string>   
+   
+       <!-- Weather in status bar -->
+    <string name="status_bar_show_weather_title">Show weather</string>
+    <string name="status_bar_show_weather_summary">Show the weather in the status bar header</string>
+
+     <!--- Lock clock -->
+    <string name="lock_clock_title">Clock widget</string>
+    <string name="lock_clock_summary">View or change how the \'cLock\' widget will display</string>
+    <string name="weather_clock_title">Status bar weather</string>
 
    <string name="qs_tile_reboot">Reboot</string>
    

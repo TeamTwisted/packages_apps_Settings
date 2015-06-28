@@ -29,6 +29,7 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.LauncherActivityInfo;
 import android.content.pm.LauncherApps;
 import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.content.pm.Signature;
 import android.graphics.drawable.Drawable;
@@ -450,6 +451,13 @@ public class NotificationAppList extends PinnedHeaderListFragment
                     if (DEBUG) Log.d(TAG, "    " + lai.getComponentName().toString());
                     appInfos.add(lai.getApplicationInfo());
                 }
+                // explicitly adding systemui
+                try {
+                    appInfos.add(mPM.getApplicationInfo("com.android.systemui", 0));
+                }
+                catch (PackageManager.NameNotFoundException e) {
+                    // systemui not found, do nothing
+                }
 
                 final List<ResolveInfo> resolvedConfigActivities
                         = queryNotificationConfigActivities(mPM);
@@ -607,6 +615,25 @@ public class NotificationAppList extends PinnedHeaderListFragment
         public boolean setShowNotificationForPackageOnKeyguard(String pkg, int uid, int status) {
             try {
                 sINM.setShowNotificationForPackageOnKeyguard(pkg, uid, status);
+                return true;
+            } catch (Exception e) {
+                Log.w(TAG, "Error calling NoMan", e);
+                return false;
+            }
+        }
+
+        public int getHeadsUpNotificationsEnabledForPackage(String pkg, int uid) {
+            try {
+                return sINM.getHeadsUpNotificationsEnabledForPackage(pkg, uid);
+            } catch (Exception e) {
+                Log.w(TAG, "Error calling NoMan", e);
+                return Notification.HEADS_UP_NEVER;
+            }
+        }
+
+        public boolean setHeadsUpNotificationsEnabledForPackage(String pkg, int uid, int status) {
+            try {
+                sINM.setHeadsUpNotificationsEnabledForPackage(pkg, uid, status);
                 return true;
             } catch (Exception e) {
                 Log.w(TAG, "Error calling NoMan", e);
