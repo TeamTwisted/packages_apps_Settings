@@ -68,11 +68,6 @@
                 android:title="@string/clear_adb_keys" />
 
         <SwitchPreference
-            android:key="enable_terminal"
-            android:title="@string/enable_terminal_title"
-            android:summary="@string/enable_terminal_summary" />
-
-        <SwitchPreference
             android:key="allow_mock_location"
             android:title="@string/allow_mock_location"
             android:summary="@string/allow_mock_location_summary"/>
@@ -289,6 +284,11 @@
             android:key="immediately_destroy_activities"
             android:title="@string/immediately_destroy_activities"
             android:summary="@string/immediately_destroy_activities_summary"/>
+
+        <SwitchPreference
+            android:key="enable_terminal"
+            android:title="@string/enable_terminal_title"
+            android:summary="@string/enable_terminal_summary" />
 
         <ListPreference
             android:key="app_process_limit"
