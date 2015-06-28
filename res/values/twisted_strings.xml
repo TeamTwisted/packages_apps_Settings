@@ -85,4 +85,6 @@
     <string name="lock_clock_summary">View or change how the \'cLock\' widget will display</string>
     <string name="weather_clock_title">Status bar weather</string>
 
+   <string name="qs_tile_reboot">Reboot</string>
+   
 </resources>
