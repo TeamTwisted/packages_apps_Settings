@@ -1,12 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+ADDING Dimens to give ability for base overlays to override existing layers,
+by adding corners to dashboard categories.
+
+** For example:
+User wants to apply an overlay that just modifies the dashboard_categories corners (radius), but wants to keep existing theme "color" and "style" this overlay would just 	 override the radius of the dashboard_categories without affecting applied theme.
+
+** 
+android:radius does not reference a dimens in dimens.xml because if a user applies a
+theme that modifies just the android:radius and they do not want that style.. The
+below dimens will override that.
+
+** 
+As always does not affect stock, nor does it affect old themes.
+
+-->
 
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item>
-        <shape  android:shape="rectangle">
-	    <corners android:radius="11dp"/><!--Added to add curved corners, rather than straight 052215-->
-            <solid android:color="@color/exposed_bg_dark" />
+<item>
 
-        </shape>
-    </item>
+<shape android:shape="rectangle">
+<solid android:color="@color/exposed_bg_dark"/>
+<corners
+android:bottomLeftRadius="@dimen/dashboard_category_bottomLeftRadius"
+android:bottomRightRadius="@dimen/dashboard_category_bottomRightRadius"
+android:topLeftRadius="@dimen/dashboard_category_topLeftRadius"
+android:topRightRadius="@dimen/dashboard_category_topRightRadius"
+android:radius="0dp"
+/>
+
+</shape>
+
+</item>
+
 </layer-list>
 
