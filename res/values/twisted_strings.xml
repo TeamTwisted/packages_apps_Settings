@@ -75,6 +75,8 @@
    <string name="adaway_title">AdAway</string>
    <string name="misc_setting">Miscellaneous</string>
    <string name="twisted_menu_about">About Twisted Android Project</string>   
+   <string name="summary_qs_title">PullDown and QS Options</string>
+   
    
        <!-- Weather in status bar -->
     <string name="status_bar_show_weather_title">Show weather</string>
@@ -86,5 +88,6 @@
     <string name="weather_clock_title">Status bar weather</string>
 
    <string name="qs_tile_reboot">Reboot</string>
-   
+   <string name="twistedapps_apps_title">Twisted Apps</string> 
+
 </resources>

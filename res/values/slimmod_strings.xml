@@ -2,7 +2,9 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
 <!-- Expanded Desktop -->
-    <string name="power_menu_expanded_desktop">Expanded desktop</string>
+    <string name="power_menu_expanded_desktop">Expanded Desktop</string>
+    <string name="summary_power_menu_expanded_desktop">per App Mode Selection</string>
+
     <string name="expanded_hide_nothing">Hide nothing</string>
     <string name="expanded_hide_status">Hide status bar</string>
     <string name="expanded_hide_navigation">Hide navigation bar</string>

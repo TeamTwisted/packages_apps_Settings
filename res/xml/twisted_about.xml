@@ -24,17 +24,47 @@
 -->
         <!-- Developers -->
     <PreferenceCategory
-        android:key="category_team twisted"
-        android:title="Twisted Team">
+        android:key="category_team_twisted"
+        android:title="Twisted Core">
  
-    <PreferenceScreen
-        android:title="aow1980"
-        android:icon="@drawable/allen">
+	<PreferenceScreen
+	  android:title="aow1980"
+	  android:icon="@drawable/allen">
                 <intent
                         android:action="android.intent.action.VIEW"
                         android:data="http://forum.xda-developers.com/member.php?u=5497766" />
         </PreferenceScreen>
-       
+ 
+        <PreferenceScreen
+	  android:title="letmedanz"
+	  android:icon="@drawable/letmedanz">
+                <intent
+                        android:action="android.intent.action.VIEW"
+                        android:data="http://forum.xda-developers.com/member.php?u=2888538" />
+        </PreferenceScreen>    
+
+        <PreferenceScreen
+        android:title="midnightrider"
+        android:icon="@drawable/jerry">
+                <intent
+                        android:action="android.intent.action.VIEW"
+                        android:data="http://forum.xda-developers.com/member.php?u=4518483" />
+        </PreferenceScreen>    
+
+        <PreferenceScreen
+        android:title="xWASABI"
+        android:icon="@drawable/xwasabi">
+                <intent
+                        android:action="android.intent.action.VIEW"
+                        android:data="https://plus.google.com/u/0/101729058057775926785/posts" />
+        </PreferenceScreen> 
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="category_support_twisted"
+        android:title="Twisted Support System">
+      
         <PreferenceScreen
                 android:title="ezio84"
                 android:icon="@drawable/ezio">
@@ -52,37 +82,37 @@
         </PreferenceScreen>
  
         <PreferenceScreen
-        android:title="letmedanz"
-                android:icon="@drawable/letmedanz">
-                <intent
-                        android:action="android.intent.action.VIEW"
-                        android:data="http://forum.xda-developers.com/member.php?u=2888538" />
-        </PreferenceScreen>    
- 
-        <PreferenceScreen
-        android:title="midnightrider"
-                android:icon="@drawable/jerry">
-                <intent
-                        android:action="android.intent.action.VIEW"
-                        android:data="http://forum.xda-developers.com/member.php?u=4518483" />
-        </PreferenceScreen>    
- 
-        <PreferenceScreen
         android:title="ralpheboyo"
                 android:icon="@drawable/ralph">
                 <intent
                         android:action="android.intent.action.VIEW"
                         android:data="http://forum.xda-developers.com/member.php?u=264345" />
-        </PreferenceScreen>        
- 
-        <PreferenceScreen
-        android:title="xWASABI"
-                android:icon="@drawable/xwasabi">
+        </PreferenceScreen>    
+	
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:key="category_team_walls"
+        android:title="Twisted Walls">
+     
+      <PreferenceScreen
+        android:title="customworx"
+	android:icon="@drawable/custom">
                 <intent
                         android:action="android.intent.action.VIEW"
-                        android:data="https://plus.google.com/u/0/101729058057775926785/posts" />
-        </PreferenceScreen>        
- 
+                        android:data="https://plus.google.com/collection/82YaV" />
+       </PreferenceScreen> 
+      
     </PreferenceCategory>
- 
+    
+    <PreferenceCategory
+        android:key="category_testers"
+        android:title="Twisted Testers">
+      
+    <PreferenceScreen
+        android:key="category_team_testers"
+	android:summary="a g bell, aoaleman, bobby janow, f100cleveland, JaKe, Maybelle, Mistertac, mrminor13, renny083, skripka, theesotericone" />
+    
+    </PreferenceCategory>
+    
 </PreferenceScreen>

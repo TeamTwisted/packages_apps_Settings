@@ -2174,8 +2174,9 @@
 	
         <!-- BUILD TWEAKS START -->
         <activity android:name=".twisted.TwistedSettings" />
-        <!-- BUILD TWEAKS END -->
+        <activity android:name=".twisted.TwistedApps" />
 	
+        <!-- BUILD TWEAKS END -->
 
         <activity android:name="Settings$WifiCallingSettingsActivity"
                   android:label="@string/wifi_calling_settings_title"

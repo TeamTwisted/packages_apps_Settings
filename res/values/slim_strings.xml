@@ -94,14 +94,17 @@
 <string name="pulse_speed_slow">Slow</string>
 <string name="pulse_speed_very_slow">Very slow</string>
 <!-- Battery light settings -->
-<string name="battery_light_title">Battery light</string>
+<string name="battery_light_title">Battery LED</string>
 <string name="battery_low_pulse_title">Pulse if battery low</string>
 <string name="battery_light_list_title">Colors</string>
 <string name="battery_light_low_color_title">Battery low</string>
 <string name="battery_light_medium_color_title">Charging</string>
 <string name="battery_light_full_color_title">Fully charged</string>
 <!-- Lights settings screen, notification light settings -->
-<string name="notification_light_title">Notification light</string>
+<string name="notification_light_title">Notification LED Settings</string>
+<string name="summary_notification_light_title">Customize Colors for Call Events and Apps</string>
+<string name="summary_battery_light_title">Customize Colors for Battery Levels</string>
+
 <string name="notification_light_general_title">General</string>
 <string name="notification_light_applist_title">Apps</string>
 <string name="notification_light_phonelist_title">Phone</string>
@@ -119,6 +122,8 @@
 <!-- Keyboard and Input ASS methods -->
 <string name="title_keyboard_input">Keyboard Settings</string>
 <string name="disable_fullscreen_keyboard_title">Disable fullscreen keyboard</string>
+<string name="summary_title_keyboard_input">Advanced Keyboard Options</string>
+
 <string name="disable_fullscreen_keyboard_summary">Landscape keyboard will never take up entire screen</string>
 <string name="volume_key_cursor_control_title">Volume key cursor control</string>
 <string name="volume_key_cursor_control_on">Volume up/down moves cursor left/right</string>
@@ -136,6 +141,8 @@
     <string name="show_ime_arrows_summary">Display left and right cursor buttons in navigation bar while typing. Longpress to navigate up/down. Overrides IME switcher and menu buttons.</string>
 <!-- Status bar -->
 <string name="status_bar_title">Battery, Clock and Date</string>
+<string name="summary_status_bar_title">and Notification Ticker</string>
+
 <string name="status_bar_style_title">Style</string>
 <string name="status_bar_options_title">Options</string>
 <!-- Status bar | Clock -->
@@ -357,18 +364,21 @@
 <string name="summary_pref_menu_location">Where do you want the menu buttons to appear?</string>
 <string name="title_pref_menu_display">Menu visibility</string>
 <string name="summary_pref_menu_display">How and when do you want the menu buttons to appear?</string>
-<string name="navbar_enable_bar">Enable navigation bar</string>
-<string name="navbar_enable_bar_summary">Enable the navigation bar</string>
+<string name="navbar_enable_bar">Enable Navigation Bar</string>
+<string name="navbar_enable_bar_summary">Customization</string>
 <string name="navigation_bar_height_title">Navigation bar height</string>
 <string name="navigation_bar_height_summary">Navigation bar height while in portrait.</string>
 <string name="navigation_bar_height_landscape_title">Navigation bar height landscape</string>
 <string name="navigation_bar_height_landscape_summary">Navigation bar height while in landscape.</string>
 <string name="navigation_bar_width_title">Navigation bar width</string>
 <string name="navigation_bar_width_summary">Navigation bar height if the bar is along a side.</string>
-<string name="navbar_can_move">Show landscape</string>
-<string name="navbar_can_move_summary">Shows navigation bar in landscape on the bottom</string>
+<string name="navbar_can_move">Landscape</string>
+<string name="navbar_can_move_summary">Show Navigation Bar on the Bottom Edge</string>
 <string name="navbar_style_dimen_title">Dimensions</string>
 <string name="navbar_button_title">Buttons</string>
+<string name="summary_navbar_button">Add/Remove, Reorder, Colors and Glow</string>
+<string name="summary_navbar_style_dimen_title">Change DPI value</string>
+
 <string name="navbar_cat">Navigation bar</string>
 <string name="navbar_dimensions_reset_message">Reset all dimensions entries to default?</string>
 <string name="navbar_button_style_reset_message">Reset all style entries to default?</string>
@@ -394,6 +404,8 @@
 <string name="privacy_guard_default_title">Enabled by default</string>
 <string name="privacy_guard_default_summary">Enable by default for newly-installed apps</string>
 <string name="privacy_guard_manager_title">Privacy Guard</string>
+<string name="summary_privacy_guard_manager_title">App-Ops</string>
+
 <string name="privacy_guard_manager_summary">Manage which apps have access to your personal data</string>
 <string name="privacy_guard_no_user_apps">No apps are installed</string>
 <string name="privacy_guard_help_title">Help</string>
@@ -571,8 +583,9 @@
 <string name="display_rotation_90_title">90 degrees</string>
 <string name="display_rotation_180_title">180 degrees</string>
 <string name="display_rotation_270_title">270 degrees</string>
-<string name="advanced_sound_title">Advanced options</string>
-<string name="title_keyboard_input">Advanced options</string>
+<string name="advanced_sound_title">Advanced Sound Options</string>
+<string name="summary_advanced_sound_title">plus Rocker and Notifications</string>
+
 <!-- Advanced reboot options -->
 <string name="advanced_reboot_title">Advanced reboot</string>
 <string name="advanced_reboot_summary">Include options in the power menu for rebooting into recovery and bootloader</string>
@@ -583,7 +596,7 @@
 <!-- Setting checkbox summary for displaying USB debugging notification -->
 <string name="adb_notify">USB debugging notify</string>
 <string name="adb_notify_summary">Display a notification when USB debugging is connected</string>
-<string name="status_bar_title">Status bar</string>
+<string name="status_bar_title">Add-ons</string>
 <string name="block_on_secure_keyguard_title">Disable on lockscreen</string>
 <string name="block_on_secure_keyguard_summary">Disable quick settings on secure lockscreen.</string>
 <string name="shortcut_action_menu">Menu</string>
@@ -656,7 +669,9 @@
     <string name="shortcut_action_lockdown">Lock now</string>
 
     <!-- Recent panel -->
-    <string name="recent_panel_category">Recent apps panel</string>
+    <string name="recent_panel_category">Recent Apps Panel</string>
+    <string name="summary_recent_panel_category">Slim or Stock with Customization</string>   
+    
     <string name="use_slim_recents_title">SlimRecents</string>
     <string name="show_running_tasks_title">Only show running apps</string>
     <string name="recents_max_apps_title">Max allowed apps</string>
@@ -679,6 +694,7 @@
     <string name="volume_adjust_sound_title">Volume</string>
     <string name="qs_tile_led">LED Tile</string>
     <string name="power_menu_title">Power Menu</string>     
+    <string name="summary_power_menu_title">Choose Entries and order</string>     
 
     <!--- Tap To Wake -->
     <string name="double_tap_to_wake_title">Double-tap to wake</string>
