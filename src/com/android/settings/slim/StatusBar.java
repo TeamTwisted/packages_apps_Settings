@@ -48,7 +48,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
 
     private static final String TAG = "StatusBarSettings";
 
-    private static final String KEY_STATUS_BAR_TICKER = "status_bar_ticker_enabled";
+    private static final String KEY_STATUS_BAR_TICKER = "status_bar_ticker";
 
     private static final String KEY_STATUS_BAR_CLOCK = "clock_style_pref";
 
@@ -85,10 +85,8 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         }
 
         mTicker = (SwitchPreference) prefSet.findPreference(KEY_STATUS_BAR_TICKER);
-        final boolean tickerEnabled = systemUiResources.getBoolean(systemUiResources.getIdentifier(
-                    "com.android.systemui:bool/enable_ticker", null, null));
-        mTicker.setChecked(Settings.System.getInt(getContentResolver(),
-                Settings.System.STATUS_BAR_TICKER_ENABLED, tickerEnabled ? 1 : 0) == 1);
+        mTicker.setChecked(Settings.System.getInt(
+                getContentResolver(), Settings.System.TICKER_ENABLED, 0) == 1);
         mTicker.setOnPreferenceChangeListener(this);
 
         mStatusBarBattery = (ListPreference) findPreference(STATUS_BAR_BATTERY_STYLE);
@@ -129,8 +127,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
                     mStatusBarBatteryShowPercent.getEntries()[index]);
             return true;
         } else if (preference == mTicker) {
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.STATUS_BAR_TICKER_ENABLED,
+            Settings.System.putInt(resolver, Settings.System.TICKER_ENABLED,
                     (Boolean) newValue ? 1 : 0);
             return true;
         }
