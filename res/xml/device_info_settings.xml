@@ -142,12 +142,6 @@
                 android:summary="@string/sm_android_default"
                 android:selectable="false" />
 
-        <Preference android:key="sm_kernel"
-                style="?android:preferenceInformationStyle"
-                android:title="@string/sm_kernel"
-                android:summary="@string/sm_kernel_default"
-                android:selectable="false" />
-
         <Preference android:key="sm_flags"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/sm_flags"
