@@ -6104,7 +6104,9 @@
     <string name="partition_info_used_of">/</string>
 
     <!-- Wakelock blocker -->
-    <string name="wakelock_blocker_title">Wakelock blocker</string>
+    <string name="wakelock_blocker_title">Wakelock Blocker</string>
+    <string name="summary_wakelock_blocker_title">CAUTION: Use only if you know what you are doing!</string>
+    
     <string name="wakelock_blocker_summary">Block system wakelocks</string>
     <string name="wakelock_blocker_save">Save</string>
     <string name="wakelock_list_header">Available wakelocks</string>

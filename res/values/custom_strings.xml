@@ -95,6 +95,9 @@
 
     <!-- AOKP custom system animations -->
     <string name="animation_title">Animations</string>  
+    <string name="summary_animation_title">List, System and Toast Tweaks</string>  
+   
+    
     <string name="system_animation_title">System</string>
     <string name="activity_open_title">Activity open</string>
     <string name="activity_close_title">Activity close</string>
