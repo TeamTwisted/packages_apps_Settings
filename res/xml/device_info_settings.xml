@@ -160,9 +160,4 @@
                 android:title="@string/build_date"
                 android:summary="@string/build_date_default" />
 
-        <PreferenceScreen android:key="smbanner"
-                          android:enabled="false"
-                          android:layout="@layout/smbanner_row"
-                          android:selectable="false" />
-
 </PreferenceScreen>
