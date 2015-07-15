@@ -224,7 +224,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         if (!proximityCheckOnWait) {
             //counter++;
             //mWakeUpOptions.removePreference(findPreference(KEY_PROXIMITY_WAKE));
-            Settings.System.putInt(getContentResolver(), Settings.System.PROXIMITY_ON_WAKE, 1);
+            Settings.System.putInt(getContentResolver(), Settings.System.PROXIMITY_ON_WAKE, 0);
         }
 
         //if (counter == 3) {
