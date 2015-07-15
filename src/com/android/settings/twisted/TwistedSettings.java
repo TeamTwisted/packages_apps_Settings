@@ -34,6 +34,7 @@ import com.android.internal.util.slim.DeviceUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
+import android.provider.Settings.Secure;
  
 public class TwistedSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -57,7 +58,13 @@ public class TwistedSettings extends SettingsPreferenceFragment implements
     private static final String DIM_NAV_BUTTONS_ALPHA = "dim_nav_buttons_alpha";
     private static final String DIM_NAV_BUTTONS_ANIMATE = "dim_nav_buttons_animate";
     private static final String DIM_NAV_BUTTONS_ANIMATE_DURATION = "dim_nav_buttons_animate_duration";
+    
+    private static final String SEARCH_PANEL_ENABLED = "search_panel_enabled";
+    private static final String PREF_RING = "navigation_bar_ring";
 
+    SwitchPreference mSearchPanelEnabled;
+    PreferenceScreen mRingPreference;
+    
     private int mNavBarMenuDisplayValue;
 
     private ListPreference mLcdDensityPreference;	
@@ -206,6 +213,11 @@ public class TwistedSettings extends SettingsPreferenceFragment implements
         mDimNavButtonsAnimateDuration.minimumValue(100);
         mDimNavButtonsAnimateDuration.multiplyValue(100);
         mDimNavButtonsAnimateDuration.setOnPreferenceChangeListener(this);
+        
+        mSearchPanelEnabled = (SwitchPreference) findPreference(SEARCH_PANEL_ENABLED);
+        mSearchPanelEnabled.setOnPreferenceChangeListener(this);
+
+        mRingPreference = (PreferenceScreen) findPreference(PREF_RING);
 
         updateSettings();        
     }
@@ -264,6 +276,9 @@ public class TwistedSettings extends SettingsPreferenceFragment implements
             mDimNavButtonsAnimateDuration.setInitValue((animateDuration / 100) - 1);
         }
 
+        mSearchPanelEnabled.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.Secure.SEARCH_PANEL_ENABLED, 0) == 1);
+
         updateNavbarPreferences(enableNavigationBar);
     }
 
@@ -283,6 +298,8 @@ public class TwistedSettings extends SettingsPreferenceFragment implements
         mDimNavButtonsAnimate.setEnabled(show);
         mDimNavButtonsAnimateDuration.setEnabled(show);
 
+        mSearchPanelEnabled.setEnabled(show);
+        mRingPreference.setEnabled(show);
     }
 
     
@@ -422,6 +439,11 @@ public class TwistedSettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getActivity().getContentResolver(),
                 Settings.System.DIM_NAV_BUTTONS_ANIMATE_DURATION,
                 Integer.parseInt((String) newValue));
+            return true;
+        } else if (preference == mSearchPanelEnabled) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.Secure.SEARCH_PANEL_ENABLED,
+                    ((Boolean) newValue) ? 1 : 0);
             return true;
         }        
   return false;
