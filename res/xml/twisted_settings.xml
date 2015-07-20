@@ -34,6 +34,20 @@
 		android:summary="@string/summary_navbar_style_dimen_title"
                 android:title="@string/navbar_style_dimen_title" />
 
+            <ListPreference
+                    android:key="pref_navbar_menu_display"
+                    android:entries="@array/pref_menu_display_entries"
+                    android:entryValues="@array/pref_menu_display_values"
+                    android:title="@string/title_pref_menu_display"
+                    android:summary="@string/summary_pref_menu_display" />
+
+            <ListPreference
+                    android:key="pref_navbar_menu_location"
+                    android:entries="@array/pref_navigation_menu_entries"
+                    android:entryValues="@array/pref_navigation_menu_values"
+                    android:title="@string/title_pref_menu_location"
+                    android:summary="@string/summary_pref_menu_location" />
+	    
             <SwitchPreference
                     android:key="navbar_can_move"
                     android:title="@string/navbar_can_move"

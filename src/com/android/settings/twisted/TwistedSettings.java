@@ -1,61 +1,102 @@
 package com.android.settings.twisted;
  
-import android.content.ContentResolver;
-import android.content.pm.PackageManager;
-import android.content.res.Resources;
-import android.database.ContentObserver;
-import android.os.Bundle;
-import android.os.Handler;
-import android.preference.ListPreference;
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
-import android.preference.PreferenceCategory;
-import android.preference.PreferenceScreen;
-import android.preference.SwitchPreference;
-import android.provider.Settings;
-import android.provider.Settings.SettingNotFoundException;
-import android.util.Log;
-import com.android.settings.R;
-import com.android.settings.SettingsPreferenceFragment;
-import com.android.internal.util.slim.DeviceUtils;
-import android.database.ContentObserver;
-import android.net.Uri;
-import android.os.Handler;
-import android.preference.PreferenceScreen;
-import android.provider.Settings.SettingNotFoundException;
-import com.android.settings.Utils;
-import android.os.Bundle;
-import com.android.settings.R;
-import com.android.settings.SettingsPreferenceFragment;
-import android.app.IActivityManager;
-import android.app.ProgressDialog;
-import android.os.AsyncTask;
-import android.os.ServiceManager;
-import android.util.DisplayMetrics;
-import android.preference.ListPreference;
-import android.content.Context;
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceClickListener;
-import android.preference.PreferenceScreen;
-import android.preference.SwitchPreference;
-import android.os.SystemProperties;
-import android.util.Log;
-import android.os.RemoteException;
 import android.app.Activity;
 import android.app.ActivityManagerNative;
 import android.app.Dialog;
 import android.app.IActivityManager;
+import android.app.ProgressDialog;
+import android.content.ContentResolver;
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.content.res.Resources;
+import android.database.ContentObserver;
+import android.net.Uri;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.RemoteException;
+import android.os.ServiceManager;
+import android.os.SystemProperties;
+import android.os.UserHandle;
+import android.preference.ListPreference;
+import android.preference.Preference.OnPreferenceClickListener;
+import android.preference.Preference;
+import android.preference.PreferenceCategory;
+import android.preference.PreferenceScreen;
+import android.preference.SlimSeekBarPreference;
+import android.preference.SwitchPreference;
+import android.provider.Settings.SettingNotFoundException;
+import android.provider.Settings;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import com.android.internal.util.slim.Action;
+import com.android.internal.util.slim.DeviceUtils;
+import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.Utils;
  
 public class TwistedSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
  	
-  private static final String KEY_LCD_DENSITY = "lcd_density";
-  private static final String TAG = "DisplaySettings";
+    private static final String KEY_LCD_DENSITY = "lcd_density";
+    private static final String TAG = "DisplaySettings";
  
-  private static final String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";
+    private static final String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";
+  
+    private static final String Nav = "NavBar";
+    private static final String PREF_MENU_LOCATION = "pref_navbar_menu_location";
+    private static final String PREF_NAVBAR_MENU_DISPLAY = "pref_navbar_menu_display";
+    private static final String ENABLE_NAVIGATION_BAR = "enable_nav_bar";
+    private static final String PREF_BUTTON = "navbar_button_settings";
+    private static final String PREF_STYLE_DIMEN = "navbar_style_dimen_settings";
+    private static final String PREF_NAVIGATION_BAR_CAN_MOVE = "navbar_can_move";
 
-  private ListPreference mLcdDensityPreference;	
-  private SwitchPreference mStatusBarBrightnessControl;
+    private static final String DIM_NAV_BUTTONS = "dim_nav_buttons";
+    private static final String DIM_NAV_BUTTONS_TOUCH_ANYWHERE = "dim_nav_buttons_touch_anywhere";
+    private static final String DIM_NAV_BUTTONS_TIMEOUT = "dim_nav_buttons_timeout";
+    private static final String DIM_NAV_BUTTONS_ALPHA = "dim_nav_buttons_alpha";
+    private static final String DIM_NAV_BUTTONS_ANIMATE = "dim_nav_buttons_animate";
+    private static final String DIM_NAV_BUTTONS_ANIMATE_DURATION = "dim_nav_buttons_animate_duration";
+
+    private int mNavBarMenuDisplayValue;
+
+    private ListPreference mLcdDensityPreference;	
+    private SwitchPreference mStatusBarBrightnessControl;
+    
+    ListPreference mMenuDisplayLocation;
+    ListPreference mNavBarMenuDisplay;
+    SwitchPreference mEnableNavigationBar;
+    SwitchPreference mNavigationBarCanMove;
+    PreferenceScreen mButtonPreference;
+    PreferenceScreen mStyleDimenPreference;
+
+    SwitchPreference mDimNavButtons;
+    SwitchPreference mDimNavButtonsTouchAnywhere;
+    SlimSeekBarPreference mDimNavButtonsTimeout;
+    SlimSeekBarPreference mDimNavButtonsAlpha;
+    SwitchPreference mDimNavButtonsAnimate;
+    SlimSeekBarPreference mDimNavButtonsAnimateDuration;
+
+    private SettingsObserver mSettingsObserver = new SettingsObserver(new Handler());
+    private final class SettingsObserver extends ContentObserver {
+        SettingsObserver(Handler handler) {
+            super(handler);
+        }
+
+        void observe() {
+            ContentResolver resolver = getActivity().getContentResolver();
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.NAVIGATION_BAR_SHOW), false, this,
+                    UserHandle.USER_ALL);
+        }
+
+        @Override
+        public void onChange(boolean selfChange) {
+            super.onChange(selfChange);
+            updateSettings();
+        }
+    }   
+  
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -101,8 +142,145 @@ public class TwistedSettings extends SettingsPreferenceFragment implements
         mLcdDensityPreference.setOnPreferenceChangeListener(this);
         updateLcdDensityPreferenceDescription(currentDensity);
 
-    	}
 
+        mMenuDisplayLocation = (ListPreference) findPreference(PREF_MENU_LOCATION);
+        mMenuDisplayLocation.setValue(Settings.System.getInt(getActivity()
+                .getContentResolver(), Settings.System.MENU_LOCATION,
+                0) + "");
+        mMenuDisplayLocation.setOnPreferenceChangeListener(this);
+
+        mNavBarMenuDisplay = (ListPreference) findPreference(PREF_NAVBAR_MENU_DISPLAY);
+        mNavBarMenuDisplayValue = Settings.System.getInt(getActivity()
+                .getContentResolver(), Settings.System.MENU_VISIBILITY,
+                2);
+        mNavBarMenuDisplay.setValue(mNavBarMenuDisplayValue + "");
+        mNavBarMenuDisplay.setOnPreferenceChangeListener(this);
+
+        mButtonPreference = (PreferenceScreen) findPreference(PREF_BUTTON);
+        mStyleDimenPreference = (PreferenceScreen) findPreference(PREF_STYLE_DIMEN);
+
+        boolean hasNavBarByDefault = getResources().getBoolean(
+                com.android.internal.R.bool.config_showNavigationBar);
+        boolean enableNavigationBar = Settings.System.getInt(getContentResolver(),
+                Settings.System.NAVIGATION_BAR_SHOW, hasNavBarByDefault ? 1 : 0) == 1;
+        mEnableNavigationBar = (SwitchPreference) findPreference(ENABLE_NAVIGATION_BAR);
+        if (hasNavBarByDefault) {
+            getPreferenceScreen().removePreference(mEnableNavigationBar);
+        } else {
+            mEnableNavigationBar.setChecked(enableNavigationBar);
+            mEnableNavigationBar.setOnPreferenceChangeListener(this);
+        }
+
+        mNavigationBarCanMove = (SwitchPreference) findPreference(PREF_NAVIGATION_BAR_CAN_MOVE);
+        mNavigationBarCanMove.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.NAVIGATION_BAR_CAN_MOVE,
+                DeviceUtils.isPhone(getActivity()) ? 1 : 0) == 0);
+        mNavigationBarCanMove.setOnPreferenceChangeListener(this);
+
+        mDimNavButtons = (SwitchPreference) findPreference(DIM_NAV_BUTTONS);
+        mDimNavButtons.setOnPreferenceChangeListener(this);
+
+        mDimNavButtonsTimeout = (SlimSeekBarPreference) findPreference(DIM_NAV_BUTTONS_TIMEOUT);
+        mDimNavButtonsTimeout.setDefault(3000);
+        mDimNavButtonsTimeout.isMilliseconds(true);
+        mDimNavButtonsTimeout.setInterval(1);
+        mDimNavButtonsTimeout.minimumValue(100);
+        mDimNavButtonsTimeout.multiplyValue(100);
+        mDimNavButtonsTimeout.setOnPreferenceChangeListener(this);
+
+        mDimNavButtonsAlpha = (SlimSeekBarPreference) findPreference(DIM_NAV_BUTTONS_ALPHA);
+        mDimNavButtonsAlpha.setDefault(50);
+        mDimNavButtonsAlpha.setInterval(1);
+        mDimNavButtonsAlpha.setOnPreferenceChangeListener(this);
+
+        mDimNavButtonsAnimate = (SwitchPreference) findPreference(DIM_NAV_BUTTONS_ANIMATE);
+        mDimNavButtonsAnimate.setOnPreferenceChangeListener(this);
+
+        mDimNavButtonsAnimateDuration = (SlimSeekBarPreference) findPreference(DIM_NAV_BUTTONS_ANIMATE_DURATION);
+        mDimNavButtonsAnimateDuration.setDefault(2000);
+        mDimNavButtonsAnimateDuration.isMilliseconds(true);
+        mDimNavButtonsAnimateDuration.setInterval(1);
+        mDimNavButtonsAnimateDuration.minimumValue(100);
+        mDimNavButtonsAnimateDuration.multiplyValue(100);
+        mDimNavButtonsAnimateDuration.setOnPreferenceChangeListener(this);
+
+        updateSettings();        
+    }
+
+    private void updateSettings() {
+        mMenuDisplayLocation.setValue(Settings.System.getInt(getActivity()
+                .getContentResolver(), Settings.System.MENU_LOCATION,
+                0) + "");
+        mNavBarMenuDisplayValue = Settings.System.getInt(getActivity()
+                .getContentResolver(), Settings.System.MENU_VISIBILITY,
+                2);
+        mNavBarMenuDisplay.setValue(mNavBarMenuDisplayValue + "");
+
+        boolean enableNavigationBar = Settings.System.getInt(getContentResolver(),
+                Settings.System.NAVIGATION_BAR_SHOW,
+                Action.isNavBarDefault(getActivity()) ? 1 : 0) == 1;
+        mEnableNavigationBar.setChecked(enableNavigationBar);
+
+        if (mNavigationBarCanMove != null) {
+            mNavigationBarCanMove.setChecked(Settings.System.getInt(getContentResolver(),
+                    Settings.System.NAVIGATION_BAR_CAN_MOVE, 1) == 0);
+        }
+
+        if (mDimNavButtons != null) {
+            mDimNavButtons.setChecked(Settings.System.getInt(getContentResolver(),
+                    Settings.System.DIM_NAV_BUTTONS, 0) == 1);
+        }
+
+        if (mDimNavButtonsTouchAnywhere != null) {
+            mDimNavButtonsTouchAnywhere.setChecked(Settings.System.getInt(getContentResolver(),
+                    Settings.System.DIM_NAV_BUTTONS_TOUCH_ANYWHERE, 0) == 1);
+        }
+
+        if (mDimNavButtonsTimeout != null) {
+            final int dimTimeout = Settings.System.getInt(getContentResolver(),
+                    Settings.System.DIM_NAV_BUTTONS_TIMEOUT, 3000);
+            // minimum 100 is 1 interval of the 100 multiplier
+            mDimNavButtonsTimeout.setInitValue((dimTimeout / 100) - 1);
+        }
+
+        if (mDimNavButtonsAlpha != null) {
+            int alphaScale = Settings.System.getInt(getContentResolver(),
+                    Settings.System.DIM_NAV_BUTTONS_ALPHA, 50);
+            mDimNavButtonsAlpha.setInitValue(alphaScale);
+        }
+
+        if (mDimNavButtonsAnimate != null) {
+            mDimNavButtonsAnimate.setChecked(Settings.System.getInt(getContentResolver(),
+                    Settings.System.DIM_NAV_BUTTONS_ANIMATE, 0) == 1);
+        }
+
+        if (mDimNavButtonsAnimateDuration != null) {
+            final int animateDuration = Settings.System.getInt(getContentResolver(),
+                    Settings.System.DIM_NAV_BUTTONS_ANIMATE_DURATION, 2000);
+            // minimum 100 is 1 interval of the 100 multiplier
+            mDimNavButtonsAnimateDuration.setInitValue((animateDuration / 100) - 1);
+        }
+
+        updateNavbarPreferences(enableNavigationBar);
+    }
+
+    private void updateNavbarPreferences(boolean show) {
+        mNavBarMenuDisplay.setEnabled(show);
+        mButtonPreference.setEnabled(show);
+        mStyleDimenPreference.setEnabled(show);
+        mNavigationBarCanMove.setEnabled(show);
+        mMenuDisplayLocation.setEnabled(show
+            && mNavBarMenuDisplayValue != 1);
+
+        mDimNavButtons.setEnabled(show);
+        mDimNavButtonsTimeout.setEnabled(show);
+        mDimNavButtonsAlpha.setEnabled(show);
+        mDimNavButtonsAnimate.setEnabled(show);
+        mDimNavButtonsAnimateDuration.setEnabled(show);
+
+    }
+
+    
 	private void updateLcdDensityPreferenceDescription(int currentDensity) {
         int defaultDensity = DisplayMetrics.DENSITY_DEVICE;
         ListPreference preference = mLcdDensityPreference;
@@ -164,14 +342,14 @@ public class TwistedSettings extends SettingsPreferenceFragment implements
     }
 
     @Override
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
         final String key = preference.getKey();	
 
 	    if (KEY_LCD_DENSITY.equals(key)) {
             try {
                 // The value must begin with a decimal number.  It may
                 // optionally be follewed by a space and arbitrary text.
-                String strValue = (String) objValue;
+                String strValue = (String) newValue;
                 int idx = strValue.indexOf(' ');
                 if (idx > 0) {
                     strValue = strValue.substring(0, idx);
@@ -187,9 +365,55 @@ public class TwistedSettings extends SettingsPreferenceFragment implements
         if (preference == mStatusBarBrightnessControl) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.STATUS_BAR_BRIGHTNESS_CONTROL,
-                    (Boolean) objValue ? 1 : 0);
+                    (Boolean) newValue ? 1 : 0);
             return true;
         }
+        if (preference == mMenuDisplayLocation) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.MENU_LOCATION, Integer.parseInt((String) newValue));
+            return true;
+        } else if (preference == mNavBarMenuDisplay) {
+            mNavBarMenuDisplayValue = Integer.parseInt((String) newValue);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.MENU_VISIBILITY, mNavBarMenuDisplayValue);
+            mMenuDisplayLocation.setEnabled(mNavBarMenuDisplayValue != 1);
+            return true;
+        } else if (preference == mEnableNavigationBar) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.NAVIGATION_BAR_SHOW,
+                    ((Boolean) newValue) ? 1 : 0);
+            updateNavbarPreferences((Boolean) newValue);
+            return true;
+        } else if (preference == mNavigationBarCanMove) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.NAVIGATION_BAR_CAN_MOVE,
+                    ((Boolean) newValue) ? 0 : 1);
+            return true;
+
+        } else if (preference == mDimNavButtons) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.DIM_NAV_BUTTONS,
+                    ((Boolean) newValue) ? 1 : 0);
+            return true;
+        } else if (preference == mDimNavButtonsTimeout) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.DIM_NAV_BUTTONS_TIMEOUT, Integer.parseInt((String) newValue));
+            return true;
+        } else if (preference == mDimNavButtonsAlpha) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.DIM_NAV_BUTTONS_ALPHA, Integer.parseInt((String) newValue));
+            return true;
+        } else if (preference == mDimNavButtonsAnimate) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.DIM_NAV_BUTTONS_ANIMATE,
+                    ((Boolean) newValue) ? 1 : 0);
+            return true;
+        } else if (preference == mDimNavButtonsAnimateDuration) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.DIM_NAV_BUTTONS_ANIMATE_DURATION,
+                Integer.parseInt((String) newValue));
+            return true;
+        }        
   return false;
 
   }
@@ -237,4 +461,3 @@ public class TwistedSettings extends SettingsPreferenceFragment implements
         }
     }
 }
-
