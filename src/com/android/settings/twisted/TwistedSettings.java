@@ -180,6 +180,9 @@ public class TwistedSettings extends SettingsPreferenceFragment implements
         mDimNavButtons = (SwitchPreference) findPreference(DIM_NAV_BUTTONS);
         mDimNavButtons.setOnPreferenceChangeListener(this);
 
+        mDimNavButtonsTouchAnywhere = (SwitchPreference) findPreference(DIM_NAV_BUTTONS_TOUCH_ANYWHERE);
+        mDimNavButtonsTouchAnywhere.setOnPreferenceChangeListener(this);
+        
         mDimNavButtonsTimeout = (SlimSeekBarPreference) findPreference(DIM_NAV_BUTTONS_TIMEOUT);
         mDimNavButtonsTimeout.setDefault(3000);
         mDimNavButtonsTimeout.isMilliseconds(true);
@@ -273,7 +276,9 @@ public class TwistedSettings extends SettingsPreferenceFragment implements
             && mNavBarMenuDisplayValue != 1);
 
         mDimNavButtons.setEnabled(show);
+        mDimNavButtonsTouchAnywhere.setEnabled(show);
         mDimNavButtonsTimeout.setEnabled(show);
+        
         mDimNavButtonsAlpha.setEnabled(show);
         mDimNavButtonsAnimate.setEnabled(show);
         mDimNavButtonsAnimateDuration.setEnabled(show);
@@ -395,6 +400,11 @@ public class TwistedSettings extends SettingsPreferenceFragment implements
                 Settings.System.DIM_NAV_BUTTONS,
                     ((Boolean) newValue) ? 1 : 0);
             return true;
+        } else if (preference == mDimNavButtonsTouchAnywhere) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.DIM_NAV_BUTTONS_TOUCH_ANYWHERE,
+                    ((Boolean) newValue) ? 1 : 0);
+            return true;        
         } else if (preference == mDimNavButtonsTimeout) {
             Settings.System.putInt(getActivity().getContentResolver(),
                 Settings.System.DIM_NAV_BUTTONS_TIMEOUT, Integer.parseInt((String) newValue));
