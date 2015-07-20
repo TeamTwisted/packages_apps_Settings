@@ -86,7 +86,7 @@
 <!-- NEW TWISTED APPS -->
 	<dashboard-tile
 		android:id="@+id/twisted_apps"
-		android:icon="@drawable/ic_twisted_settings_interface_exposed"
+		android:icon="@drawable/ic_twisted_apps_interface_exposed"
 		android:fragment="com.android.settings.twisted.TwistedApps"
 		android:title="@string/twistedapps_apps_title" />
 <!--

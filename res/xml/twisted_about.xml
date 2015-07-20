@@ -1,118 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
- 
+
 <PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="About Twisted Android Project"
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
- 
- 
-   <PreferenceScreen android:key="twisted_logo"
-        android:enabled="false"
-        android:layout="@layout/twisted_logo_row" />
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:title="About Twisted Android Project"
+xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+
+<PreferenceScreen 
+android:key="twisted_logo"
+android:layout="@layout/twisted_logo_row" />
 <!--
 <PreferenceScreen android:title="OTA notifications">
-    <intent
-        android:action="android.intent.action.VIEW"
-        android:data="https://www.pushbullet.com/channel?tag=chroma"/>
+<intent
+android:action="android.intent.action.VIEW"
+android:data="https://www.pushbullet.com/channel?tag=chroma"/>
 </PreferenceScreen>
- 
+
 <PreferenceScreen android:title="View changelog">
-    <intent
-        android:action="android.intent.action.VIEW"
-        android:data="" />
+<intent
+android:action="android.intent.action.VIEW"
+android:data="" />
 </PreferenceScreen>
 -->
-        <!-- Developers -->
-    <PreferenceCategory
-        android:key="category_team_twisted"
-        android:title="Twisted Core">
- 
-	<PreferenceScreen
-	  android:title="aow1980"
-	  android:icon="@drawable/allen">
-                <intent
-                        android:action="android.intent.action.VIEW"
-                        android:data="http://forum.xda-developers.com/member.php?u=5497766" />
-        </PreferenceScreen>
- 
-        <PreferenceScreen
-	  android:title="letmedanz"
-	  android:icon="@drawable/letmedanz">
-                <intent
-                        android:action="android.intent.action.VIEW"
-                        android:data="http://forum.xda-developers.com/member.php?u=2888538" />
-        </PreferenceScreen>    
+<!-- Developers -->
+<PreferenceCategory
+android:key="category_team_twisted"
+android:title="Twisted Core">
 
-        <PreferenceScreen
-        android:title="midnightrider"
-        android:icon="@drawable/jerry">
-                <intent
-                        android:action="android.intent.action.VIEW"
-                        android:data="http://forum.xda-developers.com/member.php?u=4518483" />
-        </PreferenceScreen>    
+<PreferenceScreen
+android:title="aow1980"
+android:icon="@drawable/allen">
+<intent
+android:action="android.intent.action.VIEW"
+android:data="http://forum.xda-developers.com/member.php?u=5497766" />
+</PreferenceScreen>
 
-        <PreferenceScreen
-        android:title="xWASABI"
-        android:icon="@drawable/xwasabi">
-                <intent
-                        android:action="android.intent.action.VIEW"
-                        android:data="https://plus.google.com/u/0/101729058057775926785/posts" />
-        </PreferenceScreen> 
+<PreferenceScreen
+android:title="letmedanz"
+android:icon="@drawable/letmedanz">
+<intent
+android:action="android.intent.action.VIEW"
+android:data="http://forum.xda-developers.com/member.php?u=2888538" />
+</PreferenceScreen>    
 
-    </PreferenceCategory>
 
-    <PreferenceCategory
-        android:key="category_support_twisted"
-        android:title="Twisted Support System">
-      
-        <PreferenceScreen
-                android:title="ezio84"
-                android:icon="@drawable/ezio">
-                <intent
-                        android:action="android.intent.action.VIEW"
-                        android:data="http://forum.xda-developers.com/member.php?u=2095315" />
-        </PreferenceScreen>
-       
-        <PreferenceScreen
-        android:title="garrykd"
-                android:icon="@drawable/garry">
-                <intent
-                        android:action="android.intent.action.VIEW"
-                        android:data="http://forum.xda-developers.com/member.php?u=2640853" />
-        </PreferenceScreen>
- 
-        <PreferenceScreen
-        android:title="ralpheboyo"
-                android:icon="@drawable/ralph">
-                <intent
-                        android:action="android.intent.action.VIEW"
-                        android:data="http://forum.xda-developers.com/member.php?u=264345" />
-        </PreferenceScreen>    
-	
-    </PreferenceCategory>
-    
-    <PreferenceCategory
-        android:key="category_team_walls"
-        android:title="Twisted Walls">
-     
-      <PreferenceScreen
-        android:title="customworx"
-	android:icon="@drawable/custom">
-                <intent
-                        android:action="android.intent.action.VIEW"
-                        android:data="https://plus.google.com/collection/82YaV" />
-       </PreferenceScreen> 
-      
-    </PreferenceCategory>
-    
-    <PreferenceCategory
-        android:key="category_testers"
-        android:title="Twisted Testers">
-      
-    <PreferenceScreen
-        android:key="category_team_testers"
-	android:summary="a g bell, aoaleman, bobby janow, f100cleveland, JaKe, Maybelle, Mistertac, mrminor13, renny083, skripka, theesotericone" />
-    
-    </PreferenceCategory>
-    
+<PreferenceScreen
+android:title="xWASABI"
+android:icon="@drawable/xwasabi">
+<intent
+android:action="android.intent.action.VIEW"
+android:data="https://plus.google.com/u/0/101729058057775926785/posts" />
+</PreferenceScreen> 
+
+</PreferenceCategory>
+
+<PreferenceCategory
+android:key="category_support_twisted"
+android:title="Twisted Support System">
+
+<PreferenceScreen
+android:title="midnightrider"
+android:icon="@drawable/jerry">
+<intent
+android:action="android.intent.action.VIEW"
+android:data="http://forum.xda-developers.com/member.php?u=4518483" />
+</PreferenceScreen>    
+
+<PreferenceScreen
+android:title="ezio84"
+android:icon="@drawable/ezio">
+<intent
+android:action="android.intent.action.VIEW"
+android:data="http://forum.xda-developers.com/member.php?u=2095315" />
+</PreferenceScreen>
+
+<PreferenceScreen
+android:title="garrykd"
+android:icon="@drawable/garry">
+<intent
+android:action="android.intent.action.VIEW"
+android:data="http://forum.xda-developers.com/member.php?u=2640853" />
+</PreferenceScreen>
+
+<PreferenceScreen
+android:title="ralpheboyo"
+android:icon="@drawable/ralph">
+<intent
+android:action="android.intent.action.VIEW"
+android:data="http://forum.xda-developers.com/member.php?u=264345" />
+</PreferenceScreen>    
+
+</PreferenceCategory>
+
+<PreferenceCategory
+android:key="category_team_walls"
+android:title="Twisted Walls">
+
+<PreferenceScreen
+android:title="customworx"
+android:icon="@drawable/custom">
+<intent
+android:action="android.intent.action.VIEW"
+android:data="https://plus.google.com/collection/82YaV" />
+</PreferenceScreen> 
+
+</PreferenceCategory>
+
+<PreferenceCategory
+android:key="category_testers"
+android:title="Twisted Testers">
+
+<PreferenceScreen
+android:key="category_team_testers"
+android:summary="a g bell, aoaleman, bobby janow, f100cleveland, JaKe, Maybelle, Mistertac, mrminor13, renny083, skripka, theesotericone" />
+
+</PreferenceCategory>
+
 </PreferenceScreen>
