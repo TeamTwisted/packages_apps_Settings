@@ -1,12 +1,17 @@
 package com.android.settings.twisted;
- 
+
+import android.app.AlertDialog;
 import android.app.Activity;
 import android.app.ActivityManagerNative;
 import android.app.Dialog;
+import android.app.DialogFragment;
+
 import android.app.IActivityManager;
 import android.app.ProgressDialog;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.DialogInterface;
+
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.database.ContentObserver;
@@ -61,6 +66,8 @@ public class TwistedSettings extends SettingsPreferenceFragment implements
     
     private static final String SEARCH_PANEL_ENABLED = "search_panel_enabled";
     private static final String PREF_RING = "navigation_bar_ring";
+    
+    private static final int DLG_NAVIGATION_WARNING = 0; 
 
     SwitchPreference mSearchPanelEnabled;
     PreferenceScreen mRingPreference;
@@ -219,6 +226,15 @@ public class TwistedSettings extends SettingsPreferenceFragment implements
 
         mRingPreference = (PreferenceScreen) findPreference(PREF_RING);
 
+        mEnableNavigationBar.setOnPreferenceChangeListener(this);
+
+        mNavigationBarCanMove = (SwitchPreference) findPreference(PREF_NAVIGATION_BAR_CAN_MOVE);
+        if (DeviceUtils.isPhone(getActivity())) {
+            mNavigationBarCanMove.setOnPreferenceChangeListener(this);
+        } else {
+            prefSet.removePreference(mNavigationBarCanMove);
+            mNavigationBarCanMove = null;
+        }        
         updateSettings();        
     }
 
@@ -286,6 +302,9 @@ public class TwistedSettings extends SettingsPreferenceFragment implements
         mNavBarMenuDisplay.setEnabled(show);
         mButtonPreference.setEnabled(show);
         mStyleDimenPreference.setEnabled(show);
+        if (mNavigationBarCanMove != null) {
+            mNavigationBarCanMove.setEnabled(show);
+        }        
         mNavigationBarCanMove.setEnabled(show);
         mMenuDisplayLocation.setEnabled(show
             && mNavBarMenuDisplayValue != 1);
@@ -401,6 +420,11 @@ public class TwistedSettings extends SettingsPreferenceFragment implements
             mMenuDisplayLocation.setEnabled(mNavBarMenuDisplayValue != 1);
             return true;
         } else if (preference == mEnableNavigationBar) {
+            if (!((Boolean) newValue) && !Action.isPieEnabled(getActivity())
+                    && Action.isNavBarDefault(getActivity())) {
+                showDialogInner(DLG_NAVIGATION_WARNING);
+                return true;
+            }        
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.NAVIGATION_BAR_SHOW,
                     ((Boolean) newValue) ? 1 : 0);
@@ -453,9 +477,77 @@ public class TwistedSettings extends SettingsPreferenceFragment implements
      @Override
      public void onResume() {
          super.onResume();
+        updateSettings();
+        mSettingsObserver.observe();         
         updateStatusBarBrightnessControl();
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+        getActivity().getContentResolver().unregisterContentObserver(mSettingsObserver);
+    }
+
+    private void showDialogInner(int id) {
+        DialogFragment newFragment = MyAlertDialogFragment.newInstance(id);
+        newFragment.setTargetFragment(this, 0);
+        newFragment.show(getFragmentManager(), "dialog " + id);
+    }
+
+    public static class MyAlertDialogFragment extends DialogFragment {
+
+        public static MyAlertDialogFragment newInstance(int id) {
+            MyAlertDialogFragment frag = new MyAlertDialogFragment();
+            Bundle args = new Bundle();
+            args.putInt("id", id);
+            frag.setArguments(args);
+            return frag;
+        }
+
+        TwistedSettings getOwner() {
+            return (TwistedSettings) getTargetFragment();
+        }
+
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            int id = getArguments().getInt("id");
+            switch (id) {
+                case DLG_NAVIGATION_WARNING:
+                    return new AlertDialog.Builder(getActivity())
+                    .setTitle(R.string.attention)
+                    .setMessage(R.string.navigation_bar_warning_no_navigation_present)
+                    .setNegativeButton(R.string.dlg_cancel,
+                        new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    })
+                    .setPositiveButton(R.string.dlg_ok,
+                        new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Settings.System.putInt(getActivity().getContentResolver(),
+                                    Settings.System.PIE_CONTROLS, 1);
+                            Settings.System.putInt(getActivity().getContentResolver(),
+                                    Settings.System.NAVIGATION_BAR_SHOW, 0);
+                            getOwner().updateNavbarPreferences(false);
+                        }
+                    })
+                    .create();
+            }
+            throw new IllegalArgumentException("unknown id " + id);
+        }
+
+        @Override
+        public void onCancel(DialogInterface dialog) {
+            int id = getArguments().getInt("id");
+            switch (id) {
+                case DLG_NAVIGATION_WARNING:
+                    getOwner().mEnableNavigationBar.setChecked(true);
+                    getOwner().updateNavbarPreferences(true);
+                    break;
+            }
+        }
+       }
     private void updateStatusBarBrightnessControl() {
         try {
             if (mStatusBarBrightnessControl != null) {
@@ -492,4 +584,4 @@ public class TwistedSettings extends SettingsPreferenceFragment implements
                     false, this);
         }
     }
-}
+  }

@@ -4,9 +4,7 @@
     android:title="Twisted Apps" >
 
         <PreferenceCategory
-	    android:id="@+id/twisted_apps"
-	    android:title="Applications"
- >
+	    android:id="@+id/twisted_apps" >
 	  
         <!-- Kernel Adiutor -->
         <PreferenceScreen
