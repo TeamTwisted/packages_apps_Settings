@@ -596,7 +596,7 @@
 <!-- Setting checkbox summary for displaying USB debugging notification -->
 <string name="adb_notify">USB debugging notify</string>
 <string name="adb_notify_summary">Display a notification when USB debugging is connected</string>
-<string name="status_bar_title">Add-ons</string>
+<string name="status_bar_title">Battery, Clock, Date</string>
 <string name="block_on_secure_keyguard_title">Disable on lockscreen</string>
 <string name="block_on_secure_keyguard_summary">Disable quick settings on secure lockscreen.</string>
 <string name="shortcut_action_menu">Menu</string>
