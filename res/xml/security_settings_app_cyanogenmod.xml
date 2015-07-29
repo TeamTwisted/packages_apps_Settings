@@ -22,5 +22,15 @@
             android:summary="@string/privacy_guard_manager_summary"
             android:fragment="com.android.settings.simpleaosp.privacyguard.PrivacyGuardManager" />
 
+    <PreferenceCategory
+        android:key="app_security"
+        android:title="@string/app_security_title">
+
+        <PreferenceScreen
+            android:key="blacklist"
+            android:title="@string/blacklist_title"
+            android:fragment="com.android.settings.blacklist.BlacklistSettings" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
