@@ -1256,6 +1256,15 @@ public class SettingsActivity extends Activity
                     if (!supported) {
                         removeTile = true;
                     }
+                } else if (id == R.id.slimota) {
+                    boolean supported = false;
+                    try {
+                        supported = (getPackageManager().getPackageInfo("com.fusionjack.slimota", 0).versionCode > 0);
+                    } catch (PackageManager.NameNotFoundException e) {
+                    }
+                    if (!supported) {
+                        removeTile = true;
+                    }
                 }
 
                 if (UserHandle.MU_ENABLED && UserHandle.myUserId() != 0

@@ -8,6 +8,17 @@
 	    android:title="Applications"
  >
 	  
+        <!-- SlimOTA -->
+        <PreferenceScreen
+               android:id="@+id/slimota"
+               android:title="@string/slimota_title"
+               android:icon="@drawable/ic_settings_slimcenter">
+               <intent
+                       android:action="android.intent.action.MAIN"
+                       android:targetPackage="com.fusionjack.slimota"
+                       android:targetClass="com.fusionjack.slimota.MainActivity" />
+        </PreferenceScreen>
+
         <!-- Kernel Adiutor -->
         <PreferenceScreen
             android:id="@+id/kernel_adiutor"
