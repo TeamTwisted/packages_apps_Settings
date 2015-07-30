@@ -422,6 +422,9 @@
 <!-- About phone screen, build date of ROM -->
 <string name="build_date">Build date</string>
 <string name="build_date_default">Unknown</string>
+<string name="twisted_version_title">Twisted version</string>
+<string name="twisted_version_default">Unknown</string>
+
 <!-- About device screen, CPU and RAM info. -->
 <string name="cpu_info">CPU</string>
 <string name="mem_info">Memory</string>
@@ -916,6 +919,6 @@
     <string name="pie_disable_ime_triggers_summary">Reduces left and right trigger size if keyboard is active</string>
 
     <!-- SlimOTA -->
-    <string name="slimota_title">SlimOTA</string>
+    <string name="slimota_title">TwistedOTA</string>
 
 </resources>

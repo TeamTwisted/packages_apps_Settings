@@ -154,6 +154,12 @@
                 android:title="@string/selinux_status"
                 android:summary="@string/selinux_status_enforcing"/>
 
+        <!-- Twisted firmware version -->
+        <Preference android:key="twisted_version"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/twisted_version_title"
+                android:summary="@string/twisted_version_default"/>
+
         <!-- Twisted build date -->
         <Preference android:key="build_date"
                 style="?android:preferenceInformationStyle"
