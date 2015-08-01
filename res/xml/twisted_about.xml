@@ -59,14 +59,6 @@ android:key="category_support_twisted"
 android:title="Twisted Support System">
 
 <PreferenceScreen
-android:title="midnightrider"
-android:icon="@drawable/jerry">
-<intent
-android:action="android.intent.action.VIEW"
-android:data="http://forum.xda-developers.com/member.php?u=4518483" />
-</PreferenceScreen>    
-
-<PreferenceScreen
 android:title="ezio84"
 android:icon="@drawable/ezio">
 <intent
@@ -81,6 +73,15 @@ android:icon="@drawable/garry">
 android:action="android.intent.action.VIEW"
 android:data="http://forum.xda-developers.com/member.php?u=2640853" />
 </PreferenceScreen>
+
+
+<PreferenceScreen
+android:title="midnightrider"
+android:icon="@drawable/jerry">
+<intent
+android:action="android.intent.action.VIEW"
+android:data="http://forum.xda-developers.com/member.php?u=4518483" />
+</PreferenceScreen>    
 
 <PreferenceScreen
 android:title="ralpheboyo"
@@ -112,7 +113,7 @@ android:title="Twisted Testers">
 
 <PreferenceScreen
 android:key="category_team_testers"
-android:summary="a g bell, aoaleman, bobby janow, f100cleveland, JaKe, Maybelle, Mistertac, mrminor13, renny083, skripka, theesotericone" />
+android:summary="a g bell, aoaleman, bobby janow, f100cleveland, gambit07, JaKe, ifwillems, Maybelle, Mistertac, mrminor13, raycaster3, renny083, skripka, theesotericone" />
 
 </PreferenceCategory>
 
