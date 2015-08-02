@@ -9,19 +9,23 @@ xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 <PreferenceScreen 
 android:key="twisted_logo"
 android:layout="@layout/twisted_logo_row" />
-<!--
-<PreferenceScreen android:title="OTA notifications">
-<intent
-android:action="android.intent.action.VIEW"
-android:data="https://www.pushbullet.com/channel?tag=chroma"/>
-</PreferenceScreen>
 
-<PreferenceScreen android:title="View changelog">
-<intent
-android:action="android.intent.action.VIEW"
-android:data="" />
-</PreferenceScreen>
--->
+<PreferenceCategory
+android:key="category_ota_twisted"
+android:title="Updates">
+  
+        <!-- SlimOTA -->
+        <PreferenceScreen
+               android:id="@+id/slimota"
+               android:title="@string/slimota_title"
+               android:icon="@drawable/ic_settings_slimcenter">
+               <intent
+                       android:action="android.intent.action.MAIN"
+                       android:targetPackage="com.fusionjack.slimota"
+                       android:targetClass="com.fusionjack.slimota.MainActivity" />
+        </PreferenceScreen>
+</PreferenceCategory>
+
 <!-- Developers -->
 <PreferenceCategory
 android:key="category_team_twisted"
@@ -113,7 +117,7 @@ android:title="Twisted Testers">
 
 <PreferenceScreen
 android:key="category_team_testers"
-android:summary="a g bell, aoaleman, bobby janow, f100cleveland, gambit07, JaKe, ifwillems, Maybelle, Mistertac, mrminor13, raycaster3, renny083, skripka, theesotericone" />
+android:summary="a g bell, aoaleman, bobby janow, CalvinS, f100cleveland, gambit07, JaKe, ifwillems, Maybelle, Mistertac, mrminor13, raycaster3, renny083, skripka, theesotericone" />
 
 </PreferenceCategory>
 

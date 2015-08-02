@@ -5,20 +5,19 @@
 
         <PreferenceCategory
 	    android:id="@+id/twisted_apps"
-	    android:title="Applications"
- >
+	  android:title="Applications">
 	  
-        <!-- SlimOTA -->
+	<!-- AdAway -->
         <PreferenceScreen
-               android:id="@+id/slimota"
-               android:title="@string/slimota_title"
-               android:icon="@drawable/ic_settings_slimcenter">
-               <intent
-                       android:action="android.intent.action.MAIN"
-                       android:targetPackage="com.fusionjack.slimota"
-                       android:targetClass="com.fusionjack.slimota.MainActivity" />
+	android:id="@+id/adaway_settings"
+		android:title="@string/adaway_title"
+		android:icon="@drawable/ic_adaway_exposed" >
+		<intent
+		android:action="android.intent.action.MAIN"
+		android:targetClass="org.adaway.ui.BaseActivity"
+		  android:targetPackage="org.adaway" />
         </PreferenceScreen>
-
+	
         <!-- Kernel Adiutor -->
         <PreferenceScreen
             android:id="@+id/kernel_adiutor"
@@ -50,17 +49,6 @@
 	      android:targetClass="net.dinglisch.android.tasker.Kid" />
         </PreferenceScreen>	
 
-	<!-- AdAway -->
-        <PreferenceScreen
-	android:id="@+id/adaway_settings"
-		android:title="@string/adaway_title"
-		android:icon="@drawable/ic_adaway_exposed" >
-		<intent
-		android:action="android.intent.action.MAIN"
-		android:targetClass="org.adaway.ui.BaseActivity"
-		  android:targetPackage="org.adaway" />
-        </PreferenceScreen>
-	
         <!-- SuperSU -->
         <PreferenceScreen
                 android:id="@+id/supersu_settings"

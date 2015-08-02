@@ -26,7 +26,7 @@
     <string name="shortcut_action_users">Users</string>
     <string name="shortcut_action_lockdown">Lock now</string>
     <string name="shortcut_action_screenrecord">Screen recorder</string>
-    <string name="power_menu_title">Global menu</string>
+    <string name="power_menu_title">Power Menu</string>
     <string name="screen_recorder_video_dimensions_title">Video size</string>
     <string name="screen_recorder_video_bitrate_title">Bitrate</string>
     <string name="screen_recorder_record_audio_title">External audio</string>

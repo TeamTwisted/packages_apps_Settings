@@ -202,12 +202,6 @@
         android:summary="@string/summary_power_menu_expanded_desktop"
         android:fragment="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />
 
-     <PreferenceScreen
-         android:key="privacy_guard_manager"
-         android:title="@string/privacy_guard_manager_title"
-         android:summary="@string/summary_privacy_guard_manager_title"
-         android:fragment="com.android.settings.terminus.privacyguard.PrivacyGuardManager" />
-
       <PreferenceScreen
           android:key="wakelock_blocker"
           android:fragment="com.android.settings.terminus.WakeLockBlocker"
@@ -215,7 +209,24 @@
           android:title="@string/wakelock_blocker_title" />
 
   </PreferenceCategory>
-  
+
+    <PreferenceCategory
+        android:key="app_security"
+        android:title="Security">
+
+        <PreferenceScreen
+            android:key="blacklist"
+            android:title="@string/blacklist_title"
+            android:fragment="com.android.settings.blacklist.BlacklistSettings" />
+	
+	<PreferenceScreen
+	    android:key="privacy_guard_manager"
+	    android:title="@string/privacy_guard_manager_title"
+	    android:summary="@string/summary_privacy_guard_manager_title"
+	    android:fragment="com.android.settings.terminus.privacyguard.PrivacyGuardManager" />
+
+    </PreferenceCategory>
+    
   <PreferenceCategory
          android:key="misc_settings"
          android:title="@string/misc_setting" >
