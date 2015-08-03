@@ -15,6 +15,15 @@
 -->
 
 <resources>
+    <!--ADDING EXPOSED DIMENS FOR DASHBOARD_BACKGROUND_EXPOSED.XML 0704-->
+
+    <dimen name="dashboard_category_topLeftRadius">0dp</dimen>
+    <dimen name="dashboard_category_topRightRadius">0dp</dimen>
+    <dimen name="dashboard_category_bottomLeftRadius">0dp</dimen>
+    <dimen name="dashboard_category_bottomRightRadius">0dp</dimen>
+	
+    <!--END OF NEW ADDITION 0704-->
+
     <dimen name="device_memory_usage_button_width">16dip</dimen>
     <dimen name="device_memory_usage_button_height">32dip</dimen>
     <dimen name="action_bar_switch_padding">16dip</dimen>
