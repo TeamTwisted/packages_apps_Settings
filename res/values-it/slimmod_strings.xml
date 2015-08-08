@@ -30,7 +30,11 @@
     <string name="show_network_traffic_2000">2000 ms</string>
     <string name="network_traffic_autohide">Visualizzazione intelligente</string>
     <string name="network_traffic_autohide_summary">Nasconde il monitor del traffico in caso di attività di rete sotto la soglia impostata</string>
-    <string name="network_traffic_autohide_threshold">Soglia di inattività</string> 
+    <string name="network_traffic_autohide_threshold">Soglia di inattività</string>
+
+    <!-- Show/Hide Search Bar -->
+    <string name="recents_show_searchbar">Disattiva barra di ricerca nei recenti</string>
+    <string name="recents_show_searchbar_summary">Disattiva la barra di ricerca Google nel menu delle app recenti</string>
 
     <!-- Developer options - kill app long press back -->
     <string name="kill_app_longpress_back">Termina app rapido</string>
