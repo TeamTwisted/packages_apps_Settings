@@ -93,6 +93,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_TAP_TO_WAKE = "double_tap_wake_gesture";
     private static final String CATEGORY_ADVANCED = "advanced_display_prefs";
 
+    private static final String ROTATION_LOCKSCREEN = "Lockscreen";
     private static final String ROTATION_ANGLE_0 = "0";
     private static final String ROTATION_ANGLE_90 = "90";
     private static final String ROTATION_ANGLE_180 = "180";
@@ -299,11 +300,19 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 DisplayRotation.ROTATION_0_MODE|DisplayRotation.ROTATION_90_MODE
                 |DisplayRotation.ROTATION_270_MODE);
 
+        boolean configEnableLockRotation = getResources().
+                        getBoolean(com.android.internal.R.bool.config_enableLockScreenRotation);
+        boolean lockScreenRotationEnabled = Settings.System.getInt(getContentResolver(),
+                        Settings.System.LOCKSCREEN_ROTATION, configEnableLockRotation ? 1 : 0) != 0;
+
         if (!rotationEnabled) {
             summary.append(getString(R.string.display_rotation_disabled));
         } else {
             ArrayList<String> rotationList = new ArrayList<String>();
             String delim = "";
+            if (lockScreenRotationEnabled) {
+                rotationList.add(ROTATION_LOCKSCREEN);
+            }
             if ((mode & DisplayRotation.ROTATION_0_MODE) != 0) {
                 rotationList.add(ROTATION_ANGLE_0);
             }
