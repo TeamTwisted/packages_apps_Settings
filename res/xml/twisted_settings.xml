@@ -301,6 +301,12 @@
             android:targetClass="com.cyanogenmod.lockclock.preference.Preferences" />
     </PreferenceScreen>
 
+<PreferenceScreen
+android:key="lockscreen_weather"
+android:title="@string/lock_screen_weather_settings_title"
+android:summary="@string/lock_screen_weather_settings_summary"
+android:fragment="com.android.settings.slim.LockScreenWeatherSettings" />
+
   </PreferenceCategory>
 
 </PreferenceScreen>
