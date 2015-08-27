@@ -90,4 +90,8 @@
    <string name="qs_tile_reboot">Reboot</string>
    <string name="twistedapps_apps_title">Twisted Apps</string> 
 
+    <!-- Three finger screenshot gesture -->
+    <string name="three_finger_gesture">Three finger gesture</string>
+    <string name="three_finger_gesture_summary">Swipe three finger to screenshot</string>
+
 </resources>
