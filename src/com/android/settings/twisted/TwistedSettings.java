@@ -305,7 +305,6 @@ public class TwistedSettings extends SettingsPreferenceFragment implements
         if (mNavigationBarCanMove != null) {
             mNavigationBarCanMove.setEnabled(show);
         }        
-        mNavigationBarCanMove.setEnabled(show);
         mMenuDisplayLocation.setEnabled(show
             && mNavBarMenuDisplayValue != 1);
 
