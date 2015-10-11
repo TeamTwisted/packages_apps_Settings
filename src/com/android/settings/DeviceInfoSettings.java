@@ -76,7 +76,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_EQUIPMENT_ID = "fcc_equipment_id";
     private static final String PROPERTY_EQUIPMENT_ID = "ro.ril.fccid";
     private static final String KEY_DEVICE_FEEDBACK = "device_feedback";
-    private static final String KEY_MOD_BUILD_DATE = "build_date";
+    private static final String KEY_TWISTED_VERSION = "twisted_version";
     private static final String KEY_SM_AND = "sm_android";
     private static final String KEY_SM_FLAGS = "sm_flags";
 
