@@ -1,0 +1,94 @@
+<PreferenceScreen
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+android:title="Twisted Apps" >
+
+<PreferenceCategory
+android:layout="@layout/intent_main_header_twistedapps"
+android:id="@+id/twisted_apps"
+android:title="Twisted Corner">
+
+<PreferenceScreen
+android:layout="@layout/intent_top_bottom_spacer_twisted"/>
+
+<!-- SlimOTA -->
+<PreferenceScreen
+android:id="@+id/slimota"
+android:title="@string/slimota_title">
+<intent
+android:action="android.intent.action.MAIN"
+android:targetPackage="com.fusionjack.slimota"
+android:targetClass="com.fusionjack.slimota.MainActivity" />
+</PreferenceScreen>
+
+<PreferenceScreen
+android:layout="@layout/intent_top_bottom_spacer_twisted">
+</PreferenceScreen>
+
+<!-- AdAway -->
+<PreferenceScreen
+android:id="@+id/adaway_settings"
+android:title="@string/adaway_title">
+<intent
+android:action="android.intent.action.MAIN"
+android:targetClass="org.adaway.ui.BaseActivity"
+android:targetPackage="org.adaway" />
+</PreferenceScreen>
+
+<!-- Kernel Adiutor -->
+<PreferenceScreen
+android:id="@+id/kernel_adiutor"
+android:title="@string/kerneladiutor_title">
+<intent
+android:action="android.intent.action.MAIN"
+android:targetPackage="com.grarak.kerneladiutor"
+android:targetClass="com.grarak.kerneladiutor.MainActivity" />
+</PreferenceScreen>
+
+<PreferenceScreen
+android:id="@+id/bitsyko_layers"
+android:title="@string/bitsyko_layers">     
+<intent
+android:action="android.intent.action.MAIN"
+android:targetPackage="com.lovejoy777.rroandlayersmanager"
+android:targetClass="com.lovejoy777.rroandlayersmanager.menu" />
+</PreferenceScreen>	
+
+<PreferenceScreen
+android:id="@+id/kantjer_layers"
+android:title="@string/kantjer_layers_title">
+<intent
+android:action="android.intent.action.MAIN"
+android:targetPackage="com.kantjer.xda.layers"
+android:targetClass="net.dinglisch.android.tasker.Kid" />
+</PreferenceScreen>	
+
+<!-- SuperSU -->
+<PreferenceScreen
+android:id="@+id/supersu_settings"
+android:title="@string/supersu_title">
+<intent
+android:action="android.intent.action.MAIN"
+android:targetPackage="eu.chainfire.supersu"
+android:targetClass="eu.chainfire.supersu.MainActivity" />
+</PreferenceScreen>
+
+<!-- Viper4Android
+<PreferenceScreen
+android:id="@+id/viper_settings"
+android:icon="@drawable/ic_settings_notifications_exposed"
+android:title="@string/viper_title">
+<intent
+android:action="android.intent.action.MAIN"
+android:targetPackage="com.vipercn.viper4android_v2"
+android:targetClass="com.vipercn.viper4android_v2.activity.ViPER4Android" />
+</PreferenceScreen>
+-->
+<PreferenceScreen
+android:layout="@layout/intent_top_bottom_spacer_twisted">
+</PreferenceScreen>
+
+</PreferenceCategory>
+</PreferenceScreen>
+
+

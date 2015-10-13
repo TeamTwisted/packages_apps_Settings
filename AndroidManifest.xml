@@ -2324,6 +2324,11 @@
                 android:value="true" />
         </activity>
 
+<!-- BUILD TWEAKS START -->
+        <activity android:name=".twisted.TwistedSettings" />
+        <activity android:name=".twisted.TwistedProjectX" />
+        <activity android:name=".twisted.TwistedApps" />
+
         <!-- Keep compatibility with old shortcuts. -->
         <activity-alias android:name="Settings$SoundSettingsActivity"
                 android:label="@string/notification_settings"

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+android:top="1dp"
+android:bottom="1dp">
+<shape android:shape="rectangle">
+<corners android:radius="0dp" />
+<gradient
+android:angle="90"
+android:type="linear"
+android:startColor="@color/twisted_start_shadow"
+android:centerColor="@color/twisted_center_shadow"
+android:endColor="@color/twisted_end_shadow"/>
+</shape>
+</item>
+</layer-list>

@@ -1,24 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+				
+<!-- GENERIC STRINGS - START -->
+<!-- Font Sample Text -->
+<string name="font_size_sample">Twisted @.@</string>
+<!-- Bluetooth settings. A checkbox to set if we should accept all the file types regardless of their presence in MIME type whitelist -->
+<string name="bluetooth_accept_all_files">Accept all file types</string>
 
-    <!-- About phone screen, build date of ROM, Twisted Version -->
-    <string name="build_date">Twisted build date</string>
-    <string name="build_date_default">2015-01-01-0000</string>
-    <string name="twisted_version_title">Twisted version</string>
-    <string name="twisted_version_default">Unknown</string>
 
-    <!-- GCC version info -->
-    <string name="sm_android">Gcc android version</string>
-    <string name="sm_android_default">Unknown</string>
+<!--  TWISTED BUILD INFO - START -->				
+<!--  Build date of ROM, Twisted Version -->
+<string name="build_date">Twisted build date</string>
+<string name="build_date_default">2015-01-01-0000</string>
+<string name="twisted_version_title">Twisted version</string>
+<string name="twisted_version_default">[usainbolt]</string>
+<!-- GCC version info -->
+<string name="sm_android">Gcc android version</string>
+<string name="sm_android_default">Unknown</string>
+<!-- GCC build flags info -->
+<string name="sm_flags">Optimizations</string>
+<string name="sm_flags_default">None</string>
 
-    <!-- GCC build flags info -->
-    <string name="sm_flags">Optimizations</string>
-    <string name="sm_flags_default">None</string>
 
-    <!-- SuperSU header name - the app hides itself from launcher based on this resource name being present in com.android.settings -->
-    <string name="supersu_title">SuperSU</string>
-    
-    <!-- Bluetooth settings. A checkbox to set if we should accept all the file types regardless of their presence in MIME type whitelist -->
-    <string name="bluetooth_accept_all_files">Accept all file types</string>
+<!-- DASHBOARD CATEGORY TITLES - START -->				
+<!-- Twisted Settings -->
+<string name="twisted_settings_title">Twisted Tweaks</string>
+<!-- Twisted Apps -->
+<string name="twistedapps_apps_title">Twisted Apps</string> 
 
+<!-- PREFERENCE SCREENS - START -->				
+<!-- Twisted Settings - Categories-->
+<string name="nav_bar_setting">Navigation Bar</string>
+<string name="status_bar_setting">Status Bar</string>
+<string name="notif_sound_setting">Notifications</string>
+<string name="systemwide_setting">System-Wide</string>
+<string name="misc_setting">Miscellaneous</string>
+
+<!-- Twisted About -->
+<string name="twisted_menu_about">About Twisted Android Project</string> 
+
+<!-- Twisted Apps -->
+<string name="bitsyko_layers">Layers</string>
+<string name="kantjer_layers_title">Layers Backup</string>
+<string name="adaway_title">AdAway</string>
+<string name="supersu_title">SuperSU</string>
+
+<!-- Display Settings -->
+<!-- LCD density -->
+<string name="lcd_density">LCD density</string>
+<string name="lcd_density_summary">%d DPI</string>
+<string name="lcd_density_default">Device default</string>
+<string name="lcd_density_unsupported">Unsupported</string>
+<string name="restarting_ui">Restarting</string>
+<!-- Rotation -->
+<string name="display_rotation_title">Rotation</string>
+<string name="display_rotation_disabled">Disabled</string>
+<string name="display_rotation_unit">degrees</string>
+<string name="display_rotation_category_title">Rotation modes</string>
+<string name="display_rotation_0_title">0 degrees</string>
+<string name="display_rotation_90_title">90 degrees</string>
+<string name="display_rotation_180_title">180 degrees</string>
+<string name="display_rotation_270_title">270 degrees</string>
+
+<!-- NavigationBar Settings -->
+<!-- Navigation Bar -->
+<string name="navigation_bar_title">NavBar Height</string>
+<!-- Navigation Bar Height -->
+<string name="navigation_bar_height">Navigation bar height</string>
+<string name="navigation_bar_height_54">54</string>
+<string name="navigation_bar_height_52">52</string>
+<string name="navigation_bar_height_50">50</string>
+<string name="navigation_bar_height_48">48dp (default)</string>
+<string name="navigation_bar_height_44">44dp</string>
+<string name="navigation_bar_height_40">40dp</string>
+<string name="navigation_bar_height_36">36dp</string>
+<string name="navigation_bar_height_32">32dp</string>
+<string name="navigation_bar_height_28">28dp</string>
+<string name="navigation_bar_height_24">24dp</string>
+<string name="navigation_bar_height_20">20dp</string>
+<string name="navigation_bar_height_0">0dp (hide)</string>
+
+<!-- StatusBar Settings -->
+<!-- Weather in status bar -->
+<string name="status_bar_show_weather_title">Show weather</string>
+<string name="status_bar_show_weather_summary">Show the weather in the status bar header</string>
+<!--- Lock clock -->
+<string name="lock_clock_title">Clock widget</string>
+<string name="lock_clock_summary">View or change how the \'cLock\' widget will display</string>
+<string name="weather_clock_title">Status bar weather</string>
+<!-- Network traffic -->
+<string name="network_traffic_title">Network traffic</string>
+<string name="show_network_traffic_state">Status bar traffic monitor</string>
+<string name="network_traffic_summary">Enable various network traffic options in statusbar</string>
+<string name="show_network_traffic_unit">Display unit</string>
+<string name="show_network_traffic_frequency">Update interval</string>
+<string name="show_network_traffic_disable">Disabled</string>
+<string name="show_network_traffic_up">Outgoing</string>
+<string name="show_network_traffic_down">Incoming</string>
+<string name="show_network_traffic_all">Outgoing and incoming</string>
+<string name="show_network_traffic_bit">Bits per second</string>
+<string name="show_network_traffic_byte">Bytes per second</string>
+<string name="show_network_traffic_500">500 ms</string>
+<string name="show_network_traffic_1000">1000 ms</string>
+<string name="show_network_traffic_1500">1500 ms</string>
+<string name="show_network_traffic_2000">2000 ms</string>
+<string name="network_traffic_autohide">Auto hide</string>
+<string name="network_traffic_autohide_summary">Hide the traffic monitor when there is no activity</string>
+<string name="network_traffic_autohide_threshold">Inactivity threshold</string> 
+<!-- QuickSettings -->
+<string name="summary_qs_title">PullDown and QS Options</string>
+<string name="qs_tile_reboot">Reboot</string>
+
+<!-- Systemwide Settings -->
+<!-- Three finger screenshot gesture -->
+<string name="three_finger_gesture">Three finger gesture</string>
+<string name="three_finger_gesture_summary">Swipe three finger to screenshot</string>
+
+		
 </resources>
