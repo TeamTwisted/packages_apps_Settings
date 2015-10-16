@@ -21,8 +21,8 @@ xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
 android:title="@string/notification_drawer_title">
 
     <PreferenceCategory
-	android:key="category_quicksettings_options"
-	android:title="Quick Settings Option" >
+        android:key="category_quicksettings_options"
+        android:title="Quick Settings Option" >
 
     <PreferenceScreen
         android:title="@string/quick_settings_title"
@@ -33,9 +33,16 @@ android:title="@string/notification_drawer_title">
         </PreferenceScreen>
 
     <com.android.settings.chroma.SecureSettingSwitchPreference
-	android:key="qs_use_four_columns"
-	android:title="@string/qs_four_columns_title"
-	android:defaultValue="false" />
+        android:key="sysui_qs_main_tiles"
+        android:title="@string/qs_main_tiles_title"
+        android:summaryOn="@string/qs_main_tiles_summary_on"
+        android:summaryOff="@string/qs_main_tiles_summary_off"
+        android:defaultValue="true" />
+
+    <com.android.settings.chroma.SecureSettingSwitchPreference
+        android:key="qs_use_four_columns"
+        android:title="@string/qs_four_columns_title"
+        android:defaultValue="false" />
 
     <com.android.settings.chroma.SecureSettingSwitchPreference
         android:key="qs_location_advanced"
