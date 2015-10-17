@@ -1,9 +1,7 @@
 package com.android.settings.twisted;
 
 import com.android.internal.logging.MetricsLogger;
-
 import android.os.Bundle;
-
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 

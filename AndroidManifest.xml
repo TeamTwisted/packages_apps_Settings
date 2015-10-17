@@ -2324,9 +2324,9 @@
                 android:value="true" />
         </activity>
 
-<!-- BUILD TWEAKS START -->
+								<!-- BUILD TWEAKS START -->
         <activity android:name=".twisted.TwistedSettings" />
-        <activity android:name=".twisted.TwistedProjectX" />
+        <activity android:name=".twisted.fragments.TwistedStatusBar" />
         <activity android:name=".twisted.TwistedApps" />
 
         <!-- Keep compatibility with old shortcuts. -->

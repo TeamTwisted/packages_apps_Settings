@@ -13,7 +13,7 @@
 <string name="build_date">Twisted build date</string>
 <string name="build_date_default">2015-01-01-0000</string>
 <string name="twisted_version_title">Twisted version</string>
-<string name="twisted_version_default">[usainbolt]</string>
+<string name="twisted_version_default">Unkown</string>
 <!-- GCC version info -->
 <string name="sm_android">Gcc android version</string>
 <string name="sm_android_default">Unknown</string>
@@ -40,6 +40,8 @@
 <string name="twisted_menu_about">About Twisted Android Project</string> 
 
 <!-- Twisted Apps -->
+<string name="slimota_title">Twisted OTA</string>
+<string name="kerneladiutor_title">Kernel Adiutor</string>
 <string name="bitsyko_layers">Layers</string>
 <string name="kantjer_layers_title">Layers Backup</string>
 <string name="adaway_title">AdAway</string>
@@ -81,6 +83,14 @@
 <string name="navigation_bar_height_0">0dp (hide)</string>
 
 <!-- StatusBar Settings -->
+
+<string name="battery_title">Status bar battery</string>
+<string name="battery_summary">Click to see battery style options.</string>
+<string name="battery_style_title">Style</string>
+<string name="battery_percent_title">Show percent</string>
+<string name="battery_percent_none">Never</string>
+<string name="battery_percent_always">Always</string>
+<string name="battery_percent_expanded">Expanded</string>
 <!-- Weather in status bar -->
 <string name="status_bar_show_weather_title">Show weather</string>
 <string name="status_bar_show_weather_summary">Show the weather in the status bar header</string>
