@@ -16,12 +16,18 @@ android:icon="@drawable/ic_twisted_statusbar"
 android:key="status_bar"
 android:title="@string/status_bar_setting"
 android:layout="@layout/intent_sub_header_twisted"/>
+
 <!-- StatusBar Battery -->
 <PreferenceScreen
 android:fragment="com.android.settings.twisted.fragments.TwistedStatusBar"
 android:key="twisted_statusbar"
 android:title="@string/battery_title"/>
 
+<PreferenceScreen
+android:key="wakelock_blocker"
+android:fragment="com.android.settings.terminus.WakeLockBlocker"
+android:title="@string/wakelock_blocker_title" />
+  
 <PreferenceScreen
 android:layout="@layout/intent_top_bottom_spacer_twisted"
 />
