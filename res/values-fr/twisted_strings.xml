@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Display settings screen, setting options for LCD density -->
+    <string name="lcd_density">Densité LCD</string>
+    <string name="lcd_density_summary">%d DPI</string>
+    <string name="lcd_density_default">Appareil par défaut</string>
+    <string name="lcd_density_unsupported">Non supporté</string>
+    <string name="restarting_ui">Redémarrage</string>
+    
+    <string name="twisted_settings_title">Twisted Tweaks</string>
+
+    <!-- SuperSU header name - the app hides itself from launcher based on this resource name being present in com.android.settings -->
+    <string name="supersu_title">SuperSU</string>
+
+    <!-- Display : Rotation -->
+    <string name="display_rotation_title">Rotation</string>
+    <string name="display_rotation_disabled">Désactiver</string>
+    <string name="display_rotation_unit">degrés</string>
+    <string name="display_rotation_category_title">Modes de rotation</string>
+    <string name="display_rotation_0_title">0 degrés</string>
+    <string name="display_rotation_90_title">90 degrés</string>
+    <string name="display_rotation_180_title">180 degrés</string>
+    <string name="display_rotation_270_title">270 degrés</string>
+
+   <!-- Generic strings -->
+   <string name="font_size_sample">Exemple</string>
+
+    <!-- Network traffic -->
+    <string name="network_traffic_title">Trafic résaux</string>
+    <string name="show_network_traffic_state">Moniteur de trafic dans la barre d\'état</string>
+    <string name="network_traffic_summary">Activer les différentes fonctions du trafic résaux dans la barre d\'état</string>
+    <string name="show_network_traffic_unit">Unité d\'affichage</string>
+    <string name="show_network_traffic_frequency">Intervalle de mise à jour</string>
+    <string name="show_network_traffic_disable">Désactivé</string>
+    <string name="show_network_traffic_up">Sortant</string>
+    <string name="show_network_traffic_down">Entrant</string>
+    <string name="show_network_traffic_all">Sortant et entrant</string>
+    <string name="show_network_traffic_bit">Bits par seconde</string>
+    <string name="show_network_traffic_byte">Octets par seconde</string>
+    <string name="show_network_traffic_500">500 ms</string>
+    <string name="show_network_traffic_1000">1000 ms</string>
+    <string name="show_network_traffic_1500">1500 ms</string>
+    <string name="show_network_traffic_2000">2000 ms</string>
+    <string name="network_traffic_autohide">Cacher automatiquement</string>
+    <string name="network_traffic_autohide_summary">Cacher le trafic résaux quand il n\'y a pas d\'activité</string>
+    <string name="network_traffic_autohide_threshold">Seuil d\'inactivité</string> 
+
+    <!-- Navigation Bar -->
+    <string name="navigation_bar_title">Hauteur de la barre de naviguation</string>
+    
+    <!-- Navigation Bar Height -->
+    <string name="navigation_bar_height">Hauteur de la barre de naviguationt</string>
+    <string name="navigation_bar_height_54">54</string>
+    <string name="navigation_bar_height_52">52</string>
+    <string name="navigation_bar_height_50">50</string>
+    <string name="navigation_bar_height_48">48dp (défaut)</string>
+    <string name="navigation_bar_height_44">44dp</string>
+    <string name="navigation_bar_height_40">40dp</string>
+    <string name="navigation_bar_height_36">36dp</string>
+    <string name="navigation_bar_height_32">32dp</string>
+    <string name="navigation_bar_height_28">28dp</string>
+    <string name="navigation_bar_height_24">24dp</string>
+    <string name="navigation_bar_height_20">20dp</string>
+    <string name="navigation_bar_height_0">0dp (caché)</string>
+    
+   <!-- BitSyko Layers -->
+   <string name="bitsyko_layers">Layers</string>
+   
+      <string name="nav_bar_setting">Barre de naviguation</string>
+   <string name="status_bar_setting">Barre d\'état</string>
+   <string name="notif_sound_setting">Notifications</string>
+   <string name="systemwide_setting">Système</string>
+   <string name="kantjer_layers_title">Layers Backup</string>
+   <string name="adaway_title">AdAway</string>
+
+</resources>
