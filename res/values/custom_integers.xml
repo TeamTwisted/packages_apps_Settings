@@ -23,4 +23,10 @@
     <integer name="maskUnit">0x00000004</integer>
     <integer name="maskPeriod">0xFFFF0000</integer>
 
+    <declare-styleable name="SeekBarPreference">
+        <attr name="interval" format="integer" />
+        <attr name="minimum" format="integer" />
+        <attr name="unitsLeft" format="string|reference" />
+        <attr name="unitsRight" format="string|reference" />
+    </declare-styleable>
 </resources>
