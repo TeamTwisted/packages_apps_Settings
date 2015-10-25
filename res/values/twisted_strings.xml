@@ -143,4 +143,7 @@
     <string name="volume_rocker_wake_summary">Pressing the volume keys will wake your device</string>
     <string name="volume_options_title">Volume buttons</string>
     
+    <!-- Button settings  -->
+    <string name="button_settings_title">Buttons</string>
+    
 </resources>
