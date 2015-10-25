@@ -11,20 +11,20 @@ android:title="Twisted Corner">
 <PreferenceScreen
 android:layout="@layout/intent_top_bottom_spacer_twisted"/>
 
-<!-- SlimOTA -->
+<!-- Twisted Walls
 <PreferenceScreen
-android:id="@+id/slimota"
-android:title="@string/slimota_title">
+android:id="@+id/twistedwalls"
+android:title="Twisted Wallpapers">
 <intent
 android:action="android.intent.action.MAIN"
-android:targetPackage="com.fusionjack.slimota"
-android:targetClass="com.fusionjack.slimota.MainActivity" />
+android:targetPackage="com.twisted.app"
+android:targetClass="com.twisted.app.MainActivity" />
 </PreferenceScreen>
 
 <PreferenceScreen
 android:layout="@layout/intent_top_bottom_spacer_twisted">
 </PreferenceScreen>
-
+-->
 <!-- AdAway -->
 <PreferenceScreen
 android:id="@+id/adaway_settings"
