@@ -11,6 +11,13 @@ android:title="@string/twisted_menu_about"
 android:layout="@layout/intent_main_header_twisted"/>
 <!-- TWISTEDABOUT CATEGORY // END -->
 
+        <!-- Navbar -->
+        <PreferenceScreen
+            android:id="@+id/navbar_settings"
+            android:fragment="com.android.settings.benzo.NavbarSettings"
+            android:title="@string/navbar_settings_title"
+            android:icon="@drawable/ic_settings_navbar" /> 
+
 <!--
 <PreferenceCategory
 android:icon="@drawable/ic_twisted_statusbar"

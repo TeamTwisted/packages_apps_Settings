@@ -13,7 +13,7 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="Buttons">
+    android:title="@string/navbar_settings_title">
 
     <PreferenceCategory
         android:key="navigation_bar"
@@ -29,7 +29,6 @@
             android:fragment="com.android.settings.benzo.NavBarDimen"
             android:title="@string/navbar_dimen_title"
             android:dependency="navigation_bar_show" />
-
     </PreferenceCategory>
 
-</PreferenceScreen> 
+</PreferenceScreen>
