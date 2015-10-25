@@ -73,6 +73,15 @@ android:targetPackage="eu.chainfire.supersu"
 android:targetClass="eu.chainfire.supersu.MainActivity" />
 </PreferenceScreen>
 
+        <!-- LMT PIE -->
+        <Preference
+            android:id="@+id/lmt_settings"
+	    android:title="LMT - Pie, ISAS and Gestures">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.lmt"
+                android:targetClass="com.android.lmt.LMT" />
+        </Preference>
 <!-- Viper4Android
 <PreferenceScreen
 android:id="@+id/viper_settings"

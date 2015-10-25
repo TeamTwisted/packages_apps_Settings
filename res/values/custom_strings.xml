@@ -22,6 +22,8 @@
 
     <string name="navbar_settings_title">Navigation Bar</string>
 
+    <string name="lmt_settings">PIE Settings</string>
+
     <!-- Quicksettings block on secure lockscreen -->
     <string name="qs_category">Quicksettings</string>
     <string name="block_on_secure_keyguard_title">Disable on lockscreen</string>
