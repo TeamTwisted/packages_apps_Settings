@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/statusbar_tweak_title">
+
+    <PreferenceCategory
+        android:key="category_battery_options"
+        android:title="@string/battery_title" >
+
+    <PreferenceScreen
+        android:fragment="com.android.settings.twisted.BatterySettings"
+        android:key="battery_style_pref"
+        android:title="@string/battery_title"
+    	   android:summary="@string/battery2_summary" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

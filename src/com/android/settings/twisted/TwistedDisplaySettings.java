@@ -15,7 +15,7 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import java.util.List;
 
-public class TwistedSettings extends SettingsPreferenceFragment {
+public class TwistedDisplaySettings extends SettingsPreferenceFragment {
 
     @Override
     protected int getMetricsCategory() {
@@ -26,7 +26,7 @@ public class TwistedSettings extends SettingsPreferenceFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.twisted_settings);
+        addPreferencesFromResource(R.xml.twisted_display);
     }
 }
 

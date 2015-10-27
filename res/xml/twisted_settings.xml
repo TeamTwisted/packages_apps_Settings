@@ -1,30 +1,74 @@
+<!--
+/*
+** Copyright 2007 TeamTwisted Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
 <PreferenceScreen
 xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-android:title="@string/twisted_settings_title" >
+android:title="@string/twisted_settings_title">
 
-<!-- TWISTEDABOUT CATEGORY // START -->
+<!-- Twisted Tweaks Cat -->
+<PreferenceCategory
+android:key="twisted"
+android:title="@string/twisted_tweak_title">
+<!-- Twisted About -->
 <PreferenceScreen
-android:key="about_twisted"
-android:fragment="com.android.settings.twisted.TwistedAbout"
-android:title="@string/twisted_menu_about"
-android:layout="@layout/intent_main_header_twisted"/>
+android:key="twisted_about"
+android:title="@string/twisted_about_title"
+android:summary="@string/twisted_about_summary"/>
+<!-- Twisted Apps -->
+<PreferenceScreen
+android:key="twisted_apps"
+android:title="@string/twisted_apps_title"
+android:summary="@string/twisted_apps_summary"/>
+<!-- Twisted Wallpapers -->
+<PreferenceScreen
+android:key="twisted_wallpapers"
+android:title="@string/twisted_wallpapers_title"
+android:summary="@string/twisted_wallpapers_summary"/>
+<!-- Twisted Changelog -->
+<PreferenceScreen
+android:key="twisted_changelog"
+android:title="@string/twisted_changelog_title"
+android:summary="@string/twisted_changelog_summary"/>
+</PreferenceCategory>
 
-<PreferenceScreen android:layout="@layout/intent_top_bottom_spacer_twisted"/>
-
-<!-- StatusBar Cat -->
+<!-- Twisted UI Cat -->
 <PreferenceCategory
-android:key="nav_bar"
-android:title="@string/statusbar_title"
-android:icon="@drawable/ic_twisted_statusbar"
-android:layout="@layout/intent_sub_header_twisted"/>           
+android:key="twisted_ui"
+android:title="@string/twisted_ui_title">
+<!-- StatusBar -->
+<PreferenceScreen
+android:id="@+id/twisted_statusbar"
+android:fragment="com.android.settings.twisted.StatusBarSettings"
+android:title="@string/statusbar_tweak_title"
+android:summary="@string/statusbar_tweak_summary"/>
+<!-- Display -->
+<PreferenceScreen
+android:key="twisted_display"
+android:fragment="com.android.settings.twisted.TwistedDisplaySettings"
+android:title="@string/display_tweak_title"
+android:summary="@string/display_tweak_summary"/>
+<!-- NavigationBar -->
+<PreferenceScreen
+android:key="twisted_navbar"
+android:title="@string/navbar_tweak_title"
+android:summary="@string/navbar_tweak_summary"/>
+</PreferenceCategory>
 
-<!-- NavBar Cat -->
-<PreferenceCategory
-android:key="nav_bar"
-android:title="@string/navigationbar_title"
-android:icon="@drawable/ic_twisted_navigationbar"
-android:layout="@layout/intent_sub_header_twisted"/>
 <!-- Navbar -->
 <PreferenceScreen
 android:id="@+id/navbar_settings"
@@ -37,34 +81,4 @@ android:title="@string/navbar_settings_title"/>
             android:fragment="com.android.settings.ButtonSettings"
             android:title="@string/button_settings_title"
             android:layout="@layout/preference_benzoextra_buttons"/>
-<!-- Display Cat
-<PreferenceCategory
-android:key="display_settings"
-android:title="Display Settings"
-android:icon="@drawable/ic_dt_density"
-android:layout="@layout/intent_sub_header_twisted"/>
- Density Changer
-<PreferenceScreen
-android:key="density_changer"
-android:title="@string/lcd_density_title"
-android:fragment="com.android.settings.benzo.Density"/>
--->
-<PreferenceScreen android:layout="@layout/intent_top_bottom_spacer_twisted"/>
-
-<!-- Systemwide Cat 
-<PreferenceCategory
-android:icon="@drawable/ic_settings_about"
-android:layout="@layout/intent_sub_header_twisted"
-android:key="systemwide_settings"
-android:title="@string/systemwide_setting"/>
-<PreferenceScreen
-android:key="wakelock_blocker"
-android:fragment="com.android.settings.terminus.WakeLockBlocker"
-android:summary="@string/summary_wakelock_blocker_title"
-android:title="@string/wakelock_blocker_title" />
-
-<PreferenceScreen android:layout="@layout/intent_top_bottom_spacer_twisted"/>
--->
 </PreferenceScreen>
-
-

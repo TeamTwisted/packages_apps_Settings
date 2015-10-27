@@ -13,9 +13,6 @@
         <item>2</item>
     </string-array>
 
-
-
-
     <!-- NavBar -->
     <string-array name="pref_navigation_menu_entries">
         <item>@string/navigation_menu_right</item>
@@ -103,4 +100,32 @@
         <item>24</item>
         <item>0</item>
     </string-array>
-</resources>            
+
+    <string-array name="status_bar_battery_style_entries">
+        <item>@string/status_bar_battery_style_icon_portrait</item>
+        <item>@string/status_bar_battery_style_icon_landscape</item>
+        <item>@string/status_bar_battery_style_circle</item>
+        <item>@string/status_bar_battery_style_dotted_circle</item>
+        <item>@string/status_bar_battery_style_text</item>
+        <item>@string/status_bar_battery_style_hidden</item>
+    </string-array>
+    <string-array name="status_bar_battery_style_values">
+        <item>0</item>
+        <item>5</item>
+        <item>2</item>
+        <item>3</item>
+        <item>6</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="status_bar_battery_percentage_entries">
+        <item>@string/status_bar_battery_percentage_default</item>
+        <item>@string/status_bar_battery_percentage_text_inside</item>
+        <item>@string/status_bar_battery_percentage_text_next</item>
+    </string-array>
+    <string-array name="status_bar_battery_percentage_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+</resources>
