@@ -148,11 +148,11 @@ public class NavbarSettings extends SettingsPreferenceFragment implements
     }
 
     @Override
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mKillAppLongPressBack) {
-            boolean value = (Boolean) objValue;
-            Settings.Secure.putInt(getContentResolver(), KILL_APP_LONGPRESS_BACK,
-                    value ? 1 : 0);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.Secure.KILL_APP_LONGPRESS_BACK,
+                    ((Boolean) newValue) ? 1 : 0);
             return true;
         } else if (preference == mDimNavButtons) {
             Settings.System.putInt(getActivity().getContentResolver(),
