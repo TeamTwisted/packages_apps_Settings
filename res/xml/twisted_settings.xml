@@ -69,6 +69,18 @@ android:title="@string/navbar_tweak_title"
 android:summary="@string/navbar_tweak_summary"/>
 </PreferenceCategory>
 
+        <!-- Pulse notification light -->
+        <PreferenceScreen
+                android:key="notification_light"
+                android:title="@string/notification_light_title"
+                android:fragment="com.android.settings.notificationlight.NotificationLightSettings" />
+
+        <!-- Battery light -->
+        <PreferenceScreen
+                android:key="battery_light"
+                android:title="@string/battery_light_title"
+                android:fragment="com.android.settings.notificationlight.BatteryLightSettings" />
+
 <!-- Navbar -->
 <PreferenceScreen
 android:id="@+id/navbar_settings"
@@ -94,8 +106,6 @@ android:title="@string/wakelock_blocker_title" />
 <PreferenceScreen
 android:layout="@layout/intent_top_bottom_spacer_twisted"
 />
-
-</PreferenceScreen>
 
         <!-- Buttons -->
         <PreferenceScreen
