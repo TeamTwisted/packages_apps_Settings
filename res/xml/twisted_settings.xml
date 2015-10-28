@@ -75,6 +75,23 @@ android:id="@+id/navbar_settings"
 android:fragment="com.android.settings.benzo.NavbarSettings"
 android:title="@string/navbar_settings_title"/>
 
+<PreferenceScreen
+android:key="wakelock_blocker"
+android:fragment="com.android.settings.terminus.WakeLockBlocker"
+android:title="@string/wakelock_blocker_title" />
+
+      <PreferenceScreen
+        android:fragment="com.android.settings.chroma.StatusBarClockStyle"
+        android:key="clock_style_pref"
+        android:title="@string/status_bar_clock"
+	    android:summary="@string/status_bar_clock_summary" />
+
+<PreferenceScreen
+android:layout="@layout/intent_top_bottom_spacer_twisted"
+/>
+
+</PreferenceScreen>
+
         <!-- Buttons -->
         <PreferenceScreen
             android:id="@+id/button_settings"
