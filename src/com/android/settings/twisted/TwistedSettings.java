@@ -7,12 +7,9 @@ import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
-
 import com.android.internal.logging.MetricsLogger;
-
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-
 import java.util.List;
 
 public class TwistedSettings extends SettingsPreferenceFragment {
@@ -29,4 +26,3 @@ public class TwistedSettings extends SettingsPreferenceFragment {
         addPreferencesFromResource(R.xml.twisted_settings);
     }
 }
-

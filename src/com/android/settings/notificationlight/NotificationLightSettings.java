@@ -91,11 +91,6 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
     private Map<String, Package> mPackages;
 
     @Override
-    protected int getMetricsCategory() {
-        return MetricsLogger.APPLICATION;
-    }
-
-    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.notification_light_settings);
@@ -110,8 +105,11 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
                 com.android.internal.R.bool.config_multiColorNotificationLed);
 
         // Get the system defined default notification color
-        mDefaultColor =
-                resources.getColor(com.android.internal.R.color.config_defaultNotificationColor);
+        mDefaultColor = resources.getColor(com.android.internal.R.color.config_defaultNotificationColor);
+        if (mDefaultColor == Color.WHITE) {
+            // We cannot properly show white in the UI, change it to off white (#eeeeee)
+            mDefaultColor = 0xFFEEEEEE;
+        }
 
         mDefaultLedOn = resources.getInteger(
                 com.android.internal.R.integer.config_defaultNotificationLedOn);
@@ -157,6 +155,11 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
             prefSet.removePreference(mApplicationPrefList);
             resetColors();
         }
+    }
+
+    @Override
+    protected int getMetricsCategory() {
+        return MetricsLogger.NOTIFICATION_LIGHT_SETTINGS;
     }
 
     @Override

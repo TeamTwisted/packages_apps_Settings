@@ -53,11 +53,6 @@ public class BatteryLightSettings extends SettingsPreferenceFragment implements
     private static final int MENU_RESET = Menu.FIRST;
 
     @Override
-    protected int getMetricsCategory() {
-        return MetricsLogger.APPLICATION;
-    }
-
-    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.battery_light_settings);
@@ -84,6 +79,11 @@ public class BatteryLightSettings extends SettingsPreferenceFragment implements
             prefSet.removePreference(prefSet.findPreference("colors_list"));
             resetColors();
         }
+    }
+
+    @Override
+    protected int getMetricsCategory() {
+        return MetricsLogger.BATTERY_LIGHT_SETTINGS;
     }
 
     @Override
