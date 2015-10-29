@@ -81,6 +81,11 @@ android:summary="@string/navbar_tweak_summary"/>
                 android:title="@string/battery_light_title"
                 android:fragment="com.android.settings.notificationlight.BatteryLightSettings" />
 
+       <com.android.settings.preference.SystemSettingSwitchPreference
+           android:key="network_traffic_state"
+           android:title="@string/network_traffic_indicator_title"
+           android:summary="@string/network_traffic_indicator_summary" />
+
 <!-- Navbar -->
 <PreferenceScreen
 android:id="@+id/navbar_settings"

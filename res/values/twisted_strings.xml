@@ -216,4 +216,7 @@
     <!-- Font size sample text -->
     <string name="font_size_sample">Font Size</string>
 
+    <!-- Network traffic -->
+    <string name="network_traffic_indicator_title">Network trafic indicator</string>
+    <string name="network_traffic_indicator_summary">Show network activity in status bar.</string>    
 </resources>
