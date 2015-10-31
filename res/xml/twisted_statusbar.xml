@@ -7,6 +7,7 @@
     <PreferenceCategory
         android:key="category_battery_options"
         android:title="@string/battery_title" >
+<<<<<<< ecadb6c221e0c53096bf9e2c16373a527d917c1b
 	<PreferenceScreen
 	    android:fragment="com.android.settings.twisted.BatterySettings"
 	    android:key="battery_style_pref"
@@ -67,5 +68,23 @@
         android:key="qs_use_four_columns"
         android:title="@string/qs_four_columns_title"
         android:defaultValue="false" />
+=======
+    <PreferenceScreen
+        android:fragment="com.android.settings.twisted.BatterySettings"
+        android:key="battery_style_pref"
+        android:title="@string/battery_title"
+    	   android:summary="@string/battery2_summary" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="category_clock_options"
+								android:title="@string/status_bar_clock" >
+				<PreferenceScreen
+								android:fragment="com.android.settings.chroma.StatusBarClockStyle"
+								android:key="clock_style_pref"
+								android:title="@string/status_bar_clock"
+								android:summary="@string/status_bar_clock_summary" />
+    </PreferenceCategory>
+>>>>>>> Twisted Settings - m6.0 Fresh New Look
 
 </PreferenceScreen>

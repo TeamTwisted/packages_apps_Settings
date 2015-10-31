@@ -41,12 +41,39 @@ android:key="twisted_wallpapers"
 android:title="@string/twisted_wallpapers_title"
 android:summary="@string/twisted_wallpapers_summary"/>
 <!-- Twisted Changelog -->
-
-        <!-- Changelog -->
-        <PreferenceScreen android:key="changelog"
-                android:title="@string/changelog_crdroid_title"
-                android:fragment="com.android.settings.crdroid.Changelog" />
+<PreferenceScreen android:key="changelog"
+android:title="@string/changelog_crdroid_title"
+android:fragment="com.android.settings.crdroid.Changelog" />
 </PreferenceCategory>
 
+<!-- Twisted UI Cat -->
+<PreferenceCategory
+android:key="twisted_ui"
+android:title="@string/twisted_ui_title">
+<!-- StatusBar -->
+<PreferenceScreen
+android:id="@+id/twisted_statusbar"
+android:fragment="com.android.settings.twisted.StatusBarSettings"
+android:title="@string/statusbar_tweak_title"
+android:summary="@string/statusbar_tweak_summary"/>
+<!-- Display -->
+<PreferenceScreen
+android:id="@+id/twisted_display"
+android:fragment="com.android.settings.twisted.TwistedDisplaySettings"
+android:title="@string/display_tweak_title"
+android:summary="@string/display_tweak_summary"/>
+<!-- NavigationBar -->
+<PreferenceScreen
+android:id="@+id/twisted_navbar"
+android:fragment="com.android.settings.twisted.TwistedNavBarSettings"
+android:title="@string/navbar_tweak_title"
+android:summary="@string/navbar_tweak_summary"/>
+<!-- NavigationBar -->
+<PreferenceScreen
+android:id="@+id/twisted_misc"
+android:fragment="com.android.settings.twisted.TwistedMiscSettings"
+android:title="@string/misc_tweak_title"
+android:summary="@string/misc_tweak_summary"/>
+</PreferenceCategory>
 
 </PreferenceScreen>

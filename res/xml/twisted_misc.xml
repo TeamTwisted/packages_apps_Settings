@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/misc_tweak_title">
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:title="@string/misc_tweak_title">
 
-    <PreferenceCategory
-        android:key="category_misc_options"
-        android:id="@+id/twisted_misc"
-        android:title="@string/misc_tweak_title" >
-	<PreferenceScreen
-		android:key="wakelock_blocker"
-		android:fragment="com.android.settings.terminus.WakeLockBlocker"
-		android:title="@string/wakelock_blocker_title"
-		android:summary="Click to block unwanted wakelocks."/>
+<PreferenceCategory
+android:key="category_misc_options"
+android:id="@+id/twisted_misc"
+android:title="@string/misc_tweak_title" >
+<PreferenceScreen
+android:key="wakelock_blocker"
+android:fragment="com.android.settings.terminus.WakeLockBlocker"
+android:title="@string/wakelock_blocker_title"
+android:summary="Click to block unwanted wakelocks."/>
 
-	<PreferenceScreen
-		android:id="@+id/button_settings"
-		android:fragment="com.android.settings.ButtonSettings"
-		android:title="@string/button_settings_title"
-		android:summary="Click to tweak hardware keys."/>
-	
-	<PreferenceScreen
-		android:key="lock_screen_general_category"
-		android:fragment="com.android.settings.chroma.LockScreenSettings"
-		android:title="LockScreen Options"
-                android:summary="Click to tweak lockscreen feel." />
+<PreferenceScreen
+android:id="@+id/button_settings"
+android:fragment="com.android.settings.ButtonSettings"
+android:title="@string/button_settings_title"
+android:summary="Click to tweak hardware keys."/>
 
-        <!-- Animation Settings -->
-        <PreferenceScreen
-            android:key="animation_settings"
-            android:title="@string/animation_title"
-            android:fragment="com.android.settings.benzo.animation.AnimationSettings"
-            android:summary="Click to tweak system animations." />
+<PreferenceScreen
+android:key="lock_screen_general_category"
+android:fragment="com.android.settings.chroma.LockScreenSettings"
+android:title="LockScreen Options"
+android:summary="Click to tweak lockscreen feel." />
 
-    <PreferenceScreen
-        android:key="power_menu_general_category"
-        android:fragment="com.android.settings.chroma.PowerMenuActions"
-        android:title="@string/power_menu_title" 
-        android:summary="Click to change power button options."/>
+<!-- Animation Settings -->
+<PreferenceScreen
+android:key="animation_settings"
+android:title="@string/animation_title"
+android:fragment="com.android.settings.benzo.animation.AnimationSettings"
+android:summary="Click to tweak system animations." />
 
-    <PreferenceScreen
-        android:key="lock_clock"
-        android:title="@string/lock_clock_title"
-        android:summary="@string/lock_clock_summary">
-            <intent android:action="android.intent.action.MAIN"
-        android:targetPackage="com.cyanogenmod.lockclock"
-        android:targetClass="com.cyanogenmod.lockclock.preference.Preferences" />
-    	</PreferenceScreen>
-    </PreferenceCategory>
+<PreferenceScreen
+android:key="power_menu_general_category"
+android:fragment="com.android.settings.chroma.PowerMenuActions"
+android:title="@string/power_menu_title" 
+android:summary="Click to change power button options."/>
+
+<PreferenceScreen
+android:key="lock_clock"
+android:title="@string/lock_clock_title"
+android:summary="@string/lock_clock_summary">
+<intent android:action="android.intent.action.MAIN"
+android:targetPackage="com.cyanogenmod.lockclock"
+android:targetClass="com.cyanogenmod.lockclock.preference.Preferences" />
+</PreferenceScreen>
+</PreferenceCategory>
 
 </PreferenceScreen>

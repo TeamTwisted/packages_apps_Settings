@@ -20,6 +20,14 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
 android:id="@+id/twisted_display"
 android:title="@string/display_tweak_title">
-
+    <PreferenceCategory
+        android:key="category_display_options"
+								android:title="@string/lockscreen_title" >
+				<PreferenceScreen
+								android:key="lock_screen_general_category"
+								android:fragment="com.android.settings.chroma.LockScreenSettings"
+								android:title="@string/lockscreen_title"
+        android:summary="Click to change lockscreen wallpaper."/>
+    </PreferenceCategory>
 </PreferenceScreen>
 
