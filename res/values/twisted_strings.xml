@@ -216,10 +216,6 @@
     <!-- Font size sample text -->
     <string name="font_size_sample">Font Size</string>
 
-    <!-- Network traffic -->
-    <string name="network_traffic_indicator_title">Network trafic indicator</string>
-    <string name="network_traffic_indicator_summary">Show network activity in status bar.</string>   
-    
     <!-- SlimDim -->
     <string name="dim_nav_buttons_category">SlimDim</string>
     <string name="dim_nav_buttons_title">Dim buttons after inactivity</string>
@@ -335,4 +331,4 @@
     <string name="enabled">Enabled</string>
     <string name="choose_app">Choose application</string>
 
-    </resources>
+</resources>
