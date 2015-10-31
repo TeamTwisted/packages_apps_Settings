@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <style name="Theme.Material.Twisted" parent="@android:style/Theme.Material.Settings">
+        <!-- Used by the ActionBar -->
+        <item name="android:colorPrimary">#181818</item>
+        <!-- Used by the StatusBar -->
+        <item name="android:colorPrimaryDark">#141414</item>
+				</style>
+</resources>

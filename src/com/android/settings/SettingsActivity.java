@@ -82,6 +82,11 @@ import com.android.settings.bluetooth.BluetoothSettings;
 import com.android.settings.dashboard.DashboardCategory;
 import com.android.settings.dashboard.DashboardSummary;
 import com.android.settings.dashboard.DashboardTile;
+import com.android.settings.twisted.TwistedSettings;
+import com.android.settings.twisted.TwistedDisplaySettings;
+import com.android.settings.twisted.TwistedNavBarSettings;
+import com.android.settings.twisted.TwistedMiscSettings;
+import com.android.settings.twisted.StatusBarSettings;
 import com.android.settings.dashboard.NoHomeDialogFragment;
 import com.android.settings.dashboard.SearchResultsSummary;
 import com.android.settings.deviceinfo.PrivateVolumeForget;
@@ -278,7 +283,12 @@ public class SettingsActivity extends Activity
             R.id.print_settings,
             R.id.nfc_payment_settings,
             R.id.home_settings,
-            R.id.dashboard
+            R.id.dashboard,
+            R.id.twisted_settings,
+            R.id.twisted_statusbar,
+            R.id.twisted_display,
+            R.id.twisted_navbar,
+            R.id.twisted_misc
     };
 
     private static final String[] ENTRY_FRAGMENTS = {
@@ -354,6 +364,11 @@ public class SettingsActivity extends Activity
             ProcessStatsSummary.class.getName(),
             DrawOverlayDetails.class.getName(),
             WriteSettingsDetails.class.getName(),
+            TwistedSettings.class.getName(),
+												TwistedDisplaySettings.class.getName(),
+												TwistedNavBarSettings.class.getName(),
+												TwistedMiscSettings.class.getName(),
+												StatusBarSettings.class.getName(),
     };
 
 

@@ -194,7 +194,9 @@
     <!-- NavBar -->
     <string name="navbar_tweak_title">Navigation Bar</string>
     <string name="navbar_tweak_summary">Customize: Height, Width, Actions, etc.</string>
-
+    <!-- NavBar -->
+    <string name="misc_tweak_title">Misc. Options</string>
+    <string name="misc_tweak_summary">Customize: Wakelock, Hardware Buttons, etc.</string>
 
 				<!-- Twisted Settings SubSettings -->
     <!-- Battery Tweaks -->

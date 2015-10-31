@@ -118,4 +118,13 @@ public class Settings extends SettingsActivity {
     public static class WriteSettingsActivity extends SettingsActivity { /* empty */ }
     public static class AppDrawOverlaySettingsActivity extends SettingsActivity { /* empty */ }
     public static class AppWriteSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class TwistedSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class StatusBarSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class TwistedDisplaySettingsActivity extends SettingsActivity { /* empty */ }
+    public static class TwistedNavBarSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class TwistedMiscSettingsActivity extends SettingsActivity { /* empty */ }
 }
+
+
+
+

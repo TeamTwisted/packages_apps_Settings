@@ -1,17 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/twisted_statusbar"
     android:title="@string/statusbar_tweak_title">
 
     <PreferenceCategory
         android:key="category_battery_options"
         android:title="@string/battery_title" >
-
-    <PreferenceScreen
-        android:fragment="com.android.settings.twisted.BatterySettings"
-        android:key="battery_style_pref"
-        android:title="@string/battery_title"
-    	   android:summary="@string/battery2_summary" />
+	<PreferenceScreen
+	    android:fragment="com.android.settings.twisted.BatterySettings"
+	    android:key="battery_style_pref"
+	    android:title="@string/battery_title"
+	    android:summary="@string/battery2_summary" />
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="category_clock_options"
+	android:title="@string/status_bar_clock" >
+	<PreferenceScreen
+	    android:fragment="com.android.settings.chroma.StatusBarClockStyle"
+	    android:key="clock_style_pref"
+	    android:title="@string/status_bar_clock"
+	    android:summary="@string/status_bar_clock_summary" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="category_network_traffic_options"
+	android:title="Network Traffic Meter" >
+       <PreferenceScreen
+           android:key="network_traffic_settings"
+           android:title="@string/network_traffic_title"
+           android:fragment="com.android.settings.benzo.NetworkTrafficSettings" />
+    </PreferenceCategory>   
+    
 </PreferenceScreen>
