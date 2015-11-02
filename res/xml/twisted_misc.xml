@@ -49,3 +49,4 @@ android:targetClass="com.cyanogenmod.lockclock.preference.Preferences" />
 </PreferenceCategory>
 
 </PreferenceScreen>
+

@@ -26,24 +26,32 @@ android:title="@string/twisted_settings_title">
 android:key="twisted"
 android:title="@string/twisted_tweak_title">
 <!-- Twisted About -->
+<!--
 <PreferenceScreen
 android:key="twisted_about"
 android:title="@string/twisted_about_title"
 android:summary="@string/twisted_about_summary"/>
+-->
 <!-- Twisted Apps -->
+<!--
 <PreferenceScreen
 android:key="twisted_apps"
 android:title="@string/twisted_apps_title"
 android:summary="@string/twisted_apps_summary"/>
+-->
 <!-- Twisted Wallpapers -->
+<!--
 <PreferenceScreen
 android:key="twisted_wallpapers"
 android:title="@string/twisted_wallpapers_title"
 android:summary="@string/twisted_wallpapers_summary"/>
+-->
 <!-- Twisted Changelog -->
-<PreferenceScreen android:key="changelog"
-android:title="@string/changelog_crdroid_title"
-android:fragment="com.android.settings.crdroid.Changelog" />
+<PreferenceScreen
+android:key="twisted_changelog"
+android:fragment="com.android.settings.crdroid.Changelog"
+android:title="@string/twisted_changelog_title"
+android:summary="@string/twisted_changelog_summary"/>
 </PreferenceCategory>
 
 <!-- Twisted UI Cat -->
@@ -68,7 +76,13 @@ android:id="@+id/twisted_navbar"
 android:fragment="com.android.settings.twisted.TwistedNavBarSettings"
 android:title="@string/navbar_tweak_title"
 android:summary="@string/navbar_tweak_summary"/>
-<!-- NavigationBar -->
+<!-- LockScreen -->
+<PreferenceScreen
+android:key="lock_screen_general_category"
+android:fragment="com.android.settings.chroma.LockScreenSettings"
+android:title="LockScreen Options"
+android:summary="Click to tweak lockscreen feel." />
+<!-- Misc. -->
 <PreferenceScreen
 android:id="@+id/twisted_misc"
 android:fragment="com.android.settings.twisted.TwistedMiscSettings"
@@ -76,4 +90,6 @@ android:title="@string/misc_tweak_title"
 android:summary="@string/misc_tweak_summary"/>
 </PreferenceCategory>
 
+
 </PreferenceScreen>
+
