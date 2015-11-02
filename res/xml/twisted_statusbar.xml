@@ -51,4 +51,10 @@
         android:summary="@string/status_bar_show_weather_summary"
         android:defaultValue="false" />
 
+       <PreferenceScreen
+           android:key="breathing_notifications"
+           android:fragment="com.android.settings.benzo.BreathingNotifications"
+           android:title="@string/breathing_notifications_title" 
+           android:summary="@string/breathing_notifications_summary" />
+
 </PreferenceScreen>
