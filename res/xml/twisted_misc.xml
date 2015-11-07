@@ -37,5 +37,13 @@
         </PreferenceScreen>
     </PreferenceCategory>
 
+        <!-- Animation Settings -->
+        <PreferenceScreen
+            android:key="animation_settings"
+            android:title="@string/animation_title"
+            android:fragment="com.android.settings.benzo.animation.AnimationSettings" 
+            android:layout="@layout/preference_benzoextra_animation" 
+            />
+
 
 </PreferenceScreen>
