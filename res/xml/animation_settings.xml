@@ -47,4 +47,10 @@
         android:entryValues="@array/listview_interpolator_values"
         android:defaultValue="0" />
 
+    <com.android.settings.preference.SystemSettingSwitchPreference
+        android:key="disable_transition_animations"
+        android:title="@string/disable_animations"
+        android:summary="@string/disable_animations_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
