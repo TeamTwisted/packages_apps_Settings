@@ -57,4 +57,10 @@
            android:title="@string/breathing_notifications_title" 
            android:summary="@string/breathing_notifications_summary" />
 
+    <com.android.settings.chroma.SecureSettingSwitchPreference
+        android:key="qs_show_brightness_slider"
+        android:title="@string/qs_brightness_slider_title_eos"
+        android:summary="@string/qs_brightness_slider_summary"
+        android:defaultValue="true" />
+
 </PreferenceScreen>
