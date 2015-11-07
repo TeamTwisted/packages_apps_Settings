@@ -134,4 +134,8 @@
     <string name="clock_font_medium_italic">Medium Italic</string>
     <string name="clock_font_size_title">Font size</string>
 
+    <!-- Navbar cursor buttons -->
+    <string name="show_ime_arrows_title">Show arrow keys while typing</string>
+    <string name="show_ime_arrows_summary">Display left and right cursor buttons for IME.</string>
+
 </resources>
