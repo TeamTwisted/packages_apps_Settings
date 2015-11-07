@@ -138,4 +138,7 @@
     <string name="show_ime_arrows_title">Show arrow keys while typing</string>
     <string name="show_ime_arrows_summary">Display left and right cursor buttons for IME.</string>
 
+    <!-- Restart SystemUI -->
+    <string name="restart_systemui">Restart SystemUI</string>
+
 </resources>
