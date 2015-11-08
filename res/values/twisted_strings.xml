@@ -409,4 +409,9 @@
     <string name="voicemail_breath_title">Breathing Voicemail</string>
     <string name="voicemail_breath_summary">Will give your voicemail notifications a breathing effect in the statusbar</string>
 
+    <!-- Show/Hide Search Bar -->
+    <string name="recents_show_searchbar">Recents panel Search bar</string>
+    <string name="recents_searchbar_summary_enabled">Search bar in recents menu is enabled</string>
+    <string name="recents_searchbar_summary_disabled">Search bar in recents menu is disabled</string>
+
 </resources>

@@ -22,7 +22,6 @@
             android:defaultValue="false" />
     </PreferenceCategory>
 
-
         <PreferenceScreen
                 android:key="expanded_desktop"
                 android:title="@string/power_menu_expanded_desktop"
