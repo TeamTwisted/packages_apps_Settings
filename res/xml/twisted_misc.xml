@@ -22,16 +22,22 @@
 	<PreferenceScreen
 		android:key="lock_screen_general_category"
 		android:fragment="com.android.settings.chroma.LockScreenSettings"
-		android:title="LockScreen Options" />
-
-    </PreferenceCategory>
+		android:title="LockScreen Options"
+                android:summary="Click to tweak lockscreen feel." />
 
         <!-- Animation Settings -->
         <PreferenceScreen
             android:key="animation_settings"
             android:title="@string/animation_title"
             android:fragment="com.android.settings.benzo.animation.AnimationSettings"
-            />
+            android:summary="Click to tweak system animations." />
 
+    <PreferenceScreen
+        android:key="power_menu_general_category"
+        android:fragment="com.android.settings.chroma.PowerMenuActions"
+        android:title="@string/power_menu_title" 
+        android:summary="Click to change power button options."/>
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
