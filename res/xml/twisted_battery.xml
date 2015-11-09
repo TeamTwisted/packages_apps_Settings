@@ -18,4 +18,10 @@
         android:entries="@array/status_bar_battery_percentage_entries"
         android:entryValues="@array/status_bar_battery_percentage_values" />
 
+        <!-- Bettery Bar -->
+        <PreferenceScreen
+            android:key="battery_bar"
+            android:fragment="com.android.settings.benzo.BatteryBar"
+            android:title="@string/battery_bar" />
+
 </PreferenceScreen>
