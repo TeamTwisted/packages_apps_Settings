@@ -41,10 +41,12 @@ android:key="twisted_wallpapers"
 android:title="@string/twisted_wallpapers_title"
 android:summary="@string/twisted_wallpapers_summary"/>
 <!-- Twisted Changelog -->
-<PreferenceScreen
-android:key="twisted_changelog"
-android:title="@string/twisted_changelog_title"
-android:summary="@string/twisted_changelog_summary"/>
+
+        <!-- Changelog -->
+        <PreferenceScreen android:key="changelog"
+                android:title="@string/changelog_crdroid_title"
+                android:fragment="com.android.settings.crdroid.Changelog" />
 </PreferenceCategory>
+
 
 </PreferenceScreen>
