@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2015 The Android Open Source Project
+     Copyright (C) 2015 TeamTwisted Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,8 +14,19 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48"
+    android:tint="?android:attr/colorAccent">
 
-<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
-    android:src="@drawable/ic_settings_bluetooth_alpha"
-    android:tint="?android:attr/colorAccent" />
+    <path
+        android:pathData="M0 0h48v48H0z" />
+    <path
+        android:fillColor="@android:color/black"
+        android:pathData="M35.41 15.41L24 4h-2v15.17L12.83 10 10 12.83 21.17 24 10 35.17 12.83 38 22
+28.83V44h2l11.41-11.41L26.83 24l8.58-8.59zM26 11.66l3.76 3.76L26
+19.17v-7.51zm3.76 20.93L26 36.34v-7.52l3.76 3.77z" />
+</vector>
 
