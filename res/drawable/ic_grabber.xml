@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2015 TeamTwisted Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="152.000000dp"
+    android:height="152.000000dp"
+    android:viewportWidth="152.000000"
+    android:viewportHeight="152.000000"
+    android:tint="?android:attr/colorAccent">
+
+    <group
+            android:translateY="152.000000"
+            android:scaleX="0.100000"
+            android:scaleY="-0.100000">
+        <path
+            android:fillColor="@android:color/black"
+            android:pathData="M675 1140 l-79 -80 -151 -2 -150 -3 0 -55 0 -55 465 0 465 0 0 55 0 55 -150 3 -151
+2 -79 80 c-44 44 -82 80 -85 80 -3 0 -41 -36 -85 -80z" />
+        <path
+            android:fillColor="@android:color/black"
+            android:pathData="M294 806 c-3 -7 -4 -33 -2 -57 l3 -44 465 0 465 0 0 55 0 55 -463 3 c-388 2 -463 0
+-468 -12z" />
+        <path
+            android:fillColor="@android:color/black"
+            android:pathData="M294 566 c-3 -7 -4 -33 -2 -57 l3 -44 150 -3 150 -3 83 -82 82 -82 83 82 82 82 150
+3 150 3 0 55 0 55 -463 3 c-388 2 -463 0 -468 -12z" />
+    </group>
+</vector>
