@@ -181,4 +181,8 @@
     <string name="lock_clock_title">Clock widget</string>
     <string name="lock_clock_summary">View or change how the \'cLock\' widget will display</string>
 
+    <!-- Swap volume buttons when the screen is rotated -->
+    <string name="swap_volume_buttons_title">Volume key swap on rotation</string>
+    <string name="swap_volume_buttons_summary">Adjust volume buttons action based on current rotation</string>
+
 </resources>
