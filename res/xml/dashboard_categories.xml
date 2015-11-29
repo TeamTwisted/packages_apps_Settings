@@ -89,16 +89,12 @@
       android:id="@+id/personal_section"
       android:title="@string/header_category_personal">
 
-        <!-- SuperSU -->
-        <dashboard-tile
-                android:id="@+id/twisted_settings"
-                android:icon="@drawable/ic_settings_twisted"
-                android:title="@string/twisted_settings_title">
-                <intent
-                    android:action="android.intent.action.MAIN"
-                    android:targetPackage="com.android.twistedproject"
-                    android:targetClass="com.android.twistedproject.TwistedActivity" />
-        </dashboard-tile>
+    <!-- twisted -->
+    <dashboard-tile
+      android:id="@+id/twisted_settings"
+      android:icon="@drawable/ic_settings_twisted"
+      android:fragment="com.android.settings.twisted.TwistedSettings"
+      android:title="@string/twisted_settings_title" />
 
     </dashboard-category>
 

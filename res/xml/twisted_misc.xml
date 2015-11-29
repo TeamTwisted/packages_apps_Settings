@@ -19,12 +19,6 @@ android:fragment="com.android.settings.ButtonSettings"
 android:title="@string/button_settings_title"
 android:summary="Click to tweak hardware keys."/>
 
-<PreferenceScreen
-android:key="lock_screen_general_category"
-android:fragment="com.android.settings.chroma.LockScreenSettings"
-android:title="LockScreen Options"
-android:summary="Click to tweak lockscreen feel." />
-
 <!-- Animation Settings -->
 <PreferenceScreen
 android:key="animation_settings"
