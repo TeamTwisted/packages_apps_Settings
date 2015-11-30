@@ -445,6 +445,11 @@
     <string name="status_bar_quick_qs_pulldown_title">Quick pulldown</string>
     <string name="status_bar_quick_qs_pulldown_summary">Right edge of the status bar pulls down Quick Settings</string>
 
+    <!-- Advanced Location tile -->
     <string name="qs_advanced_location_title">Advanced location quick settings</string>
     <string name="qs_advanced_location_summary">Enable advanced settings for location in quick settings</string>
+
+    <!-- Full Screen recents -->
+    <string name="recents_full_screen_title">Full screen</string>
+    <string name="recents_full_screen_summary">Makes the recents screen go into immersive mode</string>
 </resources>

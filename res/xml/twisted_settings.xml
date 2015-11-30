@@ -74,11 +74,13 @@ android:title="@string/statusbar_notificationdrawer_title"
 android:summary="@string/notificationdrawer_tweak_summary"/>
 
 <!-- Display -->
+<!--
 <PreferenceScreen
 android:id="@+id/twisted_display"
 android:fragment="com.android.settings.twisted.TwistedDisplaySettings"
 android:title="@string/display_tweak_title"
 android:summary="@string/display_tweak_summary"/>
+-->
 
 <!-- NavigationBar -->
 <PreferenceScreen

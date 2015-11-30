@@ -21,10 +21,5 @@ xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
 android:id="@+id/twisted_display"
 android:title="@string/display_tweak_title">
 
-<PreferenceScreen
-android:key="expanded_desktop"
-android:title="@string/power_menu_expanded_desktop"
-android:fragment="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />
-
 </PreferenceScreen>
 
