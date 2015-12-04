@@ -4,6 +4,6 @@
     <color name="twisted_center_shadow">#10000000</color>
     <color name="twisted_end_shadow">#37000000</color>
 
-    <color name="theme_primary">#181818</color><!-- Twisted Theme - Change 10/03 -->
-    <color name="theme_primary_dark">#141414</color><!-- Twisted Theme - Change 10/03 -->
+    <color name="theme_primary">#212121</color><!-- Twisted Theme - Change 10/03 -->
+    <color name="theme_primary_dark">#212121</color><!-- Twisted Theme - Change 10/03 -->
 </resources>            
