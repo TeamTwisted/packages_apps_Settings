@@ -244,7 +244,10 @@
     <dimen name="confirm_credentials_security_method_margin">48dp</dimen>
     <dimen name="fab_size">56dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="fab_icon_size">24dp</dimen>
     <dimen name="fab_elevation">12dp</dimen>
+    <dimen name="fab_elevation_normal">8dp</dimen>
+    <dimen name="fab_elevation_pressed">6dp</dimen>
     <dimen name="fab_press_translation_z">9dp</dimen>
 
     <!-- Delete managed profile dialog -->
