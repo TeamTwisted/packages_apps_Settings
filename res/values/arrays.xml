@@ -683,11 +683,24 @@
         <item>monitor high power location</item>
         <item>get usage stats</item>
         <item>mute/unmute microphone</item>
+        <item>toast window</item>
         <item>project media</item>
         <item>activate VPN</item>
         <item>write wallpaper</item>
         <item>assist structure</item>
         <item>assist screenshot</item>
+        <item>read phone state</item>
+        <item>add voicemail</item>
+        <item>use sip</item>
+        <item>make call</item>
+        <item>use fingerprint</item>
+        <item>use body sensors</item>
+        <item>read cell broadcast</item>
+        <item>mock location</item>
+        <item>read external storage</item>
+        <item>write external storage</item>
+        <item>turn screen on</item>
+        <item>get accounts</item>
     </string-array>
 
     <!-- User display names for app ops codes -->
@@ -737,11 +750,24 @@
         <item>@string/app_ops_access_location</item>
         <item>@string/app_ops_get_usage_stats</item>
         <item>@string/app_ops_mute_unmute_microphone</item>
+        <item>@string/app_ops_toast_window</item>
         <item>@string/app_ops_project_media</item>
         <item>@string/app_ops_activate_vpn</item>
         <item>@string/app_ops_change_wallpaper</item>
         <item>@string/app_ops_assist_structure</item>
         <item>@string/app_ops_assist_screenshot</item>
+        <item>@string/app_ops_read_phone_state</item>
+        <item>@string/app_ops_add_voicemail</item>
+        <item>@string/app_ops_make_phone_call</item>
+        <item>@string/app_ops_make_phone_call</item>
+        <item>@string/app_ops_use_fingerprint</item>
+        <item>@string/app_ops_use_body_sensors</item>
+        <item>@string/app_ops_read_cell_broadcasts</item>
+        <item>@string/app_ops_mock_location</item>
+        <item>@string/app_ops_read_external_storage</item>
+        <item>@string/app_ops_write_external_storage</item>
+        <item>@string/app_ops_turn_on_screen</item>
+        <item>@string/app_ops_get_accounts</item>
     </string-array>
 
     <!-- Titles for the list of long press timeout options. -->
