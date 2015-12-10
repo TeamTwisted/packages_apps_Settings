@@ -7088,4 +7088,10 @@
 
     <!-- Description of feature to change color setting for the display [CHAR LIMIT=NONE] -->
     <string name="picture_color_mode_desc">Use sRGB</string>
+
+    <!-- Break SystemUI Tuner into two parts -->
+    <string name="quick_settings_title">Quick Settings</string>
+    <string name="quick_settings_summary">Configure quick settings tiles</string>
+    <string name="status_bar_icon_blacklist_title">Status bar icons</string>
+    <string name="status_bar_icon_blacklist_summary">Configure what icons are shown on status bar</string>
 </resources>
