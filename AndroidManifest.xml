@@ -2683,5 +2683,6 @@
         <activity android:name=".twisted.TwistedDisplaySettings" />
         <activity android:name=".twisted.BatterySettings" />
         <activity android:name=".twisted.StatusBarSettings" />
+        <activity android:name=".twisted.NotificationDrawerSettings" />
     </application>
 </manifest>
