@@ -58,30 +58,42 @@ android:summary="@string/twisted_changelog_summary"/>
 <PreferenceCategory
 android:key="twisted_ui"
 android:title="@string/twisted_ui_title">
+
 <!-- StatusBar -->
 <PreferenceScreen
 android:id="@+id/twisted_statusbar"
 android:fragment="com.android.settings.twisted.StatusBarSettings"
 android:title="@string/statusbar_tweak_title"
 android:summary="@string/statusbar_tweak_summary"/>
+
+<!-- NotificationDrawer -->
+<PreferenceScreen
+android:id="@+id/twisted_notificationdrawer"
+android:fragment="com.android.settings.twisted.TwistedNotificationDrawerSettings"
+android:title="@string/statusbar_notificationdrawer_title"
+android:summary="@string/notificationdrawer_tweak_summary"/>
+
 <!-- Display -->
 <PreferenceScreen
 android:id="@+id/twisted_display"
 android:fragment="com.android.settings.twisted.TwistedDisplaySettings"
 android:title="@string/display_tweak_title"
 android:summary="@string/display_tweak_summary"/>
+
 <!-- NavigationBar -->
 <PreferenceScreen
 android:id="@+id/twisted_navbar"
 android:fragment="com.android.settings.twisted.TwistedNavBarSettings"
 android:title="@string/navbar_tweak_title"
 android:summary="@string/navbar_tweak_summary"/>
+
 <!-- LockScreen -->
 <PreferenceScreen
 android:key="lock_screen_general_category"
 android:fragment="com.android.settings.chroma.LockScreenSettings"
 android:title="LockScreen Options"
 android:summary="Click to tweak lockscreen feel." />
+
 <!-- Misc. -->
 <PreferenceScreen
 android:id="@+id/twisted_misc"

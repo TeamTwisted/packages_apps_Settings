@@ -198,9 +198,12 @@
     <!-- NavBar -->
     <string name="navbar_tweak_title">Navigation Bar</string>
     <string name="navbar_tweak_summary">Customize: Height, Width, Actions, etc.</string>
-    <!-- NavBar -->
+    <!-- Misc -->
     <string name="misc_tweak_title">Misc. Options</string>
     <string name="misc_tweak_summary">Customize: Wakelock, Hardware Buttons, etc.</string>
+    <!-- NotificationDrawer -->
+    <string name="statusbar_notificationdrawer_title">Notification Drawer</string>
+    <string name="notificationdrawer_tweak_summary">Customize: Notification Drawer</string>
 
 				<!-- Twisted Settings SubSettings -->
     <!-- Battery Tweaks -->
@@ -435,4 +438,6 @@
     <!-- Double tap-to-sleep -->
     <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
     <string name="double_tap_to_sleep_summary">Double-tap on the status bar or top third and bottom shortcut area of the lock screen to turn off the display</string>
+
+   <string name="notification_drawer_title">Notification Drawer Settings</string>
 </resources>
