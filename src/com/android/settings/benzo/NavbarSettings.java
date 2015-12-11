@@ -31,23 +31,19 @@ import com.android.internal.logging.MetricsLogger;
 public class NavbarSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
 
-    private static final String KILL_APP_LONGPRESS_BACK = "kill_app_longpress_back";
     private static final String DIM_NAV_BUTTONS = "dim_nav_buttons";
     private static final String DIM_NAV_BUTTONS_TIMEOUT = "dim_nav_buttons_timeout";
     private static final String DIM_NAV_BUTTONS_ALPHA = "dim_nav_buttons_alpha";
     private static final String DIM_NAV_BUTTONS_ANIMATE = "dim_nav_buttons_animate";
     private static final String DIM_NAV_BUTTONS_ANIMATE_DURATION = "dim_nav_buttons_animate_duration";
     private static final String DIM_NAV_BUTTONS_TOUCH_ANYWHERE = "dim_nav_buttons_touch_anywhere";
-    private static final String STATUS_BAR_IME_ARROWS = "status_bar_ime_arrows";
 
-    private SwitchPreference mKillAppLongPressBack;
     private SwitchPreference mDimNavButtons;
     private SlimSeekBarPreference mDimNavButtonsTimeout;
     private SlimSeekBarPreference mDimNavButtonsAlpha;
     private SwitchPreference mDimNavButtonsAnimate;
     private SlimSeekBarPreference mDimNavButtonsAnimateDuration;
     private SwitchPreference mDimNavButtonsTouchAnywhere;
-    private SwitchPreference mStatusBarImeArrows;
 
     @Override
     protected int getMetricsCategory() {
@@ -58,19 +54,6 @@ public class NavbarSettings extends SettingsPreferenceFragment implements
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.navbar_settings);
-
-        // kill-app long press back
-        mKillAppLongPressBack = (SwitchPreference) findPreference(KILL_APP_LONGPRESS_BACK);
-        mKillAppLongPressBack.setOnPreferenceChangeListener(this);
-        int killAppLongPressBack = Settings.Secure.getInt(getContentResolver(),
-                KILL_APP_LONGPRESS_BACK, 0);
-        mKillAppLongPressBack.setChecked(killAppLongPressBack != 0);
-
-        // nav bar cursor
-        mStatusBarImeArrows = (SwitchPreference) findPreference(STATUS_BAR_IME_ARROWS);
-        mStatusBarImeArrows.setChecked(Settings.System.getInt(getContentResolver(),
-                Settings.System.STATUS_BAR_IME_ARROWS, 0) == 1);
-        mStatusBarImeArrows.setOnPreferenceChangeListener(this);
 
         // SlimDim
         mDimNavButtons = (SwitchPreference) findPreference(DIM_NAV_BUTTONS);
@@ -155,19 +138,10 @@ public class NavbarSettings extends SettingsPreferenceFragment implements
         mDimNavButtonsAnimateDuration.setEnabled(show);
     }
 
+
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mKillAppLongPressBack) {
-            Settings.System.putInt(getActivity().getContentResolver(),
-                Settings.Secure.KILL_APP_LONGPRESS_BACK,
-                    ((Boolean) newValue) ? 1 : 0);
-            return true;
-        } else if (preference == mStatusBarImeArrows) {
-            Settings.System.putInt(getActivity().getContentResolver(),
-                Settings.System.STATUS_BAR_IME_ARROWS,
-                    ((Boolean) newValue) ? 1 : 0);
-            return true;
-        } else if (preference == mDimNavButtons) {
+        if (preference == mDimNavButtons) {
             Settings.System.putInt(getActivity().getContentResolver(),
                 Settings.System.DIM_NAV_BUTTONS,
                     ((Boolean) newValue) ? 1 : 0);
