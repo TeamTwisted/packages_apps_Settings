@@ -23,5 +23,4 @@
             android:key="battery_bar"
             android:fragment="com.android.settings.benzo.BatteryBar"
             android:title="@string/battery_bar" />
-
 </PreferenceScreen>
