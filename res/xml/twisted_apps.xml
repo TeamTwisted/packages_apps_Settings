@@ -7,24 +7,6 @@ android:title="Twisted Apps" >
 android:layout="@layout/intent_main_header_twistedapps"
 android:id="@+id/twisted_apps"
 android:title="Twisted Corner">
-
-<PreferenceScreen
-android:layout="@layout/intent_top_bottom_spacer_twisted"/>
-
-<!-- Twisted Walls
-<PreferenceScreen
-android:id="@+id/twistedwalls"
-android:title="Twisted Wallpapers">
-<intent
-android:action="android.intent.action.MAIN"
-android:targetPackage="com.twisted.app"
-android:targetClass="com.twisted.app.MainActivity" />
-</PreferenceScreen>
-
-<PreferenceScreen
-android:layout="@layout/intent_top_bottom_spacer_twisted">
-</PreferenceScreen>
--->
 <!-- AdAway -->
 <PreferenceScreen
 android:id="@+id/adaway_settings"
@@ -34,7 +16,6 @@ android:action="android.intent.action.MAIN"
 android:targetClass="org.adaway.ui.BaseActivity"
 android:targetPackage="org.adaway" />
 </PreferenceScreen>
-
 <!-- Kernel Adiutor -->
 <PreferenceScreen
 android:id="@+id/kernel_adiutor"
@@ -44,7 +25,7 @@ android:action="android.intent.action.MAIN"
 android:targetPackage="com.grarak.kerneladiutor"
 android:targetClass="com.grarak.kerneladiutor.MainActivity" />
 </PreferenceScreen>
-
+<!-- Layers Manager -->
 <PreferenceScreen
 android:id="@+id/bitsyko_layers"
 android:title="@string/bitsyko_layers">     
@@ -53,16 +34,6 @@ android:action="android.intent.action.MAIN"
 android:targetPackage="com.lovejoy777.rroandlayersmanager"
 android:targetClass="com.lovejoy777.rroandlayersmanager.menu" />
 </PreferenceScreen>	
-
-<PreferenceScreen
-android:id="@+id/kantjer_layers"
-android:title="@string/kantjer_layers_title">
-<intent
-android:action="android.intent.action.MAIN"
-android:targetPackage="com.kantjer.xda.layers"
-android:targetClass="net.dinglisch.android.tasker.Kid" />
-</PreferenceScreen>	
-
 <!-- SuperSU -->
 <PreferenceScreen
 android:id="@+id/supersu_settings"
@@ -72,31 +43,15 @@ android:action="android.intent.action.MAIN"
 android:targetPackage="eu.chainfire.supersu"
 android:targetClass="eu.chainfire.supersu.MainActivity" />
 </PreferenceScreen>
-
-        <!-- LMT PIE -->
-        <Preference
-            android:id="@+id/lmt_settings"
-	    android:title="LMT - Pie, ISAS and Gestures">
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetPackage="com.android.lmt"
-                android:targetClass="com.android.lmt.LMT" />
-        </Preference>
-<!-- Viper4Android
-<PreferenceScreen
-android:id="@+id/viper_settings"
-android:icon="@drawable/ic_settings_notifications_exposed"
-android:title="@string/viper_title">
+<!-- LMT PIE -->
+<Preference
+android:id="@+id/lmt_settings"
+android:title="LMT - Pie, ISAS and Gestures">
 <intent
 android:action="android.intent.action.MAIN"
-android:targetPackage="com.vipercn.viper4android_v2"
-android:targetClass="com.vipercn.viper4android_v2.activity.ViPER4Android" />
-</PreferenceScreen>
--->
-<PreferenceScreen
-android:layout="@layout/intent_top_bottom_spacer_twisted">
-</PreferenceScreen>
-
+android:targetPackage="com.android.lmt"
+android:targetClass="com.android.lmt.LMT" />
+</Preference>
 </PreferenceCategory>
 </PreferenceScreen>
 

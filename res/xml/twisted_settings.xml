@@ -32,13 +32,6 @@ android:key="twisted_about"
 android:title="@string/twisted_about_title"
 android:summary="@string/twisted_about_summary"/>
 -->
-<!-- Twisted Apps -->
-<!--
-<PreferenceScreen
-android:key="twisted_apps"
-android:title="@string/twisted_apps_title"
-android:summary="@string/twisted_apps_summary"/>
--->
 <!-- Twisted Wallpapers -->
 <!--
 <PreferenceScreen
@@ -52,8 +45,13 @@ android:key="twisted_changelog"
 android:fragment="com.android.settings.crdroid.Changelog"
 android:title="@string/twisted_changelog_title"
 android:summary="@string/twisted_changelog_summary"/>
+<!-- Twisted Apps -->
+<PreferenceScreen
+android:key="twisted_apps"
+android:fragment="com.android.settings.twisted.TwistedApps"
+android:title="@string/twisted_apps_title"
+android:summary="@string/twisted_apps_summary"/>
 </PreferenceCategory>
-
 <!-- Twisted UI Cat -->
 <PreferenceCategory
 android:key="twisted_ui"
