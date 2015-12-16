@@ -26,6 +26,8 @@
             android:scaleX="0.100000"
             android:scaleY="-0.100000">
         <path
+            android:strokeWidth="1"
+            android:strokeColor="@android:color/black"
             android:fillColor="@android:color/black"
             android:pathData="M355 1243 c-92 -16 -202 -63 -240 -103 -35 -37 -44 -97 -20 -138 10 -16 39 -42 64
 -57 43 -27 46 -31 43 -65 -5 -45 18 -92 57 -121 25 -19 27 -25 23 -68 -5 -54 14
