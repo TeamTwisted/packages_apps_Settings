@@ -28,15 +28,16 @@
 <!-- Twisted Apps -->
 <string name="twistedapps_apps_title">Twisted Apps</string> 
 
-    <!-- Changelog -->
-    <string name="changelog_crdroid_title">Changelog</string>
-    <string name="changelog_crdroid_error">Unable to load changelog</string>
+<!-- Changelog -->
+<string name="changelog_crdroid_title">Changelog</string>
+<string name="changelog_crdroid_error">Unable to load changelog</string>
 
 
 <!-- PREFERENCE SCREENS - START -->				
 <!-- Twisted Settings - Categories-->
 <string name="nav_bar_setting">Navigation Bar</string>
 <string name="status_bar_setting">Status Bar</string>
+<string name="system_icon_cat">System icons</string>
 <string name="notif_sound_setting">Notifications</string>
 <string name="systemwide_setting">System-Wide</string>
 <string name="misc_setting">Miscellaneous</string>

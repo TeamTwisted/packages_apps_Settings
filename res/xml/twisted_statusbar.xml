@@ -5,18 +5,13 @@ android:id="@+id/twisted_statusbar"
 android:title="@string/statusbar_tweak_title">
 
 <PreferenceCategory
-android:key="category_battery_options"
-android:title="@string/battery_title" >
+android:key="category_system_icons"
+android:title="@string/system_icon_cat" >
 <PreferenceScreen
 android:fragment="com.android.settings.twisted.BatterySettings"
 android:key="battery_style_pref"
 android:title="@string/battery_title"
 android:summary="@string/battery2_summary" />
-</PreferenceCategory>
-
-<PreferenceCategory
-android:key="category_clock_options"
-android:title="@string/status_bar_clock" >
 <PreferenceScreen
 android:fragment="com.android.settings.chroma.StatusBarClockStyle"
 android:key="clock_style_pref"
