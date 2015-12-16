@@ -95,17 +95,6 @@
       android:icon="@drawable/ic_settings_twisted"
       android:fragment="com.android.settings.twisted.TwistedSettings"
       android:title="@string/twisted_settings_title" />
-      
-        <!-- SuperSU -->
-        <dashboard-tile
-                android:id="@+id/supersu_settings"
-                android:icon="@drawable/ic_settings_supersu"
-                android:title="@string/supersu_title">
-                <intent
-                    android:action="android.intent.action.MAIN"
-                    android:targetPackage="eu.chainfire.supersu"
-                    android:targetClass="eu.chainfire.supersu.MainActivity" />
-        </dashboard-tile>
     </dashboard-category>
 
     <!-- DEVICE -->
