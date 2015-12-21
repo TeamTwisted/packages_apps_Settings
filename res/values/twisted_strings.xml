@@ -480,4 +480,8 @@
 
     <string name="default_string">Default</string>
 
+    <!-- Recent panel settings -->
+    <string name="recents_tweak_title">Recent Panel</string>
+    <string name="recents_tweak_summary">Customize: Recents the recents</string>
+
 </resources>

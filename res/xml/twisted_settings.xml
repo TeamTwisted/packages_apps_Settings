@@ -87,6 +87,13 @@ android:fragment="com.android.settings.twisted.TwistedNavBarSettings"
 android:title="@string/navbar_tweak_title"
 android:summary="@string/navbar_tweak_summary"/>
 
+<!-- Recents -->
+<PreferenceScreen
+android:id="@+id/twisted_recents"
+android:fragment="com.android.settings.twisted.TwistedRecentsSettings"
+android:title="@string/recents_tweak_title"
+android:summary="@string/recents_tweak_summary"/>
+
 <!-- LockScreen -->
 <PreferenceScreen
 android:key="lock_screen_general_category"
