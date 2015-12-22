@@ -46,7 +46,6 @@ import android.app.ActivityManagerNative;
 import android.app.Dialog;
 import android.app.IActivityManager;
 import android.app.ProgressDialog;
-import android.app.UiModeManager;
 import android.app.admin.DevicePolicyManager;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -96,7 +95,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_TAP_TO_WAKE = "tap_to_wake";
     private static final String KEY_AUTO_BRIGHTNESS = "auto_brightness";
     private static final String KEY_AUTO_ROTATE = "auto_rotate";
-    private static final String KEY_NIGHT_MODE = "night_mode";
     private static final String KEY_DOZE_CATEGORY = "category_doze_options";
     private static final String KEY_DOZE = "doze";
     private static final String KEY_ADVANCED_DOZE_OPTIONS = "advanced_doze_options";
@@ -121,7 +119,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private final Configuration mCurConfig = new Configuration();
 
     private ListPreference mScreenTimeoutPreference;
-    private ListPreference mNightModePreference;
     private Preference mScreenSaverPreference;
     private SwitchPreference mLiftToWakePreference;
     private SwitchPreference mTapToWakePreference;
@@ -267,16 +264,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             mDozePreference.setOnPreferenceChangeListener(this);
         } else {
             removePreference(KEY_DOZE_CATEGORY);
-        }
-
-        mNightModePreference = (ListPreference) findPreference(KEY_NIGHT_MODE);
-        if (mNightModePreference != null) {
-            final UiModeManager uiManager = (UiModeManager) getSystemService(
-                    Context.UI_MODE_SERVICE);
-            final int currentNightMode = uiManager.getNightMode();
-            mNightModePreference.setValue(String.valueOf(currentNightMode));
-            mNightModePreference.setOnPreferenceChangeListener(this);
-        }
+        }      
     }
 
     private int getDefaultDensity() {
@@ -665,17 +653,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             boolean value = (Boolean) objValue;
             Settings.Secure.putInt(getContentResolver(), CAMERA_DOUBLE_TAP_POWER_GESTURE_DISABLED,
                     value ? 0 : 1 /* Backwards because setting is for disabling */);
-        }
-        if (preference == mNightModePreference) {
-            try {
-                final int value = Integer.parseInt((String) objValue);
-                final UiModeManager uiManager = (UiModeManager) getSystemService(
-                        Context.UI_MODE_SERVICE);
-                uiManager.setNightMode(value);
-                Helpers.restartSystemUI();
-            } catch (NumberFormatException e) {
-                Log.e(TAG, "could not persist night mode setting", e);
-            }
         }
         return true;
     }
