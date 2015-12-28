@@ -17,19 +17,26 @@
 package com.android.settings.chroma;
 
 import android.content.Context;
+import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.pm.UserInfo;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.os.UserManager;
+import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
+import android.preference.SlimSeekBarPreference;
+import android.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
-
+import com.android.internal.logging.MetricsLogger;
 import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.util.cm.PowerMenuConstants;
 import static com.android.internal.util.cm.PowerMenuConstants.*;
 
@@ -37,7 +44,8 @@ import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PowerMenuActions extends PreferenceFragment {
+public class PowerMenuActions extends SettingsPreferenceFragment
+        implements OnPreferenceChangeListener {
 
     private SwitchPreference mRebootPref;
     private SwitchPreference mScreenshotPref;
@@ -50,6 +58,12 @@ public class PowerMenuActions extends PreferenceFragment {
     private SwitchPreference mVoicePref;
     private SwitchPreference mBugReportPref;
     private SwitchPreference mSilentPref;
+    private SwitchPreference mOnTheGoPref;
+    private SlimSeekBarPreference mOnTheGoAlphaPref;
+    private static final String PREF_ON_THE_GO_ALPHA = "on_the_go_alpha";
+
+    private ContentResolver mCr;
+    private PreferenceScreen mPrefSet;
 
     Context mContext;
     private ArrayList<String> mLocalUserConfig = new ArrayList<String>();
@@ -62,6 +76,12 @@ public class PowerMenuActions extends PreferenceFragment {
 
         addPreferencesFromResource(R.xml.chroma_settings_power);
         mContext = getActivity().getApplicationContext();
+
+        mPrefSet = getPreferenceScreen();
+
+        mCr = getActivity().getContentResolver();
+
+
 
         mAvailableActions = getActivity().getResources().getStringArray(
                 R.array.power_menu_actions_array);
@@ -96,10 +116,22 @@ public class PowerMenuActions extends PreferenceFragment {
                 mBugReportPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_BUGREPORT);
             } else if (action.equals(GLOBAL_ACTION_KEY_SILENT)) {
                 mSilentPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_SILENT);
+            } else if (action.equals(GLOBAL_ACTION_KEY_ONTHEGO)) {
+                mOnTheGoPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_ONTHEGO);
             }
         }
 
+        mOnTheGoAlphaPref = (SlimSeekBarPreference) findPreference(PREF_ON_THE_GO_ALPHA);
+        mOnTheGoAlphaPref.setDefault(50);
+        mOnTheGoAlphaPref.setInterval(1);
+        mOnTheGoAlphaPref.setOnPreferenceChangeListener(this);
+
         getUserConfig();
+    }
+
+    @Override
+    protected int getMetricsCategory() {
+        return MetricsLogger.DONT_TRACK_ME_BRO;
     }
 
     @Override
@@ -116,6 +148,14 @@ public class PowerMenuActions extends PreferenceFragment {
 
         if (mScreenRecordPref != null) {
             mScreenRecordPref.setChecked(settingsArrayContains(GLOBAL_ACTION_KEY_SCREENRECORD));
+        }
+
+        if (mOnTheGoPref != null) {
+            mOnTheGoPref.setChecked(settingsArrayContains(GLOBAL_ACTION_KEY_ONTHEGO));
+        }
+
+        if (mOnTheGoPref != null) {
+            mOnTheGoPref.setChecked(settingsArrayContains(GLOBAL_ACTION_KEY_ONTHEGO));
         }
 
         if (mAirplanePref != null) {
@@ -184,6 +224,10 @@ public class PowerMenuActions extends PreferenceFragment {
             value = mScreenRecordPref.isChecked();
             updateUserConfig(value, GLOBAL_ACTION_KEY_SCREENRECORD);
 
+        } else if (preference == mOnTheGoPref) {
+            value = mOnTheGoPref.isChecked();
+            updateUserConfig(value, GLOBAL_ACTION_KEY_ONTHEGO);
+
         } else if (preference == mAirplanePref) {
             value = mAirplanePref.isChecked();
             updateUserConfig(value, GLOBAL_ACTION_KEY_AIRPLANE);
@@ -221,6 +265,18 @@ public class PowerMenuActions extends PreferenceFragment {
         }
         return true;
     }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+         if (preference == mOnTheGoAlphaPref) {
+            float val = Float.parseFloat((String) newValue);
+            Settings.System.putFloat(mCr, Settings.System.ON_THE_GO_ALPHA,
+                    val / 100);
+            return true;
+        }
+        return false;
+    }
+
 
     private boolean settingsArrayContains(String preference) {
         return mLocalUserConfig.contains(preference);
