@@ -85,6 +85,7 @@ import com.android.settings.dashboard.DashboardSummary;
 import com.android.settings.dashboard.DashboardTile;
 import com.android.settings.twisted.TwistedSettings;
 import com.android.settings.twisted.TwistedDisplaySettings;
+import com.android.settings.twisted.TwistedDayNightSettings;
 import com.android.settings.twisted.TwistedNavBarSettings;
 import com.android.settings.twisted.TwistedMiscSettings;
 import com.android.settings.twisted.StatusBarSettings;
@@ -289,7 +290,8 @@ public class SettingsActivity extends Activity
             R.id.twisted_statusbar,
             R.id.twisted_display,
             R.id.twisted_navbar,
-            R.id.twisted_misc
+            R.id.twisted_misc,
+            R.id.twisted_daynight
     };
 
     private static final String[] ENTRY_FRAGMENTS = {
@@ -367,6 +369,7 @@ public class SettingsActivity extends Activity
             WriteSettingsDetails.class.getName(),
             TwistedSettings.class.getName(),
 												TwistedDisplaySettings.class.getName(),
+												TwistedDayNightSettings.class.getName(),
 												TwistedNavBarSettings.class.getName(),
 												TwistedMiscSettings.class.getName(),
 												StatusBarSettings.class.getName(),

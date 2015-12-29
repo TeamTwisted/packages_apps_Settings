@@ -2411,6 +2411,22 @@
           <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
                      android:resource="@id/twisted_navbar" />
       			</activity>
+									<!-- Twisted Settings - DayNight -->
+      			<activity android:name="Settings$TwistedDayNightSettingsActivity"
+                android:label="@string/twisted_daynight_title"
+                android:exported="true"
+                android:theme="@style/Theme.Material.Twisted"
+                android:noHistory="true"
+                android:taskAffinity="">
+          <intent-filter>
+              <action android:name="android.intent.action.MAIN" />
+              <category android:name="android.intent.category.DEFAULT" />
+          </intent-filter>
+          <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                     android:value="com.android.settings.twisted.TwistedDayNight" />
+          <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
+                     android:resource="@id/twisted_daynight" />
+      			</activity>
 
 
 
