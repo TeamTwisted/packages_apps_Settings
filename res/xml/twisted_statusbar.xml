@@ -53,6 +53,14 @@ android:key="breathing_notifications"
 android:fragment="com.android.settings.benzo.BreathingNotifications"
 android:title="@string/breathing_notifications_title" 
 android:summary="@string/breathing_notifications_summary" />
+
+    <PreferenceScreen
+            android:title="@string/status_bar_icon_blacklist_title"
+            android:summary="@string/status_bar_icon_blacklist_summary" >
+        <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.systemui"
+                android:targetClass="com.android.systemui.tuner.TunerActivity" />
+    </PreferenceScreen>
 </PreferenceCategory>
 
 </PreferenceScreen>

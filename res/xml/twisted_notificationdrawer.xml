@@ -43,6 +43,14 @@ android:defaultValue="false"/>
 android:key="category_quicksettings_options"
 android:title="Quick Settings Option" >
 
+        <PreferenceScreen
+                android:title="@string/quick_settings_title"
+                android:summary="@string/quick_settings_summary" >
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.android.systemui"
+                    android:targetClass="com.android.systemui.tuner.QsActivity" />
+        </PreferenceScreen>
+
 <com.android.settings.chroma.SecureSettingSwitchPreference
 android:key="qs_use_four_columns"
 android:title="@string/qs_four_columns_title"
