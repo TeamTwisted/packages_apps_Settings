@@ -484,4 +484,8 @@
     <string name="recents_tweak_title">Recent Panel</string>
     <string name="recents_tweak_summary">Customize: Recents the recents</string>
 
+    <string name="twisted_daynight_header_summary">Day/Night Header</string>
+    <string name="twisted_daynight_title">Day/Night</string>
+    <string name="twisted_daynight_summary">Turn on The Day/Night Settings</string>
+    <string name="twisted_daynight_header_title">Twisted Day/Night</string>
 </resources>
