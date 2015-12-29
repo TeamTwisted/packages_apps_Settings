@@ -23,6 +23,7 @@ android:title="@string/twisted_settings_title">
 
 <!-- Twisted Tweaks Cat -->
 <PreferenceCategory
+android:layout="@layout/twisted_preference_screen"
 android:key="twisted"
 android:title="@string/twisted_tweak_title">
 <!-- Twisted About -->
@@ -41,6 +42,8 @@ android:summary="@string/twisted_wallpapers_summary"/>
 -->
 <!-- Twisted Changelog -->
 <PreferenceScreen
+android:layout="@layout/twisted_preference_screen"
+android:icon="@drawable/ic_twisted_changelog"
 android:key="twisted_changelog"
 android:fragment="com.android.settings.crdroid.Changelog"
 android:title="@string/twisted_changelog_title"
@@ -48,6 +51,8 @@ android:summary="@string/twisted_changelog_summary"/>
 <!-- Twisted Apps -->
 <PreferenceScreen
 android:key="twisted_apps"
+android:layout="@layout/twisted_preference_screen"
+android:icon="@drawable/ic_twisted_apps"
 android:fragment="com.android.settings.twisted.TwistedApps"
 android:title="@string/twisted_apps_title"
 android:summary="@string/twisted_apps_summary"/>
@@ -55,11 +60,14 @@ android:summary="@string/twisted_apps_summary"/>
 <!-- Twisted UI Cat -->
 <PreferenceCategory
 android:key="twisted_ui"
+android:layout="@layout/twisted_preference_screen"
 android:title="@string/twisted_ui_title">
 
 <!-- StatusBar -->
 <PreferenceScreen
 android:id="@+id/twisted_statusbar"
+android:layout="@layout/twisted_preference_screen"
+android:icon="@drawable/ic_twisted_statusbar"
 android:fragment="com.android.settings.twisted.StatusBarSettings"
 android:title="@string/statusbar_tweak_title"
 android:summary="@string/statusbar_tweak_summary"/>
@@ -67,22 +75,26 @@ android:summary="@string/statusbar_tweak_summary"/>
 <!-- NotificationDrawer -->
 <PreferenceScreen
 android:id="@+id/twisted_notificationdrawer"
+android:layout="@layout/twisted_preference_screen"
+android:icon="@drawable/ic_twisted_notificationdrawer"
 android:fragment="com.android.settings.twisted.TwistedNotificationDrawerSettings"
 android:title="@string/statusbar_notificationdrawer_title"
 android:summary="@string/notificationdrawer_tweak_summary"/>
 
 <!-- Display -->
-<!--
 <PreferenceScreen
 android:id="@+id/twisted_display"
+android:layout="@layout/twisted_preference_screen"
+android:icon="@drawable/ic_twisted_display"
 android:fragment="com.android.settings.twisted.TwistedDisplaySettings"
 android:title="@string/display_tweak_title"
 android:summary="@string/display_tweak_summary"/>
--->
 
 <!-- NavigationBar -->
 <PreferenceScreen
 android:id="@+id/twisted_navbar"
+android:layout="@layout/twisted_preference_screen"
+android:icon="@drawable/ic_twisted_navigationbar"
 android:fragment="com.android.settings.twisted.TwistedNavBarSettings"
 android:title="@string/navbar_tweak_title"
 android:summary="@string/navbar_tweak_summary"/>
@@ -90,6 +102,8 @@ android:summary="@string/navbar_tweak_summary"/>
 <!-- Recents -->
 <PreferenceScreen
 android:id="@+id/twisted_recents"
+android:layout="@layout/twisted_preference_screen"
+android:icon="@drawable/ic_twisted_recents"
 android:fragment="com.android.settings.twisted.TwistedRecentsSettings"
 android:title="@string/recents_tweak_title"
 android:summary="@string/recents_tweak_summary"/>
@@ -97,6 +111,8 @@ android:summary="@string/recents_tweak_summary"/>
 <!-- LockScreen -->
 <PreferenceScreen
 android:key="lock_screen_general_category"
+android:layout="@layout/twisted_preference_screen"
+android:icon="@drawable/ic_twisted_lockscreen"
 android:fragment="com.android.settings.chroma.LockScreenSettings"
 android:title="LockScreen Options"
 android:summary="Click to tweak lockscreen feel." />
@@ -104,6 +120,8 @@ android:summary="Click to tweak lockscreen feel." />
 <!-- Misc. -->
 <PreferenceScreen
 android:id="@+id/twisted_misc"
+android:layout="@layout/twisted_preference_screen"
+android:icon="@drawable/ic_twisted_misc"
 android:fragment="com.android.settings.twisted.TwistedMiscSettings"
 android:title="@string/misc_tweak_title"
 android:summary="@string/misc_tweak_summary"/>

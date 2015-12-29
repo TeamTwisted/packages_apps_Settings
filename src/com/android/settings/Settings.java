@@ -122,6 +122,7 @@ public class Settings extends SettingsActivity {
     public static class TwistedSettingsActivity extends SettingsActivity { /* empty */ }
     public static class StatusBarSettingsActivity extends SettingsActivity { /* empty */ }
     public static class TwistedDisplaySettingsActivity extends SettingsActivity { /* empty */ }
+    public static class TwistedDayNightSettingsActivity extends SettingsActivity { /* empty */ }
     public static class TwistedNavBarSettingsActivity extends SettingsActivity { /* empty */ }
     public static class TwistedMiscSettingsActivity extends SettingsActivity { /* empty */ }
     public static class BlacklistSettingsActivity extends SettingsActivity { /* empty */ }
