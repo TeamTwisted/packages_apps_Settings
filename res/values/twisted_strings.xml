@@ -196,6 +196,9 @@
     <!-- Display -->
     <string name="display_tweak_title">Display</string>
     <string name="display_tweak_summary">Customize: DPI</string>
+
+    <string name="display_tweak_summary">Customize: DPI</string>
+    <string name="display_tweak_summary">Customize: DPI</string>
     <!-- NavBar -->
     <string name="navbar_tweak_title">Navigation Bar</string>
     <string name="navbar_tweak_summary">Customize: Height, Width, Actions, etc.</string>
@@ -205,6 +208,10 @@
     <!-- NotificationDrawer -->
     <string name="statusbar_notificationdrawer_title">Notification Drawer</string>
     <string name="notificationdrawer_tweak_summary">Customize: Notification Drawer</string>
+    <string name="twisted_daynight_header_title">Theme User Interface</string>
+    <string name="twisted_daynight_header_summary">Remember this is a wip.. so enable at your own risk.</string>
+    <string name="twisted_daynight_title">Theme User Interface</string>
+    <string name="twisted_daynight_summary">Click to open options to switch to light or dark theme. #whiteuimustdie</string>
 
 				<!-- Twisted Settings SubSettings -->
     <!-- Battery Tweaks -->
