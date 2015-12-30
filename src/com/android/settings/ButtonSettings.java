@@ -15,10 +15,18 @@
 */
 package com.android.settings;
 
+import android.app.admin.DevicePolicyManager;
+import android.content.ContentResolver;
+import android.content.Context;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.RemoteException;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceCategory;
+import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
@@ -36,8 +44,10 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private static final String TAG = ButtonSettings.class.getSimpleName();
 
     private static final String VOLUME_ROCKER_WAKE = "volume_rocker_wake";
+    private static final String KEY_VOLUME_CONTROL_RING_STREAM = "volume_keys_control_ring_stream";
 
     private SwitchPreference mVolumeRockerWake;
+    private SwitchPreference mVolumeControlRingStream;
 
     @Override
     protected int getMetricsCategory() {
@@ -48,6 +58,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.button_settings);
+        ContentResolver resolver = getActivity().getContentResolver();
 
         final PreferenceScreen prefScreen = getPreferenceScreen();
 
@@ -57,6 +68,27 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         int volumeRockerWake = Settings.System.getInt(getContentResolver(),
                 VOLUME_ROCKER_WAKE, 0);
         mVolumeRockerWake.setChecked(volumeRockerWake != 0);
+
+        // volume controls volume
+        mVolumeControlRingStream = (SwitchPreference)
+                findPreference(KEY_VOLUME_CONTROL_RING_STREAM);
+        int volumeControlRingtone = Settings.System.getInt(resolver,
+                Settings.System.VOLUME_KEYS_CONTROL_RING_STREAM, 1);
+        if (mVolumeControlRingStream != null) {
+            mVolumeControlRingStream.setChecked(volumeControlRingtone > 0);
+        }
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        if (preference == mVolumeControlRingStream) {
+            int value = mVolumeControlRingStream.isChecked() ? 1 : 0;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.VOLUME_KEYS_CONTROL_RING_STREAM, value);
+            return true;
+        }
+
+        return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
     @Override

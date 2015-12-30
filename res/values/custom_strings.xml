@@ -219,5 +219,7 @@
     <string name="recent_app_sidebar_label_color_title">Label color</string>
     <string name="recent_app_sidebar_bg_color_title">Background color</string>
     <string name="recent_app_sidebar_scale_title">Size</string>
-
+    
+    <string name="volume_keys_control_ring_stream_title">Control ringtone volume</string>
+    <string name="volume_keys_control_ring_stream_summary">If on, volume keys control ringtone volume. If off, volume keys control media volume.</string>
 </resources>
