@@ -20,6 +20,11 @@
         android:key="category_wakeup_options"
         android:title="@string/volume_options_title" >
 
+        <com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="volume_keys_control_ring_stream"
+            android:title="@string/volume_keys_control_ring_stream_title"
+            android:summary="@string/volume_keys_control_ring_stream_summary" />
+
         <SwitchPreference
             android:key="volume_rocker_wake"
             android:summary="@string/volume_rocker_wake_summary"
