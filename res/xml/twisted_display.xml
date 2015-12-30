@@ -33,5 +33,17 @@ android:fragment="com.android.settings.twisted.TwistedDayNightSettings"
 android:title="@string/twisted_daynight_title"
 android:summary="@string/twisted_daynight_summary"/>
 
+        <ListPreference
+            android:key="lcd_density"
+            android:title="@string/lcd_density"
+            android:persistent="false" />
+
+       <PreferenceScreen
+           	 android:key="expanded_desktop"
+           	 android:title="@string/power_menu_expanded_desktop"
+           	 android:summary="@string/expanded_desktop_title"
+           	 android:fragment="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />
+
+
 </PreferenceScreen>
 
