@@ -3,10 +3,6 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
 android:title="Twisted Apps" >
 
-<PreferenceCategory
-android:layout="@layout/intent_main_header_twistedapps"
-android:id="@+id/twisted_apps"
-android:title="Twisted Corner">
 <!-- AdAway -->
 <PreferenceScreen
 android:id="@+id/adaway_settings"
@@ -52,7 +48,6 @@ android:action="android.intent.action.MAIN"
 android:targetPackage="com.android.lmt"
 android:targetClass="com.android.lmt.LMT" />
 </Preference>
-</PreferenceCategory>
 </PreferenceScreen>
 
 
