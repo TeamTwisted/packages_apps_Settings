@@ -368,6 +368,7 @@
     <string name="network_traffic_autohide_threshold">Inactivity threshold</string>
     
     <!-- Lockscreen shortcuts -->
+    <string name="lockscreen_settings_title">Lockscreen Settings</string>
     <string name="lockscreen_shortcuts_category">Shortcuts</string>
     <string name="lockscreen_shortcuts_title">Lockscreen Shortcuts</string>
     <string name="lockscreen_shortcuts_summary">Change the shortcuts on lockscreen to whatever you want</string>
@@ -445,7 +446,7 @@
 
     <!-- Double tap-to-sleep -->
     <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
-    <string name="double_tap_to_sleep_summary">Double-tap on the status bar or top third and bottom shortcut area of the lock screen to turn off the display</string>
+    <string name="double_tap_to_sleep_summary">Double-tap on the status bar to put the device to sleep</string>
 
     <string name="notification_drawer_title">Notification Drawer Settings</string>
 

@@ -36,17 +36,17 @@
                 android:icon="@*android:drawable/ic_audio_alarm"
                 android:title="@string/alarm_volume_option_title" />
 
-        <!-- Volume Steps -->
-        <PreferenceScreen
-                android:key="volume_steps"
-                android:title="@string/volume_steps_title"
-                android:fragment="com.android.settings.aicp.VolumeSteps" />
-
         <!-- Ring volume -->
         <com.android.settings.notification.VolumeSeekBarPreference
                 android:key="ring_volume"
                 android:icon="@drawable/ring_ring"
                 android:title="@string/ring_notification_volume_option_title" />
+
+        <!-- Notification volume -->
+        <com.android.settings.notification.VolumeSeekBarPreference
+                android:key="notification_volume"
+                android:icon="@*android:drawable/ic_audio_notification_new"
+                android:title="@string/notification_volume_option_title" />
 
         <!-- Link Volume Notification -->
         <SwitchPreference
@@ -55,24 +55,17 @@
                 android:persistent = "false"
                 android:defaultValue = "true" />
 
-        <!-- Notification volume -->
-        <com.android.settings.notification.VolumeSeekBarPreference
-                android:key="notification_volume"
-                android:icon="@*android:drawable/ic_audio_notification_new"
-                android:title="@string/notification_volume_option_title" />
-
         <!-- Also vibrate for calls -->
         <SwitchPreference
                 android:key="vibrate_when_ringing"
                 android:title="@string/vibrate_when_ringing_title"
                 android:persistent="false" />
 
-        <!-- Camera Double-Tap vibration -->
-        <com.android.settings.chroma.SystemSettingSwitchPreference
-                android:key="double_tap_vibrate"
-                android:title="@string/dbl_tap_vib_title"
-                android:summary="@string/dbl_tap_vib_summary"
-                android:defaultValue="true" />
+        <!-- Volume Steps -->
+        <PreferenceScreen
+                android:key="volume_steps"
+                android:title="@string/volume_steps_title"
+                android:fragment="com.android.settings.aicp.VolumeSteps" />
 
         <!-- Interruptions -->
         <PreferenceScreen
@@ -110,16 +103,24 @@
         android:key="notification"
         android:title="@string/notification_section_header" >
 
-				<!-- Pulse notification light -->
-									<PreferenceScreen
-										android:key="notification_light"
-										android:title="@string/notification_light_title"
-										android:fragment="com.android.settings.notificationlight.NotificationLightSettings" />
-				<!-- Battery light -->
-									<PreferenceScreen
-										android:key="battery_light"
-										android:title="@string/battery_light_title"
-										android:fragment="com.android.settings.notificationlight.BatteryLightSettings" />
+        <!-- Heads up -->
+        <com.android.settings.cyanogenmod.GlobalSettingSwitchPreference
+            android:key="heads_up_notifications_enabled"
+            android:title="@string/heads_up_notifications"
+            android:summaryOn="@string/summary_heads_up_enabled"
+            android:summaryOff="@string/summary_heads_up_disabled" />
+
+	<!-- Pulse notification light -->
+	<PreferenceScreen
+		android:key="notification_light"
+		android:title="@string/notification_light_title"
+		android:fragment="com.android.settings.notificationlight.NotificationLightSettings" />
+
+	<!-- Battery light -->
+	<PreferenceScreen
+		android:key="battery_light"
+		android:title="@string/battery_light_title"
+		android:fragment="com.android.settings.notificationlight.BatteryLightSettings" />
 
          <!-- When device is locked -->
         <com.android.settings.DropDownPreference
@@ -137,12 +138,6 @@
                     android:value="com.android.settings.Settings$NotificationAppListActivity" />
         </PreferenceScreen>
 
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="advanced"
-        android:title="@string/advanced_section_header" >
-
         <!-- Notification access -->
         <Preference
                 android:key="manage_notification_access"
@@ -150,26 +145,5 @@
                 android:persistent="false"
                 android:fragment="com.android.settings.notification.NotificationAccessSettings" />
 
-        <!-- Do Not Disturb access -->
-        <Preference
-                android:key="manage_zen_access"
-                android:title="@string/manage_zen_access_title"
-                android:persistent="false"
-                android:fragment="com.android.settings.notification.ZenAccessSettings" />
-
     </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="headsup"
-        android:title="@string/headsup_section_header" >
-
-        <!-- Heads up -->
-        <com.android.settings.cyanogenmod.GlobalSettingSwitchPreference
-            android:key="heads_up_notifications_enabled"
-            android:title="@string/heads_up_notifications"
-            android:summaryOn="@string/summary_heads_up_enabled"
-            android:summaryOff="@string/summary_heads_up_disabled" />
-
-    </PreferenceCategory>
-
 </PreferenceScreen>
