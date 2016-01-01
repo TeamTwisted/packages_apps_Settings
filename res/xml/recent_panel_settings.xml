@@ -69,7 +69,8 @@
 
         <SlimSeekBarPreference
             android:key="recent_panel_scale"
-            android:title="@string/recent_panel_scale_title" />
+            android:title="@string/recent_panel_scale_title"
+            android:dependency="use_slim_recents" />
 
         <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:dependency="use_slim_recents"
