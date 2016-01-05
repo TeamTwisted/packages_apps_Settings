@@ -87,6 +87,7 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
     private static final String KEY_ZEN_MODE = "zen_mode";
     private static final String KEY_NOTIFICATION_LIGHT = "notification_light";
     private static final String KEY_BATTERY_LIGHT = "battery_light";
+    private static final String KEY_INCREASING_RING_VOLUME = "increasing_ring_volume";
 
     private static final String[] RESTRICTED_KEYS = {
         KEY_MEDIA_VOLUME,
@@ -100,6 +101,16 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
     private static final int SAMPLE_CUTOFF = 2000;  // manually cap sample playback at 2 seconds
 
     private final VolumePreferenceCallback mVolumeCallback = new VolumePreferenceCallback();
+    private final IncreasingRingVolumePreference.Callback mIncreasingRingVolumeCallback =
+            new IncreasingRingVolumePreference.Callback() {
+        @Override
+        public void onStartingSample() {
+            mVolumeCallback.stopSample();
+            mHandler.removeMessages(H.STOP_SAMPLE);
+            mHandler.sendEmptyMessageDelayed(H.STOP_SAMPLE, SAMPLE_CUTOFF);
+        }
+    };
+
     private final H mHandler = new H();
     private final SettingsObserver mSettingsObserver = new SettingsObserver();
     private final Receiver mReceiver = new Receiver();
@@ -113,6 +124,8 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
     private VolumeSeekBarPreference mRingPreference;
     private VolumeSeekBarPreference mNotificationPreference;
 
+    private TwoStatePreference mIncreasingRing;
+    private IncreasingRingVolumePreference mIncreasingRingVolume;
     private Preference mPhoneRingtonePreference;
     private Preference mNotificationRingtonePreference;
     private TwoStatePreference mVibrateWhenRinging;
@@ -178,6 +191,8 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
         initVibrateWhenRinging(mSoundCategory);
         initVolumeLinkNotification();
 
+        initIncreasingRing(mSoundCategory);
+
         final PreferenceCategory notification = (PreferenceCategory)
                 findPreference(KEY_NOTIFICATION);
         initPulse(notification);
@@ -201,6 +216,9 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
         for (VolumeSeekBarPreference volumePref : mVolumePrefs) {
             volumePref.onActivityResume();
         }
+        if (mIncreasingRingVolume != null) {
+            mIncreasingRingVolume.onActivityResume();
+        }
         boolean isRestricted = mUserManager.hasUserRestriction(UserManager.DISALLOW_ADJUST_VOLUME);
         for (String key : RESTRICTED_KEYS) {
             Preference pref = findPreference(key);
@@ -214,6 +232,9 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
     public void onPause() {
         super.onPause();
         mVolumeCallback.stopSample();
+        if (mIncreasingRingVolume != null) {
+            mIncreasingRingVolume.stopSample();
+        }
         mSettingsObserver.register(false);
         mReceiver.register(false);
     }
@@ -310,6 +331,9 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
         public void onSampleStarting(SeekBarVolumizer sbv) {
             if (mCurrent != null && mCurrent != sbv) {
                 mCurrent.stopSample();
+            }
+            if (mIncreasingRingVolume != null) {
+                mIncreasingRingVolume.stopSample();
             }
             mCurrent = sbv;
             if (mCurrent != null) {
@@ -414,6 +438,28 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
             }
         }
         return summary;
+    }
+
+    // === Increasing ringtone ===
+
+    private void initIncreasingRing(PreferenceCategory root) {
+        mIncreasingRing = (TwoStatePreference)
+                root.findPreference(Settings.System.INCREASING_RING);
+        mIncreasingRingVolume = (IncreasingRingVolumePreference)
+                root.findPreference(KEY_INCREASING_RING_VOLUME);
+
+        if (mIncreasingRing == null || mIncreasingRingVolume == null || !mVoiceCapable) {
+            if (mIncreasingRing != null) {
+                root.removePreference(mIncreasingRing);
+                mIncreasingRing = null;
+            }
+            if (mIncreasingRingVolume != null) {
+                root.removePreference(mIncreasingRingVolume);
+                mIncreasingRingVolume = null;
+            }
+        } else {
+            mIncreasingRingVolume.setCallback(mIncreasingRingVolumeCallback);
+        }
     }
 
     // === Vibrate when ringing ===
@@ -692,6 +738,9 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
                     break;
                 case STOP_SAMPLE:
                     mVolumeCallback.stopSample();
+                    if (mIncreasingRingVolume != null) {
+                        mIncreasingRingVolume.stopSample();
+                    }
                     break;
                 case UPDATE_EFFECTS_SUPPRESSOR:
                     updateEffectsSuppressor();
