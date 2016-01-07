@@ -34,12 +34,6 @@ android:title="@string/misc_tweak_title">
 		android:summary="Click to change power button options."/>
 
 	<PreferenceScreen
-		android:key="wakelock_blocker"
-		android:fragment="com.android.settings.terminus.WakeLockBlocker"
-		android:title="@string/wakelock_blocker_title"
-		android:summary="Click to block unwanted wakelocks."/>
-
-	<PreferenceScreen
 		android:key="lock_clock"
 		android:title="@string/lock_clock_title"
 		android:summary="@string/lock_clock_summary">
