@@ -102,11 +102,6 @@ public class WakeLockBlocker extends SettingsPreferenceFragment {
     }
 
     @Override
-    protected int getMetricsCategory() {
-        return MetricsLogger.DEVELOPMENT;
-    }
-
-    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d("maxwen", "running");
@@ -173,6 +168,11 @@ public class WakeLockBlocker extends SettingsPreferenceFragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
+    }
+
+    @Override
+    protected int getMetricsCategory() {
+        return MetricsLogger.APPLICATION;
     }
 
     private boolean isFirstEnable() {
@@ -257,12 +257,12 @@ public class WakeLockBlocker extends SettingsPreferenceFragment {
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         menu.add(0, MENU_RELOAD, 0, R.string.wakelock_blocker_reload)
-                .setIcon(com.android.internal.R.drawable.ic_menu_refresh)
+                .setIcon(R.drawable.ic_menu_refresh_holo_dark)
                 .setAlphabeticShortcut('r')
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM |
                         MenuItem.SHOW_AS_ACTION_WITH_TEXT);
         menu.add(0, MENU_SAVE, 0, R.string.wakelock_blocker_save)
-                .setIcon(R.drawable.ic_wakelockblocker_save)
+                .setIcon(R.drawable.ic_menu_save)
                 .setAlphabeticShortcut('s')
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM |
                         MenuItem.SHOW_AS_ACTION_WITH_TEXT);
