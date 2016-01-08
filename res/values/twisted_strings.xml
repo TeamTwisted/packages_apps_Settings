@@ -492,4 +492,6 @@
     <string name="recents_tweak_title">Recent Panel</string>
     <string name="recents_tweak_summary">Customize: Recents the recents</string>
 
+    <string name="volbtn_down_zen_title">Volume down in silent</string>
+    <string name="volbtn_down_zen_summary">allow volume down to enter do not disturb mode</string>
 </resources>

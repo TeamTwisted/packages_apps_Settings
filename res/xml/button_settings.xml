@@ -42,6 +42,12 @@
         android:summary="@string/swap_volume_buttons_summary"
         android:defaultValue="true"/>
 
+    <com.android.settings.chroma.SystemSettingSwitchPreference
+        android:key="volume_down_zen"
+        android:title="@string/volbtn_down_zen_title"
+        android:summary="@string/volbtn_down_zen_summary"
+        android:defaultValue="false"/>
+
     </PreferenceCategory>
 
 </PreferenceScreen>
