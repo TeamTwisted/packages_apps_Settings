@@ -496,4 +496,7 @@
     <string name="twisted_daynight_title">Day/Night</string>
     <string name="twisted_daynight_summary">Turn on The Day/Night Settings</string>
     <string name="twisted_daynight_header_title">Twisted Day/Night</string>
+
+    <string name="volbtn_down_zen_title">Volume down in silent</string>
+    <string name="volbtn_down_zen_summary">allow volume down to enter do not disturb mode</string>
 </resources>
