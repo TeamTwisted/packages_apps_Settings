@@ -75,7 +75,6 @@ public class NavbarSettings extends SettingsPreferenceFragment implements
     }
 
     private void updateSettings() {
-        boolean enableNavigationBar = Action.isNavBarEnabled(getActivity());
         if (mDimNavButtonsTimeout != null) {
             final int dimTimeout = Settings.System.getInt(getContentResolver(),
                     Settings.System.DIM_NAV_BUTTONS_TIMEOUT, 3000);
@@ -96,7 +95,6 @@ public class NavbarSettings extends SettingsPreferenceFragment implements
             mDimNavButtonsAnimateDuration.setInitValue((animateDuration / 100) - 1);
         }
 
-        updateNavbarPreferences(enableNavigationBar);
     }
 
     private void updateNavbarPreferences(boolean show) {
