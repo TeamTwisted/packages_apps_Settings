@@ -99,24 +99,6 @@
 <!-- NavigationBar Settings -->
 <string name="navbar_settings_title">Navigation Bar</string>
 <string name="navigationbar_title">Navigation Bar</string>
-<!-- Navigation bar -->
-<string name="navigation_bar_category">Navigation bar</string>
-<string name="navigation_other_category">Options</string>
-<string name="navbar_enable_bar">Enable</string>
-<string name="navbar_dimen_title">Dimensions</string>
-<string name="navbar_dimensions_reset_message">Reset all dimensions entries to default?</string>
-<string name="navigation_bar_height_title">Navigation bar height</string>
-<string name="navigation_bar_height_landscape_title">Navigation bar height landscape</string>
-<string name="navigation_bar_width_title">Navigation bar width</string>
-<string name="navigation_bar_size_42_dp_default">42 dp (default)</string>
-<string name="navigation_bar_size_36_dp">36 dp</string>
-<string name="navigation_bar_size_30_dp">30 dp</string>
-<string name="navigation_bar_size_24_dp">24 dp</string>
-<string name="navigation_bar_size_48_dp_default">48 dp (default)</string>
-<string name="navigation_bar_size_44_dp">44 dp</string>
-<string name="navigation_bar_size_40_dp">40 dp</string>
-<string name="navigation_bar_size_42_dp">42 dp</string>
-<string name="navigation_bar_size_0_dp">0 dp (off)</string>
 <!-- Navigation Bar Menu -->
 <string name="navigation_menu_right">Right</string>
 <string name="navigation_menu_left">Left</string>
@@ -124,10 +106,6 @@
 <string name="navigation_menu_default_jb_behavior">Show on request (default)</string>
 <string name="navigation_menu_never_show">Never show</string>
 <string name="navigation_menu_always_show">Always show</string>
-
-<!-- kill app long press back -->
-<string name="kill_app_longpress_back">Kill app back button</string>
-<string name="kill_app_longpress_back_summary">Kill the foreground app by long-pressing the back key</string>
 
 <!-- StatusBar Settings -->
 <string name="statusbar_title">Status Bar</string>
