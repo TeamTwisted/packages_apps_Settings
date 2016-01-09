@@ -16,6 +16,7 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <bool name="config_tile_single_line">false</bool>
     <!-- If false, MIN is displayed. If true, MSID is displayed. -->
     <bool name="config_msid_enable" translatable="false">false</bool>
 
@@ -30,7 +31,10 @@
     <integer name="maximum_user_dictionary_word_length" translatable="false">48</integer>
 
     <!-- Dashboard number of columns -->
-    <integer name="dashboard_num_columns">1</integer>
+    <integer name="dashboard_num_columns">2</integer>
+
+				<!-- Dashboard textview single line true or false to support multiple lines -->
+    <bool name="config_dashboard_tile_single_line">false</bool>
 
     <!-- Carrier_enabled editable -->
     <bool name="config_allow_edit_carrier_enabled" translatable="false">false</bool>
