@@ -188,7 +188,7 @@
     <dashboard-category
             android:id="@+id/personal_section"
             android:key="@string/category_key_personal"
-            android:title="@string/header_category_personal" >
+            android:title="@string/header_category_access" >
 
         <!-- Location -->
         <dashboard-tile
