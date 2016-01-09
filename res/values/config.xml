@@ -32,9 +32,6 @@
     <!-- Dashboard number of columns -->
     <integer name="dashboard_num_columns">2</integer>
 
-				<!-- Dashboard textview single line true or false to support multiple lines -->
-    <bool name="config_dashboard_tile_single_line">false</bool>
-
     <!-- Carrier_enabled editable -->
     <bool name="config_allow_edit_carrier_enabled" translatable="false">false</bool>
 
