@@ -26,8 +26,8 @@ android:id="@android:id/icon"
 android:layout_width="@dimen/dashboard_tile_image_size"
 android:layout_height="@dimen/dashboard_tile_image_size"
 android:scaleType="centerInside"
-android:layout_marginStart="@dimen/dashboard_tile_image_margin_start"
-android:layout_marginEnd="@dimen/dashboard_tile_image_margin_end" />
+android:layout_marginStart="16dp"
+android:layout_marginEnd="8dp" />
 
 <LinearLayout
 android:layout_width="match_parent"
@@ -59,6 +59,7 @@ android:fadingEdge="horizontal" />
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
 android:layout_below="@android:id/title"
+android:textAppearance="@*android:style/TextAppearance.Material.Small"
 android:layout_alignStart="@android:id/title"
 android:textColor="?android:attr/textColorSecondary" />
 

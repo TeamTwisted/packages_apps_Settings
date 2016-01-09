@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
 <!-- GENERIC STRINGS - START -->
 <!-- Font Sample Text -->
 <string name="font_size_sample">Twisted</string>
