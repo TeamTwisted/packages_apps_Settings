@@ -489,7 +489,7 @@
 
     <!-- Recent panel settings -->
     <string name="recents_tweak_title">Recent Panel</string>
-    <string name="recents_tweak_summary">Customize: Recents the recents</string>
+    <string name="recents_tweak_summary">Customize: SlimRecents, Full Screen Recents, etc.</string>
 
     <string name="twisted_daynight_header_summary">Day/Night Header</string>
     <string name="twisted_daynight_title">Day/Night</string>
