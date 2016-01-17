@@ -9,7 +9,7 @@ android:title="@string/contexual_header_title">
 	android:key="category_header_options"
 	android:title="@string/contexual_header_title" >
 
-<com.android.settings.preference.SystemSettingSwitchPreference
+<com.android.settings.chroma.SystemSettingSwitchPreference
 	android:key="status_bar_custom_header"
 	android:title="@string/status_bar_custom_header_title"
 	android:summary="@string/status_bar_custom_header_summary"
