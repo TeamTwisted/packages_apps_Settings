@@ -19,6 +19,34 @@
         android:key="other_sound_settings"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <PreferenceCategory
+	android:key="vibration_options"
+	android:title="Vibrations" >
+
+    <!-- Vibrate on touch -->
+    <SwitchPreference
+            android:key="vibrate_on_touch"
+            android:title="@string/vibrate_on_touch_title"
+            android:persistent="false" />
+
+    <!-- Fingerprint authentication vibration -->
+    <com.android.settings.chroma.SystemSettingSwitchPreference
+       	    android:key="fingerprint_success_vib"
+            android:title="@string/fprint_sucess_vib_title"
+            android:defaultValue="true" />
+
+     <!-- Camera Double-Tap vibration -->
+     <com.android.settings.chroma.SystemSettingSwitchPreference
+            android:key="double_tap_vibrate"
+            android:title="@string/dbl_tap_vib_title"
+            android:defaultValue="true" />
+
+     </PreferenceCategory>
+
+    <PreferenceCategory
+	   android:key="sound_options"
+	   android:title="Sounds" >
+
     <!-- Dial pad tones -->
     <SwitchPreference
             android:key="dial_pad_tones"
@@ -49,11 +77,7 @@
             android:title="@string/touch_sounds_title"
             android:persistent="false" />
 
-    <!-- Vibrate on touch -->
-    <SwitchPreference
-            android:key="vibrate_on_touch"
-            android:title="@string/vibrate_on_touch_title"
-            android:persistent="false" />
+    </PreferenceCategory>
 
     <!-- Dock speaker plays -->
     <com.android.settings.DropDownPreference
@@ -66,12 +90,5 @@
             android:key="emergency_tone"
             android:title="@string/emergency_tone_title"
             android:persistent="false" />
-
-    <!-- Fingerprint authentication vibration -->
-    <com.android.settings.chroma.SystemSettingSwitchPreference
-        android:key="fingerprint_success_vib"
-        android:title="@string/fprint_sucess_vib_title"
-        android:summary="@string/fprint_sucess_vib_summary"
-        android:defaultValue="true" />
 
 </PreferenceScreen>
