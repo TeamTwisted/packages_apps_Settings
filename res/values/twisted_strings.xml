@@ -498,4 +498,7 @@
 
     <!-- Fingerprint vibration -->
     <string name="fprint_sucess_vib_title">Fingerprint authentication vibration</string>
+
+    <!-- QS shade transparency -->
+    <string name="qs_transparent_shade">QS shade transparency</string>
 </resources>
