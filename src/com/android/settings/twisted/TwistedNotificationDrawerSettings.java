@@ -11,22 +11,25 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
-
+import android.database.ContentObserver;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import java.util.Locale;
 import android.text.TextUtils;
 import android.view.View;
+import com.android.settings.benzo.SeekBarPreference;
 
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 
-public class TwistedNotificationDrawerSettings extends SettingsPreferenceFragment implements
-        OnPreferenceChangeListener {
+public class TwistedNotificationDrawerSettings  extends SettingsPreferenceFragment
+        implements OnPreferenceChangeListener {
 
     private static final String PRE_QUICK_PULLDOWN = "quick_pulldown";
+    private static final String PREF_QS_TRANSPARENT_SHADE = "qs_transparent_shade";
 
     private ListPreference mQuickPulldown;
+    private SeekBarPreference mQSShadeAlpha;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,14 @@ public class TwistedNotificationDrawerSettings extends SettingsPreferenceFragmen
         addPreferencesFromResource(R.xml.twisted_notificationdrawer);
 
         PreferenceScreen prefSet = getPreferenceScreen();
+
+        // QS shade alpha
+        mQSShadeAlpha =
+                (SeekBarPreference) prefSet.findPreference(PREF_QS_TRANSPARENT_SHADE);
+        int qSShadeAlpha = Settings.System.getInt(getContentResolver(),
+                Settings.System.QS_TRANSPARENT_SHADE, 255);
+        mQSShadeAlpha.setValue(qSShadeAlpha / 1);
+        mQSShadeAlpha.setOnPreferenceChangeListener(this);
 
     // Quick pulldown
 	mQuickPulldown = (ListPreference) findPreference(PRE_QUICK_PULLDOWN);
@@ -58,6 +69,11 @@ public class TwistedNotificationDrawerSettings extends SettingsPreferenceFragmen
                     Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
                     statusQuickPulldown);
             updateQuickPulldownSummary(statusQuickPulldown);
+            return true;
+        } else if (preference == mQSShadeAlpha) {
+            int alpha = (Integer) objValue;
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.QS_TRANSPARENT_SHADE, alpha * 1);
             return true;
         }
         return false;
