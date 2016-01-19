@@ -31,11 +31,13 @@ android:title="@string/notification_drawer_title">
             android:summaryOff="@string/recents_searchbar_summary_disabled"
             android:defaultValue="false" />
 
-	<com.android.settings.chroma.SystemSettingSwitchPreference
-            android:key="recents_full_screen"
-            android:title="@string/recents_full_screen_title"
-            android:summary="@string/recents_full_screen_summary"
-            android:defaultValue="false" />
+    <ListPreference
+        android:key="immersive_recents"
+        android:title="@string/immersive_recents_title"
+        android:entries="@array/immersive_recents_entries"
+        android:entryValues="@array/immersive_recents_values"
+        android:summary="@string/power_menu_animation_summary"
+        android:persistent="false" />
 
     <PreferenceScreen
         android:key="recent_panel"
