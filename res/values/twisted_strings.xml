@@ -461,8 +461,12 @@
     <string name="qs_advanced_location_summary">Enable advanced settings for location in quick settings</string>
 
     <!-- Full Screen recents -->
-    <string name="recents_full_screen_title">Full screen</string>
-    <string name="recents_full_screen_summary">Makes the recents screen go into immersive mode</string>
+    <string name="immersive_recents_title">Immersive Recents</string>
+    <string name="immersive_recents_summary">Change the view of the recents screen</string>
+    <string name="immersive_recents_default">Default</string>
+    <string name="immersive_recents_fullscreen">Fullscreen</string>
+    <string name="immersive_recents_statusbar">Statusbar only</string>
+    <string name="immersive_recents_navbar">Navbar only</string>
 
     <!-- Recent panel -->
     <string name="recent_panel_category">Recent apps panel</string>
