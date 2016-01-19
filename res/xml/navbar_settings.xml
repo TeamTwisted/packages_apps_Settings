@@ -56,5 +56,4 @@
             android:summary="@string/dim_nav_buttons_animate_duration_summary" />
 
     </PreferenceCategory>
-
 </PreferenceScreen>
