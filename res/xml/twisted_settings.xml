@@ -40,6 +40,17 @@ android:key="twisted_wallpapers"
 android:title="@string/twisted_wallpapers_title"
 android:summary="@string/twisted_wallpapers_summary"/>
 -->
+<!-- Twisted OTA -->
+<PreferenceScreen
+android:layout="@layout/twisted_preference_screen"
+android:icon="@drawable/ic_twisted_ota"
+android:title="@string/twisted_ota_title"
+android:summary="@string/twisted_ota_summary" >
+<intent
+android:action="android.intent.action.MAIN"
+android:targetPackage="com.fusionjack.slimota"
+android:targetClass="com.fusionjack.slimota.MainActivity" />
+</PreferenceScreen>
 <!-- Twisted Changelog -->
 <PreferenceScreen
 android:layout="@layout/twisted_preference_screen"
@@ -126,7 +137,6 @@ android:fragment="com.android.settings.twisted.TwistedMiscSettings"
 android:title="@string/misc_tweak_title"
 android:summary="@string/misc_tweak_summary"/>
 </PreferenceCategory>
-
 
 </PreferenceScreen>
 
