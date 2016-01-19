@@ -6,7 +6,7 @@
 <!-- Bluetooth settings. A checkbox to set if we should accept all the file types regardless of their presence in MIME type whitelist -->
 <string name="bluetooth_accept_all_files">Accept all file types</string>
 
-<!--  TWISTED BUILD INFO - START -->				
+<!--  TWISTED BUILD INFO - START -->
 
 <!--  Build date of ROM, Twisted Version -->
 <string name="build_date">Twisted build date</string>
@@ -21,7 +21,7 @@
 <string name="sm_flags_default">None</string>
 
 
-<!-- DASHBOARD CATEGORY TITLES - START -->				
+<!-- DASHBOARD CATEGORY TITLES - START -->
 <!-- Twisted Settings -->
 <string name="twisted_settings_title">Twisted Tweaks</string>
 <!-- Twisted Apps -->
@@ -32,7 +32,7 @@
 <string name="changelog_crdroid_error">Unable to load changelog</string>
 
 
-<!-- PREFERENCE SCREENS - START -->				
+<!-- PREFERENCE SCREENS - START -->
 <!-- Twisted Settings - Categories-->
 <string name="nav_bar_setting">Navigation Bar</string>
 <string name="status_bar_setting">Status Bar</string>
@@ -183,6 +183,9 @@
     <!-- Twisted Apps -->
     <string name="twisted_apps_title">Preloaded Apps</string>
     <string name="twisted_apps_summary">Click to view the preloaded apps we find useful.</string>
+    <!-- Twisted OTA -->
+    <string name="twisted_ota_title">Twisted OTA</string>
+    <string name="twisted_ota_summary">Click to view and download Twisted updates.</string>
     <!-- Twisted Changelog -->
     <string name="twisted_changelog_title">Changelog</string>
     <string name="twisted_changelog_summary">Click to view the most recent changes to Twisted.</string>
