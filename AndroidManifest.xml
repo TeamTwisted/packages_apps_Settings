@@ -2335,7 +2335,6 @@
                 android:label="@string/twisted_settings_title"
                 android:icon="@mipmap/ic_launcher_settings"
                 android:exported="true"
-                android:theme="@style/Theme.Material.Twisted"
                 android:noHistory="true"
                 android:taskAffinity="">
           <intent-filter>
@@ -2351,7 +2350,6 @@
       			<activity android:name="Settings$StatusBarSettingsActivity"
                 android:label="@string/statusbar_tweak_title"
                 android:exported="true"
-                android:theme="@style/Theme.Material.Twisted"
                 android:noHistory="true"
                 android:taskAffinity="">
           <intent-filter>
@@ -2367,7 +2365,6 @@
       			<activity android:name="Settings$TwistedDisplaySettingsActivity"
                 android:label="@string/display_tweak_title"
                 android:exported="true"
-                android:theme="@style/Theme.Material.Twisted"
                 android:noHistory="true"
                 android:taskAffinity="">
           <intent-filter>
@@ -2383,7 +2380,6 @@
       			<activity android:name="Settings$TwistedNavBarSettingsActivity"
                 android:label="@string/navbar_tweak_title"
                 android:exported="true"
-                android:theme="@style/Theme.Material.Twisted"
                 android:noHistory="true"
                 android:taskAffinity="">
           <intent-filter>
@@ -2399,7 +2395,6 @@
       			<activity android:name="Settings$TwistedMiscSettingsActivity"
                 android:label="@string/misc_tweak_title"
                 android:exported="true"
-                android:theme="@style/Theme.Material.Twisted"
                 android:noHistory="true"
                 android:taskAffinity="">
           <intent-filter>
@@ -2415,7 +2410,6 @@
       			<activity android:name="Settings$TwistedDayNightSettingsActivity"
                 android:label="@string/twisted_daynight_title"
                 android:exported="true"
-                android:theme="@style/Theme.Material.Twisted"
                 android:noHistory="true"
                 android:taskAffinity="">
           <intent-filter>
