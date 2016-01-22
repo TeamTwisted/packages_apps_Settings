@@ -508,4 +508,8 @@
 
     <!-- QS shade transparency -->
     <string name="qs_transparent_shade">QS shade transparency</string>
+
+    <!-- QS header transparency -->
+    <string name="qs_transparent_header">QS header transparency</string>
+
 </resources>

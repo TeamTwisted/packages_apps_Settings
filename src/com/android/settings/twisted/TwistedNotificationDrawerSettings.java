@@ -27,9 +27,11 @@ public class TwistedNotificationDrawerSettings extends SettingsPreferenceFragmen
 
     private static final String PRE_QUICK_PULLDOWN = "quick_pulldown";
     private static final String PREF_QS_TRANSPARENT_SHADE = "qs_transparent_shade";
+    private static final String PREF_QS_TRANSPARENT_HEADER = "qs_transparent_header";
 
     private ListPreference mQuickPulldown;
     private SeekBarPreference mQSShadeAlpha;
+    private SeekBarPreference mQSHeaderAlpha;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,14 @@ public class TwistedNotificationDrawerSettings extends SettingsPreferenceFragmen
                 Settings.System.QS_TRANSPARENT_SHADE, 255);
         mQSShadeAlpha.setValue(qSShadeAlpha / 1);
         mQSShadeAlpha.setOnPreferenceChangeListener(this);
+
+            // QS header alpha
+            mQSHeaderAlpha =
+                    (SeekBarPreference) prefSet.findPreference(PREF_QS_TRANSPARENT_HEADER);
+            int qSHeaderAlpha = Settings.System.getInt(getContentResolver(),
+                    Settings.System.QS_TRANSPARENT_HEADER, 255);
+            mQSHeaderAlpha.setValue(qSHeaderAlpha / 1);
+            mQSHeaderAlpha.setOnPreferenceChangeListener(this);
 
     // Quick pulldown
 	mQuickPulldown = (ListPreference) findPreference(PRE_QUICK_PULLDOWN);
@@ -75,6 +85,11 @@ public class TwistedNotificationDrawerSettings extends SettingsPreferenceFragmen
             Settings.System.putInt(getContentResolver(),
                     Settings.System.QS_TRANSPARENT_SHADE, alpha * 1);
             return true;
+            } else if (preference == mQSHeaderAlpha) {
+                int alpha = (Integer) objValue;
+                Settings.System.putInt(getContentResolver(),
+                        Settings.System.QS_TRANSPARENT_HEADER, alpha * 1);
+                return true;
         }
         return false;
     }
