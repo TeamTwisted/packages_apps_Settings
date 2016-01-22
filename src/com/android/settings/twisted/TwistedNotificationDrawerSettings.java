@@ -28,10 +28,12 @@ public class TwistedNotificationDrawerSettings  extends SettingsPreferenceFragme
     private static final String PRE_QUICK_PULLDOWN = "quick_pulldown";
     private static final String PREF_QS_TRANSPARENT_SHADE = "qs_transparent_shade";
     private static final String PREF_QS_TRANSPARENT_HEADER = "qs_transparent_header";
+    private static final String PREF_TRANSPARENT_VOLUME_DIALOG = "transparent_volume_dialog";
 
     private ListPreference mQuickPulldown;
     private SeekBarPreference mQSShadeAlpha;
     private SeekBarPreference mQSHeaderAlpha;
+    private SeekBarPreference mVolumeDialogAlpha;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -56,6 +58,14 @@ public class TwistedNotificationDrawerSettings  extends SettingsPreferenceFragme
                     Settings.System.QS_TRANSPARENT_HEADER, 255);
             mQSHeaderAlpha.setValue(qSHeaderAlpha / 1);
             mQSHeaderAlpha.setOnPreferenceChangeListener(this);
+
+            // Volume dialog alpha
+            mVolumeDialogAlpha =
+                    (SeekBarPreference) prefSet.findPreference(PREF_TRANSPARENT_VOLUME_DIALOG);
+            int volumeDialogAlpha = Settings.System.getInt(getContentResolver(),
+                    Settings.System.TRANSPARENT_VOLUME_DIALOG, 255);
+            mVolumeDialogAlpha.setValue(volumeDialogAlpha / 1);
+            mVolumeDialogAlpha.setOnPreferenceChangeListener(this);
 
     // Quick pulldown
 	mQuickPulldown = (ListPreference) findPreference(PRE_QUICK_PULLDOWN);
@@ -89,6 +99,11 @@ public class TwistedNotificationDrawerSettings  extends SettingsPreferenceFragme
                 int alpha = (Integer) objValue;
                 Settings.System.putInt(getContentResolver(),
                         Settings.System.QS_TRANSPARENT_HEADER, alpha * 1);
+                return true;
+            } else if (preference == mVolumeDialogAlpha) {
+                int alpha = (Integer) objValue;
+                Settings.System.putInt(getContentResolver(),
+                        Settings.System.TRANSPARENT_VOLUME_DIALOG, alpha * 1);
                 return true;
         }
         return false;
