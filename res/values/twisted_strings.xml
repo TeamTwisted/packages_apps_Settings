@@ -517,4 +517,6 @@
     <!-- Volume dialog transparency -->
     <string name="volume_dialog_transparency">Volume dialog transparency</string>
 
+    <string name="transparency_title">Transparency</string>
+
 </resources>
