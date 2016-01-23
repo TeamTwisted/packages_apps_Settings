@@ -20,7 +20,6 @@ android:title="@string/misc_tweak_title">
 		android:title="@string/button_settings_title"
 		android:summary="Click to tweak hardware keys."/>
 
-        <!-- Blacklist and App Ops -->
        <PreferenceScreen
                 android:id="@+id/privacy_settings_cyanogenmod"
                 android:title="@string/privacy_settings_cyanogenmod_title"
@@ -32,6 +31,12 @@ android:title="@string/misc_tweak_title">
 		android:fragment="com.android.settings.chroma.PowerMenuActions"
 		android:title="@string/power_menu_title" 
 		android:summary="Click to change power button options."/>
+
+        <PreferenceScreen
+               android:key="twisted_transparency"
+               android:fragment="com.android.settings.twisted.TwistedTransparency"
+               android:title="Transparency"
+               android:summary="Change the transparency of UI elements" />
 
 	<PreferenceScreen
 		android:key="lock_clock"
