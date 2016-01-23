@@ -35,4 +35,12 @@
     <string name="notification_volume_option_title">Notification volume</string>
     <string name="ring_notification_volume_option_title">Ring and notification volume</string>
 
+    <!-- Dashboard columns -->
+    <string name="dashboard_columns_title">Dashboard Columns</string>
+    <string name="dashboard_columns_summary">Change the number of columns displayed in the dashboard</string>
+    <string name="dashboard_columns_dialog_title">Select dashboard columns</string>
+    <string name="dashboard_columns_default">One (default)</string>
+    <string name="dashboard_columns_two">Two</string>
+    <string name="dashboard_columns_three">Three</string>
+
 </resources>
