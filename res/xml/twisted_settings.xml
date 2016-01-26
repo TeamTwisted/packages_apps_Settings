@@ -126,7 +126,7 @@ android:layout="@layout/twisted_preference_screen"
 android:icon="@drawable/ic_twisted_lockscreen"
 android:fragment="com.android.settings.chroma.LockScreenSettings"
 android:title="LockScreen Options"
-android:summary="Click to tweak lockscreen feel." />
+android:summary="Customize: Lockscreen wallpaper, Weather, etc." />
 
 <!-- Misc. -->
 <PreferenceScreen
