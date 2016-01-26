@@ -179,16 +179,16 @@
     <string name="twisted_ui_title">Twisted User Interface</string>
     <!-- Twisted About -->
     <string name="twisted_about_title">About Team Twisted</string>
-    <string name="twisted_about_summary">Click to view the lead devs and notable mentions.</string>
+    <string name="twisted_about_summary">Click to view the lead devs and notable mentions</string>
     <!-- Twisted Apps -->
     <string name="twisted_apps_title">Preloaded Apps</string>
-    <string name="twisted_apps_summary">Click to view the preloaded apps we find useful.</string>
+    <string name="twisted_apps_summary">Click to view the preloaded apps we find useful</string>
     <!-- Twisted OTA -->
     <string name="twisted_ota_title">Twisted OTA</string>
-    <string name="twisted_ota_summary">Click to view and download Twisted updates.</string>
+    <string name="twisted_ota_summary">Click to view and download Twisted updates</string>
     <!-- Twisted Changelog -->
     <string name="twisted_changelog_title">Changelog</string>
-    <string name="twisted_changelog_summary">Click to view the most recent changes to Twisted.</string>
+    <string name="twisted_changelog_summary">Click to view the recent Twisted changes</string>
     <!-- Twisted Wallpapers -->
     <string name="twisted_wallpapers_title">Wallpapers</string>
     <string name="twisted_wallpapers_summary">Click to view and apply preloaded Twisted wallpapers.</string>
@@ -197,10 +197,7 @@
     <string name="statusbar_tweak_summary">Customize: Battery, Clock/Date, etc.</string>
     <!-- Display -->
     <string name="display_tweak_title">Display</string>
-    <string name="display_tweak_summary">Customize: DPI</string>
-
-    <string name="display_tweak_summary">Customize: DPI</string>
-    <string name="display_tweak_summary">Customize: DPI</string>
+    <string name="display_tweak_summary">Customize: DPI, DayNight mode, etc.</string>
     <!-- NavBar -->
     <string name="navbar_tweak_title">Navigation Bar</string>
     <string name="navbar_tweak_summary">Customize: Height, Width, Actions, etc.</string>
@@ -209,9 +206,9 @@
     <string name="misc_tweak_summary">Customize: Wakelock, Hardware Buttons, etc.</string>
     <!-- NotificationDrawer -->
     <string name="statusbar_notificationdrawer_title">Notification Drawer</string>
-    <string name="notificationdrawer_tweak_summary">Customize: Notification Drawer</string>
+    <string name="notificationdrawer_tweak_summary">Customize: Quick Settings, etc.</string>
     <string name="twisted_daynight_header_title">Theme User Interface</string>
-    <string name="twisted_daynight_header_summary">Remember this is a wip.. so enable at your own risk.</string>
+    <string name="twisted_daynight_header_summary">Remember this is a wip.. so enable at your own risk</string>
     <string name="twisted_daynight_title">Theme User Interface</string>
     <string name="twisted_daynight_summary">Click to open options to switch to light or dark theme. #whiteuimustdie</string>
 
@@ -496,7 +493,7 @@
 
     <!-- Recent panel settings -->
     <string name="recents_tweak_title">Recent Panel</string>
-    <string name="recents_tweak_summary">Customize: SlimRecents, Full Screen Recents, etc.</string>
+    <string name="recents_tweak_summary">Customize: SlimRecents, Search bar, etc.</string>
 
     <string name="twisted_daynight_header_summary">Day/Night Header</string>
     <string name="twisted_daynight_title">Day/Night</string>
