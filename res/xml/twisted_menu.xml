@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/navbar_menu"
+android:title="@string/navbar_menu">
+
+<PreferenceCategory
+	android:key="category_header_options"
+	android:title="Menu options" >
+
+            <ListPreference
+                    android:key="pref_navbar_menu_display"
+                    android:entries="@array/pref_menu_display_entries"
+                    android:entryValues="@array/pref_menu_display_values"
+                    android:title="@string/title_pref_menu_display"
+                    android:summary="@string/summary_pref_menu_display" />
+
+            <ListPreference
+                    android:key="pref_navbar_menu_location"
+                    android:entries="@array/pref_navigation_menu_entries"
+                    android:entryValues="@array/pref_navigation_menu_values"
+                    android:title="@string/title_pref_menu_location"
+                    android:summary="@string/summary_pref_menu_location" />
+
+</PreferenceCategory>
+</PreferenceScreen>

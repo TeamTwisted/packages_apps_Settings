@@ -580,10 +580,10 @@ public class ActionListViewSettings extends ListFragment implements
             case LOCKSCREEN_SHORTCUT:
                 ActionHelper.setLockscreenShortcutConfig(mActivity, actionConfigs, reset);
                 break;
-/* Disabled for now till all features are back. Enable it step per step!!!!!!
             case NAV_BAR:
                 ActionHelper.setNavBarConfig(mActivity, actionConfigs, reset);
                 break;
+/* Disabled for now till all features are back. Enable it step per step!!!!!!
             case NAV_RING:
                 ActionHelper.setNavRingConfig(mActivity, actionConfigs, reset);
                 break;
