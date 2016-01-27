@@ -229,7 +229,7 @@
 
     <!-- Double Tap Navbar to Sleep -->
     <string name="double_tap_sleep_nav_bar_title">Double-tap to sleep</string>
-    <string name="double_tap_sleep_nav_bar_summary">Double tap navigation bar to put the device to sleep</string>
+    <string name="double_tap_sleep_nav_bar_summary">Double tap nav bar to put the device to sleep</string>
 
     <string name="help">Help</string>
     <string name="reset_message">Reset all entries to default?</string>
@@ -495,5 +495,12 @@
    <!-- Navigation bar -->
    <string name="navigation_bar_category">Navigation bar</string>
    <string name="navigation_other_category">Options</string>
+
+   <!-- Navbar cursor buttons -->
+   <string name="show_ime_arrows_title">Show arrow keys while typing</string>
+   <string name="show_ime_arrows_summary">Display left and right cursor buttons for IME.</string>
+
+   <string name="navbar_menu">Menu</string>
+   <string name="transparency">Transparency</string>
 
 </resources>

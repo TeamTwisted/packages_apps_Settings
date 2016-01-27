@@ -35,7 +35,7 @@ android:title="@string/misc_tweak_title">
         <PreferenceScreen
                android:key="twisted_transparency"
                android:fragment="com.android.settings.twisted.TwistedTransparency"
-               android:title="Transparency"
+               android:title="@string/transparency"
                android:summary="Change the transparency of UI elements" />
 
 	<PreferenceScreen
