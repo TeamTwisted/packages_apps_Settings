@@ -15,27 +15,19 @@
      limitations under the License.
 -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="152.000000dp"
-    android:height="152.000000dp"
-    android:viewportWidth="152.000000"
-    android:viewportHeight="152.000000"
+    android:width="33dp"
+    android:height="24dp"
+    android:viewportWidth="33"
+    android:viewportHeight="24"
     android:tint="?android:attr/colorAccent">
 
-    <group
-            android:translateY="152.000000"
-            android:scaleX="0.100000"
-            android:scaleY="-0.100000">
-        <path
-            android:fillColor="@android:color/black"
-            android:pathData="M675 1140 l-79 -80 -151 -2 -150 -3 0 -55 0 -55 465 0 465 0 0 55 0 55 -150 3 -151
-2 -79 80 c-44 44 -82 80 -85 80 -3 0 -41 -36 -85 -80z" />
-        <path
-            android:fillColor="@android:color/black"
-            android:pathData="M294 806 c-3 -7 -4 -33 -2 -57 l3 -44 465 0 465 0 0 55 0 55 -463 3 c-388 2 -463 0
--468 -12z" />
-        <path
-            android:fillColor="@android:color/black"
-            android:pathData="M294 566 c-3 -7 -4 -33 -2 -57 l3 -44 150 -3 150 -3 83 -82 82 -82 83 82 82 82 150
-3 150 3 0 55 0 55 -463 3 c-388 2 -463 0 -468 -12z" />
-    </group>
+    <path
+								android:fillColor="@android:color/black"
+        android:pathData="M0 4.5h21v4.5h-21v-4.5zM0 10.5h21v4.5h-21v-4.5zM0 16.5h21v4.5h-21v-4.5z" />
+    <path
+								android:fillColor="@android:color/black"
+        android:pathData="M23.25 13.5l4.5 4.5 4.5-4.5z" />
+    <path
+								android:fillColor="@android:color/black"
+        android:pathData="M32.25 12l-4.5-4.5-4.5 4.5z" />
 </vector>
