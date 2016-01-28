@@ -184,6 +184,8 @@
         <item>@string/shortcut_action_recent</item>
         <item>@string/shortcut_action_power</item>
         <item>@string/shortcut_action_search</item>
+        <item>@string/shortcut_action_voice_search</item>
+        <item>@string/shortcut_action_camera</item>
         <item>@string/shortcut_action_none</item>
     </string-array>
 
@@ -203,27 +205,21 @@
      <string-array name="shortcut_action_screen_off_entries">
         <item>@string/shortcut_action_app</item>
         <item>@string/shortcut_action_camera</item>
-        <item>@string/shortcut_action_media_next</item>
-        <item>@string/shortcut_action_media_play_pause</item>
-        <item>@string/shortcut_action_media_previous</item>
         <item>@string/shortcut_action_ring_silent</item>
         <item>@string/shortcut_action_ring_vib</item>
         <item>@string/shortcut_action_ring_vib_silent</item>
-        <item>@string/shortcut_action_wake_device</item>
         <item>@string/shortcut_action_none</item>
     </string-array>
 
     <string-array name="shortcut_action_screen_off_values" translatable="false">
         <item>**app**</item>
         <item>**camera**</item>
-        <item>**media_next**</item>
-        <item>**media_play_pause**</item>
-        <item>**media_previous**</item>
         <item>**ring_silent**</item>
         <item>**ring_vib**</item>
         <item>**ring_vib_silent**</item>
-        <item>**wake_device**</item>
         <item>**null**</item>
+        <item>**voice_search**</item>
+        <item>**camera**</item>
     </string-array>
 
     <!-- MediaScanner behavior on boot -->
