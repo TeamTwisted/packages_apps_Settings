@@ -233,4 +233,9 @@
     
     <string name="keyguard_torch_title">Lockscreen torch</string>
     <string name="keyguard_torch_summary">Longpress power button with screen off turns on torch</string>
+
+    <!-- Quick Settings edit icon -->
+    <string name="quick_settings_edit_icon_title">Enable QS edit icon</string>
+    <string name="quick_settings_edit_icon_summary">Controls the quick settings edit icon in the drawer</string>
+
 </resources>

@@ -32,6 +32,12 @@ android:title="@string/notification_drawer_title">
         android:targetClass="com.android.systemui.tuner.QsActivity" />
         </PreferenceScreen>
 
+        <com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="quick_settings_edit_icon"
+            android:title="@string/quick_settings_edit_icon_title"
+            android:summary="@string/quick_settings_edit_icon_summary"
+            android:defaultValue="true" />
+
     <com.android.settings.chroma.SecureSettingSwitchPreference
 	android:key="qs_use_four_columns"
 	android:title="@string/qs_four_columns_title"
