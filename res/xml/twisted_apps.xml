@@ -45,8 +45,8 @@ android:id="@+id/lmt_settings"
 android:title="LMT - Pie, ISAS and Gestures">
 <intent
 android:action="android.intent.action.MAIN"
-android:targetPackage="com.android.lmt"
-android:targetClass="com.android.lmt.LMT" />
+android:targetPackage="com.noname81.lmt"
+android:targetClass="com.noname81.lmt.LMT" />
 </Preference>
 </PreferenceScreen>
 
