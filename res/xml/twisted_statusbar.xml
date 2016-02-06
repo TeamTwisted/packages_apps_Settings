@@ -17,6 +17,15 @@ android:fragment="com.android.settings.chroma.StatusBarClockStyle"
 android:key="clock_style_pref"
 android:title="@string/status_bar_clock"
 android:summary="@string/status_bar_clock_summary" />
+
+    <PreferenceScreen
+            android:title="@string/status_bar_icon_blacklist_title"
+            android:summary="@string/status_bar_icon_blacklist_summary" >
+        <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.systemui"
+                android:targetClass="com.android.systemui.tuner.TunerActivity" />
+    </PreferenceScreen>
+
 </PreferenceCategory>
 
 <PreferenceCategory

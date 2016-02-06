@@ -7098,6 +7098,8 @@
     <!-- Break SystemUI Tuner into two parts -->
     <string name="quick_settings_title">Quick Settings</string>
     <string name="quick_settings_summary">Configure quick settings tiles</string>
+    <string name="status_bar_icon_blacklist_title">Status bar icons</string>
+    <string name="status_bar_icon_blacklist_summary">Configure what icons are shown on status bar</string>
 
     <!-- Power menu Animations  -->
     <string name="power_menu_animation_title">Power menu animation</string>
