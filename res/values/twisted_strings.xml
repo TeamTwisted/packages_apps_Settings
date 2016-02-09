@@ -157,7 +157,7 @@
     <string name="twisted_ui_title">Twisted User Interface</string>
     <!-- Twisted About -->
     <string name="twisted_about_title">About Team Twisted</string>
-    <string name="twisted_about_summary">Click to view the lead devs and notable mentions</string>
+    <string name="twisted_about_summary">Click to learn more about TeamTwisted</string>
     <!-- Twisted Apps -->
     <string name="twisted_apps_title">Preloaded Apps</string>
     <string name="twisted_apps_summary">Click to view the preloaded apps we find useful</string>
