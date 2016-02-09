@@ -27,19 +27,17 @@ android:layout="@layout/twisted_preference_screen"
 android:key="twisted"
 android:title="@string/twisted_tweak_title">
 <!-- Twisted About -->
-<!--
 <PreferenceScreen
-android:key="twisted_about"
+android:id="@+id/twisted_about"
+android:layout="@layout/twisted_preference_screen"
+android:icon="@drawable/ic_twisted_about"
 android:title="@string/twisted_about_title"
-android:summary="@string/twisted_about_summary"/>
--->
-<!-- Twisted Wallpapers -->
-<!--
-<PreferenceScreen
-android:key="twisted_wallpapers"
-android:title="@string/twisted_wallpapers_title"
-android:summary="@string/twisted_wallpapers_summary"/>
--->
+android:summary="@string/twisted_about_summary">
+<intent
+android:action="android.intent.action.MAIN"
+android:targetClass="com.android.twistedabout.ScrollingActivity"
+android:targetPackage="com.android.twistedabout" />
+</PreferenceScreen>
 <!-- Twisted OTA -->
 <PreferenceScreen
 android:layout="@layout/twisted_preference_screen"
@@ -68,6 +66,7 @@ android:fragment="com.android.settings.twisted.TwistedApps"
 android:title="@string/twisted_apps_title"
 android:summary="@string/twisted_apps_summary"/>
 </PreferenceCategory>
+
 <!-- Twisted UI Cat -->
 <PreferenceCategory
 android:key="twisted_ui"
