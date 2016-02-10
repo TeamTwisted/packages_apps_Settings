@@ -21,10 +21,14 @@ public class TwistedTransparency extends SettingsPreferenceFragment
     private static final String PREF_QS_TRANSPARENT_SHADE = "qs_transparent_shade";
     private static final String PREF_QS_TRANSPARENT_HEADER = "qs_transparent_header";
     private static final String PREF_TRANSPARENT_VOLUME_DIALOG = "transparent_volume_dialog";
+    private static final String PREF_TRANSPARENT_POWER_MENU = "transparent_power_menu";
+    private static final String PREF_TRANSPARENT_POWER_DIALOG_DIM = "transparent_power_dialog_dim";
 
     private SeekBarPreference mQSShadeAlpha;
     private SeekBarPreference mQSHeaderAlpha;
     private SeekBarPreference mVolumeDialogAlpha;
+    private SeekBarPreference mPowerMenuAlpha;
+    private SeekBarPreference mPowerDialogDim;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -49,6 +53,22 @@ public class TwistedTransparency extends SettingsPreferenceFragment
                     Settings.System.QS_TRANSPARENT_HEADER, 255);
             mQSHeaderAlpha.setValue(qSHeaderAlpha / 1);
             mQSHeaderAlpha.setOnPreferenceChangeListener(this);
+
+            // Power menu alpha
+            mPowerMenuAlpha =
+                    (SeekBarPreference) prefSet.findPreference(PREF_TRANSPARENT_POWER_MENU);
+            int powerMenuAlpha = Settings.System.getInt(getContentResolver(),
+                    Settings.System.TRANSPARENT_POWER_MENU, 100);
+            mPowerMenuAlpha.setValue(powerMenuAlpha / 1);
+            mPowerMenuAlpha.setOnPreferenceChangeListener(this);
+
+            // Power/reboot dialog dim
+            mPowerDialogDim =
+                    (SeekBarPreference) prefSet.findPreference(PREF_TRANSPARENT_POWER_DIALOG_DIM);
+            int powerDialogDim = Settings.System.getInt(getContentResolver(),
+                    Settings.System.TRANSPARENT_POWER_DIALOG_DIM, 50);
+            mPowerDialogDim.setValue(powerDialogDim / 1);
+            mPowerDialogDim.setOnPreferenceChangeListener(this);
 
             // Volume dialog alpha
             mVolumeDialogAlpha =
@@ -75,6 +95,16 @@ public class TwistedTransparency extends SettingsPreferenceFragment
                 int alpha = (Integer) objValue;
                 Settings.System.putInt(getContentResolver(),
                         Settings.System.TRANSPARENT_VOLUME_DIALOG, alpha * 1);
+                return true;
+            } else if (preference == mPowerMenuAlpha) {
+                int alpha = (Integer) objValue;
+                Settings.System.putInt(getContentResolver(),
+                        Settings.System.TRANSPARENT_POWER_MENU, alpha * 1);
+                return true;
+            } else if (preference == mPowerDialogDim) {
+                int alpha = (Integer) objValue;
+                Settings.System.putInt(getContentResolver(),
+                        Settings.System.TRANSPARENT_POWER_DIALOG_DIM, alpha * 1);
                 return true;
         }
         return false;
