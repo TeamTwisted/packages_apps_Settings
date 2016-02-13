@@ -59,12 +59,6 @@
             android:title="@string/screen_locking_sounds_title"
             android:persistent="false" />
 
-    <!-- Charging sounds -->
-    <SwitchPreference
-            android:key="charging_sounds"
-            android:title="@string/charging_sounds_title"
-            android:persistent="false" />
-
     <!-- Docking sounds -->
     <SwitchPreference
             android:key="docking_sounds"
