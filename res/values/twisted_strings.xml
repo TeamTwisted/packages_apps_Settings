@@ -407,12 +407,6 @@
     <string name="recents_searchbar_summary_enabled">Search bar in recents menu is enabled</string>
     <string name="recents_searchbar_summary_disabled">Search bar in recents menu is disabled</string>
 
-    <!-- Heads up -->
-    <string name="headsup_section_header">Heads up notifications</string>
-    <string name="heads_up_notifications">Heads up</string>
-    <string name="summary_heads_up_enabled">Pop-up notifications are enabled</string>
-    <string name="summary_heads_up_disabled">Pop-up notifications are disabled</string>
-
     <!-- Scramble PIN Layout on Lockscreen -->
     <string name="unlock_scramble_pin_layout_title">Scramble layout</string>
     <string name="unlock_scramble_pin_layout_summary">Scramble PIN layout when unlocking device</string>
