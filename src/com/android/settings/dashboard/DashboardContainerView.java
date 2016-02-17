@@ -129,8 +129,11 @@ public class DashboardContainerView extends ViewGroup {
 
             int row = cursor / mNumColumns;
 
-            if (row == mNumRows - 1) {
+            if (Settings.System.getInt(mContext.getContentResolver(),
+                    Settings.System.DASHBOARD_TILEVIEW_DIVIDERS, 0) == 1) {
                 child.setDividerVisibility(false);
+            } else {
+                child.setDividerVisibility(true);
             }
 
             // Push the item to the next row if it can't fit on this one

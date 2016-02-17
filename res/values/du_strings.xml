@@ -48,5 +48,8 @@
     <string name="dashboard_tileview_double_lines_title">Dashboard tile view title</string>
     <string name="dashboard_tileview_double_lines_summary_on">Show dashboard tile titles in 1 line</string>
     <string name="dashboard_tileview_double_lines_summary_off">Show dashboard tile titles in 2 lines</string>
-
+    <string name="dashboard_tileview_dividers_title">Dashboard dividers</string>
+    <string name="dashboard_tileview_dividers_summary">Hide dashboard tile dividers</string>
+    <string name="dashboard_tileview_dividers_title">Dashboard dividers</string>
+    <string name="dashboard_tileview_dividers_summary">Hide dashboard tile dividers</string>
 </resources>
