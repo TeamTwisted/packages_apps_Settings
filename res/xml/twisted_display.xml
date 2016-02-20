@@ -49,5 +49,31 @@ android:title="@string/power_menu_expanded_desktop"
 android:summary="@string/expanded_desktop_title"
 android:fragment="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />
 
+        <PreferenceCategory
+            android:key="dashboard_category"
+            android:title="@string/dashboard_category">
+
+        <ListPreference
+                android:key="dashboard_columns"
+                android:title="@string/dashboard_columns_title"
+                android:dialogTitle="@string/dashboard_columns_dialog_title"
+                android:entries="@array/dashboard_columns_entries"
+                android:entryValues="@array/dashboard_columns_values"
+                android:summary="@string/dashboard_columns_summary"
+                android:persistent="false" />
+
+        <com.android.settings.chroma.SystemSettingSwitchPreference
+                android:key="dashboard_tileview_double_lines"
+                android:title="@string/dashboard_tileview_double_lines_title"
+                android:summaryOn="@string/dashboard_tileview_double_lines_summary_on"
+                android:summaryOff="@string/dashboard_tileview_double_lines_summary_off"
+                android:defaultValue="false" />
+
+        <com.android.settings.chroma.SystemSettingSwitchPreference
+                android:key="dashboard_tileview_dividers"
+                android:title="@string/dashboard_tileview_dividers_title"
+                android:summary="@string/dashboard_tileview_dividers_summary"
+                android:defaultValue="false" />
+        </PreferenceCategory>
 </PreferenceScreen>
 
