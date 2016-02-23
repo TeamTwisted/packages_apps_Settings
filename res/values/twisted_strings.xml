@@ -19,7 +19,9 @@
 <!-- GCC build flags info -->
 <string name="sm_flags">Optimizations</string>
 <string name="sm_flags_default">None</string>
-
+<!-- Clang version -->
+<string name="dtc_version">Clang</string>
+<string name="dtc_version_default">None</string>
 
 <!-- DASHBOARD CATEGORY TITLES - START -->
 <!-- Twisted Settings -->

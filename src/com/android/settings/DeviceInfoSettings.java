@@ -82,6 +82,8 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_TWISTED_VERSION = "twisted_version";
     private static final String KEY_SM_AND = "sm_android";
     private static final String KEY_SM_FLAGS = "sm_flags";
+    private static final String KEY_DTC_VERSION = "dtc_version";
+    private static final String PROPERTY_DTC_VERSION = "ro.dtc.version";
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
 
@@ -135,8 +137,8 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         findPreference(KEY_SM_FLAGS).setEnabled(true);
         setValueSummary(KEY_SM_AND, "ro.sm.android");
         setValueSummary(KEY_SM_FLAGS, "ro.sm.flags");
+        setValueSummary(KEY_DTC_VERSION, "ro.dtc.version");
 
-        
         if (!SELinux.isSELinuxEnabled()) {
             String status = getResources().getString(R.string.selinux_status_disabled);
             setStringSummary(KEY_SELINUX_STATUS, status);
