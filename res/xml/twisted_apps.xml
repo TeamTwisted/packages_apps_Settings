@@ -1,0 +1,53 @@
+<PreferenceScreen
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+android:title="Twisted Apps" >
+
+<!-- AdAway -->
+<PreferenceScreen
+android:id="@+id/adaway_settings"
+android:title="@string/adaway_title">
+<intent
+android:action="android.intent.action.MAIN"
+android:targetClass="org.adaway.ui.BaseActivity"
+android:targetPackage="org.adaway" />
+</PreferenceScreen>
+<!-- Kernel Adiutor -->
+<PreferenceScreen
+android:id="@+id/kernel_adiutor"
+android:title="@string/kerneladiutor_title">
+<intent
+android:action="android.intent.action.MAIN"
+android:targetPackage="com.grarak.kerneladiutor"
+android:targetClass="com.grarak.kerneladiutor.MainActivity" />
+</PreferenceScreen>
+<!-- Layers Manager -->
+<PreferenceScreen
+android:id="@+id/bitsyko_layers"
+android:title="@string/bitsyko_layers">     
+<intent
+android:action="android.intent.action.MAIN"
+android:targetPackage="com.lovejoy777.rroandlayersmanager"
+android:targetClass="com.lovejoy777.rroandlayersmanager.menu" />
+</PreferenceScreen>	
+<!-- SuperSU -->
+<PreferenceScreen
+android:id="@+id/supersu_settings"
+android:title="@string/supersu_title">
+<intent
+android:action="android.intent.action.MAIN"
+android:targetPackage="eu.chainfire.supersu"
+android:targetClass="eu.chainfire.supersu.MainActivity" />
+</PreferenceScreen>
+<!-- LMT PIE -->
+<Preference
+android:id="@+id/lmt_settings"
+android:title="LMT - Pie, ISAS and Gestures">
+<intent
+android:action="android.intent.action.MAIN"
+android:targetPackage="com.noname81.lmt"
+android:targetClass="com.noname81.lmt.LMT" />
+</Preference>
+</PreferenceScreen>
+
+

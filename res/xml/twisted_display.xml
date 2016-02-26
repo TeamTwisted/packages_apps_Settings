@@ -1,0 +1,79 @@
+<!--
+/*
+** Copyright 2007 TeamTwisted Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<PreferenceScreen
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+android:id="@+id/twisted_display"
+android:title="@string/display_tweak_title">
+
+<!-- Twisted Display Cat -->
+<PreferenceCategory
+android:key="twisted_display"
+android:title="DayNight mode"/>
+
+<!-- Twisted DayNight -->
+<PreferenceScreen
+android:key="twisted_daynight"
+android:fragment="com.android.settings.twisted.TwistedDayNightSettings"
+android:title="@string/twisted_daynight_title"
+android:summary="@string/twisted_daynight_summary"/>
+
+<!-- Twisted Display Cat -->
+<PreferenceCategory
+android:key="twisted_display"
+android:title="Misc"/>
+
+<ListPreference
+android:key="lcd_density"
+android:title="@string/lcd_density"
+android:persistent="false" />
+
+<PreferenceScreen
+android:key="expanded_desktop"
+android:title="@string/power_menu_expanded_desktop"
+android:summary="@string/expanded_desktop_title"
+android:fragment="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />
+
+        <PreferenceCategory
+            android:key="dashboard_category"
+            android:title="@string/dashboard_category">
+
+        <ListPreference
+                android:key="dashboard_columns"
+                android:title="@string/dashboard_columns_title"
+                android:dialogTitle="@string/dashboard_columns_dialog_title"
+                android:entries="@array/dashboard_columns_entries"
+                android:entryValues="@array/dashboard_columns_values"
+                android:summary="@string/dashboard_columns_summary"
+                android:persistent="false" />
+
+        <com.android.settings.chroma.SystemSettingSwitchPreference
+                android:key="dashboard_tileview_double_lines"
+                android:title="@string/dashboard_tileview_double_lines_title"
+                android:summaryOn="@string/dashboard_tileview_double_lines_summary_on"
+                android:summaryOff="@string/dashboard_tileview_double_lines_summary_off"
+                android:defaultValue="false" />
+
+        <com.android.settings.chroma.SystemSettingSwitchPreference
+                android:key="dashboard_tileview_dividers"
+                android:title="@string/dashboard_tileview_dividers_title"
+                android:summary="@string/dashboard_tileview_dividers_summary"
+                android:defaultValue="false" />
+        </PreferenceCategory>
+</PreferenceScreen>
+

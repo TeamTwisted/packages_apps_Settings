@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- show battery percent -->
+    <string-array name="entries_battery_percent" translatable="false">
+        <item>@string/battery_percent_none</item>
+        <item>@string/battery_percent_always</item>
+        <item>@string/battery_percent_expanded</item>
+    </string-array>
+
+    <string-array name="values_battery_percent" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="status_bar_battery_style_entries">
+        <item>@string/status_bar_battery_style_icon_portrait</item>
+        <item>@string/status_bar_battery_style_icon_landscape</item>
+        <item>@string/status_bar_battery_style_circle</item>
+        <item>@string/status_bar_battery_style_dotted_circle</item>
+        <item>@string/status_bar_battery_style_text</item>
+        <item>@string/status_bar_battery_style_hidden</item>
+    </string-array>
+    <string-array name="status_bar_battery_style_values">
+        <item>0</item>
+        <item>5</item>
+        <item>2</item>
+        <item>3</item>
+        <item>6</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="status_bar_battery_percentage_entries">
+        <item>@string/status_bar_battery_percentage_default</item>
+        <item>@string/status_bar_battery_percentage_text_inside</item>
+        <item>@string/status_bar_battery_percentage_text_next</item>
+    </string-array>
+    <string-array name="status_bar_battery_percentage_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- Quick pulldown -->
+    <string-array name="quick_pulldown_entries" translatable="false">
+        <item>@string/quick_pulldown_off</item>
+        <item>@string/quick_pulldown_right</item>
+        <item>@string/quick_pulldown_left</item>
+    </string-array>
+
+    <string-array name="quick_pulldown_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- Immersive Recents -->
+    <string-array name="immersive_recents_entries" translatable="false">
+        <item>@string/immersive_recents_default</item>
+        <item>@string/immersive_recents_fullscreen</item>
+        <item>@string/immersive_recents_statusbar</item>
+        <item>@string/immersive_recents_navbar</item>
+    </string-array>
+
+    <string-array name="immersive_recents_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+</resources>

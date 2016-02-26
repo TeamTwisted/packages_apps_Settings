@@ -1,0 +1,141 @@
+<!--
+/*
+** Copyright 2007 TeamTwisted Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<PreferenceScreen
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+android:id="@+id/twisted_settings"
+android:title="@string/twisted_settings_title">
+
+<!-- Twisted Tweaks Cat -->
+<PreferenceCategory
+android:layout="@layout/twisted_preference_screen"
+android:key="twisted"
+android:title="@string/twisted_tweak_title">
+<!-- Twisted About -->
+<PreferenceScreen
+android:id="@+id/twisted_about"
+android:layout="@layout/twisted_preference_screen"
+android:icon="@drawable/ic_twisted_about"
+android:title="@string/twisted_about_title"
+android:summary="@string/twisted_about_summary">
+<intent
+android:action="android.intent.action.MAIN"
+android:targetClass="com.android.twistedabout.ScrollingActivity"
+android:targetPackage="com.android.twistedabout" />
+</PreferenceScreen>
+<!-- Twisted OTA -->
+<PreferenceScreen
+android:layout="@layout/twisted_preference_screen"
+android:icon="@drawable/ic_twisted_ota"
+android:title="@string/twisted_ota_title"
+android:summary="@string/twisted_ota_summary" >
+<intent
+android:action="android.intent.action.MAIN"
+android:targetPackage="com.fusionjack.slimota"
+android:targetClass="com.fusionjack.slimota.MainActivity" />
+</PreferenceScreen>
+<!-- Twisted Changelog -->
+<PreferenceScreen
+android:layout="@layout/twisted_preference_screen"
+android:icon="@drawable/ic_twisted_changelog"
+android:key="twisted_changelog"
+android:fragment="com.android.settings.crdroid.Changelog"
+android:title="@string/twisted_changelog_title"
+android:summary="@string/twisted_changelog_summary"/>
+<!-- Twisted Apps -->
+<PreferenceScreen
+android:key="twisted_apps"
+android:layout="@layout/twisted_preference_screen"
+android:icon="@drawable/ic_twisted_apps"
+android:fragment="com.android.settings.twisted.TwistedApps"
+android:title="@string/twisted_apps_title"
+android:summary="@string/twisted_apps_summary"/>
+</PreferenceCategory>
+
+<!-- Twisted UI Cat -->
+<PreferenceCategory
+android:key="twisted_ui"
+android:layout="@layout/twisted_preference_screen"
+android:title="@string/twisted_ui_title">
+
+<!-- StatusBar -->
+<PreferenceScreen
+android:id="@+id/twisted_statusbar"
+android:layout="@layout/twisted_preference_screen"
+android:icon="@drawable/ic_twisted_statusbar"
+android:fragment="com.android.settings.twisted.StatusBarSettings"
+android:title="@string/statusbar_tweak_title"
+android:summary="@string/statusbar_tweak_summary"/>
+
+<!-- NotificationDrawer -->
+<PreferenceScreen
+android:id="@+id/twisted_notificationdrawer"
+android:layout="@layout/twisted_preference_screen"
+android:icon="@drawable/ic_twisted_notificationdrawer"
+android:fragment="com.android.settings.twisted.TwistedNotificationDrawerSettings"
+android:title="@string/statusbar_notificationdrawer_title"
+android:summary="@string/notificationdrawer_tweak_summary"/>
+
+<!-- Display -->
+<PreferenceScreen
+android:id="@+id/twisted_display"
+android:layout="@layout/twisted_preference_screen"
+android:icon="@drawable/ic_twisted_display"
+android:fragment="com.android.settings.twisted.TwistedDisplaySettings"
+android:title="@string/display_tweak_title"
+android:summary="@string/display_tweak_summary"/>
+
+<!-- NavigationBar -->
+<PreferenceScreen
+android:id="@+id/twisted_navbar"
+android:layout="@layout/twisted_preference_screen"
+android:icon="@drawable/ic_twisted_navigationbar"
+android:fragment="com.android.settings.twisted.TwistedNavBarSettings"
+android:title="@string/navbar_tweak_title"
+android:summary="@string/navbar_tweak_summary"/>
+
+<!-- Recents -->
+<PreferenceScreen
+android:id="@+id/twisted_recents"
+android:layout="@layout/twisted_preference_screen"
+android:icon="@drawable/ic_twisted_recents"
+android:fragment="com.android.settings.twisted.TwistedRecentsSettings"
+android:title="@string/recents_tweak_title"
+android:summary="@string/recents_tweak_summary"/>
+
+<!-- LockScreen -->
+<PreferenceScreen
+android:key="lock_screen_general_category"
+android:layout="@layout/twisted_preference_screen"
+android:icon="@drawable/ic_twisted_lockscreen"
+android:fragment="com.android.settings.chroma.LockScreenSettings"
+android:title="LockScreen Options"
+android:summary="Customize: Lockscreen wallpaper, Weather, etc." />
+
+<!-- Misc. -->
+<PreferenceScreen
+android:id="@+id/twisted_misc"
+android:layout="@layout/twisted_preference_screen"
+android:icon="@drawable/ic_twisted_misc"
+android:fragment="com.android.settings.twisted.TwistedMiscSettings"
+android:title="@string/misc_tweak_title"
+android:summary="@string/misc_tweak_summary"/>
+</PreferenceCategory>
+
+</PreferenceScreen>
+

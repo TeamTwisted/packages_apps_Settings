@@ -887,18 +887,6 @@
                 android:value="true" />
         </activity>
 
-        <activity android:name="SettingsLicenseActivity"
-                android:label="@string/settings_license_activity_title"
-                android:theme="@android:style/Theme.Material.Light.Panel"
-                android:configChanges="orientation|screenSize">
-            <intent-filter android:priority="1">
-                <action android:name="android.settings.LICENSE" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
-                android:value="true" />
-        </activity>
-
         <activity android:name="Settings$ManageApplicationsActivity"
                 android:label="@string/applications_settings"
                 android:taskAffinity="">
@@ -1102,7 +1090,6 @@
             </intent-filter>
         </activity>
 
-        <!--
         <activity android:name="Settings$AppOpsSummaryActivity"
                 android:label="@string/app_ops_settings"
                 android:taskAffinity=""
@@ -1119,7 +1106,6 @@
             <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
                 android:resource="@id/application_settings" />
         </activity>
-        -->
 
         <activity android:name="Settings$LocationSettingsActivity"
                 android:label="@string/location_settings_title"
@@ -1806,7 +1792,7 @@
                   android:excludeFromRecents="true"
                   android:exported="true"
                   android:permission="android.permission.MANAGE_USB"
-                  android:theme="@android:style/Theme.Material.Light.Dialog.NoActionBar">
+                  android:theme="@android:style/Theme.Material.Dialog.Alert">
         </activity>
 
         <activity android:name=".bluetooth.RequestPermissionHelperActivity"
@@ -2132,16 +2118,43 @@
             android:theme="@style/CryptKeeperBlankTheme"
         />
 
+        <!-- "Blacklist settings" UI, used only on voice-capable phone devices. -->
+        <activity android:name="Settings$BlacklistSettingsActivity"
+                android:uiOptions="splitActionBarWhenNarrow"
+                android:label="@string/blacklist_title"
+                android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.blacklist.BlacklistSettings" />
+            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
+                android:resource="@id/security_settings" />
+        </activity>
+
+        <activity-alias android:name=".blacklist.BlacklistSettings"
+                android:taskAffinity="com.android.settings"
+                android:label="@string/blacklist_title"
+                android:targetActivity="Settings$BlacklistSettingsActivity"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.settings.blacklist.BlacklistSettings" />
+            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
+                       android:resource="@id/security_settings" />
+        </activity-alias>
+
         <!-- Pseudo-activity used to provide an intent-filter entry point to encryption settings -->
         <activity android:name="Settings$CryptKeeperSettingsActivity"
                 android:label="@string/crypt_keeper_encrypt_title">
             <intent-filter android:priority="1">
                 <action android:name="android.app.action.START_ENCRYPTION" />
-                <category android:name="android.intent.category.DEFAULT" /> />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" /> />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.CryptKeeperSettings" />
@@ -2314,6 +2327,104 @@
                 android:value="true" />
         </activity>
 
+
+
+
+        <!-- Twisted Tweaks -->
+      			<activity android:name="Settings$TwistedSettingsActivity"
+                android:label="@string/twisted_settings_title"
+                android:icon="@mipmap/ic_launcher_settings"
+                android:exported="true"
+                android:noHistory="true"
+                android:taskAffinity="">
+          <intent-filter>
+              <action android:name="android.intent.action.MAIN" />
+              <category android:name="android.intent.category.DEFAULT" />
+          </intent-filter>
+          <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                     android:value="com.android.settings.twisted.TwistedSettings" />
+          <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
+                     android:resource="@id/twisted_settings" />
+      			</activity>
+									<!-- Twisted Settings - StatusBar -->
+      			<activity android:name="Settings$StatusBarSettingsActivity"
+                android:label="@string/statusbar_tweak_title"
+                android:exported="true"
+                android:noHistory="true"
+                android:taskAffinity="">
+          <intent-filter>
+              <action android:name="android.intent.action.MAIN" />
+              <category android:name="android.intent.category.DEFAULT" />
+          </intent-filter>
+          <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                     android:value="com.android.settings.twisted.StatusBarSettings" />
+          <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
+                     android:resource="@id/twisted_statusbar" />
+      			</activity>
+									<!-- Twisted Settings - Display -->
+      			<activity android:name="Settings$TwistedDisplaySettingsActivity"
+                android:label="@string/display_tweak_title"
+                android:exported="true"
+                android:noHistory="true"
+                android:taskAffinity="">
+          <intent-filter>
+              <action android:name="android.intent.action.MAIN" />
+              <category android:name="android.intent.category.DEFAULT" />
+          </intent-filter>
+          <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                     android:value="com.android.settings.twisted.TwistedDisplaySettings" />
+          <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
+                     android:resource="@id/twisted_display" />
+      			</activity>
+									<!-- Twisted Settings - NavBar -->
+      			<activity android:name="Settings$TwistedNavBarSettingsActivity"
+                android:label="@string/navbar_tweak_title"
+                android:exported="true"
+                android:noHistory="true"
+                android:taskAffinity="">
+          <intent-filter>
+              <action android:name="android.intent.action.MAIN" />
+              <category android:name="android.intent.category.DEFAULT" />
+          </intent-filter>
+          <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                     android:value="com.android.settings.twisted.TwistedNavBarSettings" />
+          <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
+                     android:resource="@id/twisted_navbar" />
+      			</activity>
+									<!-- Twisted Settings - Misc -->
+      			<activity android:name="Settings$TwistedMiscSettingsActivity"
+                android:label="@string/misc_tweak_title"
+                android:exported="true"
+                android:noHistory="true"
+                android:taskAffinity="">
+          <intent-filter>
+              <action android:name="android.intent.action.MAIN" />
+              <category android:name="android.intent.category.DEFAULT" />
+          </intent-filter>
+          <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                     android:value="com.android.settings.twisted.TwistedMiscSettings" />
+          <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
+                     android:resource="@id/twisted_navbar" />
+      			</activity>
+									<!-- Twisted Settings - DayNight -->
+      			<activity android:name="Settings$TwistedDayNightSettingsActivity"
+                android:label="@string/twisted_daynight_title"
+                android:exported="true"
+                android:noHistory="true"
+                android:taskAffinity="">
+          <intent-filter>
+              <action android:name="android.intent.action.MAIN" />
+              <category android:name="android.intent.category.DEFAULT" />
+          </intent-filter>
+          <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                     android:value="com.android.settings.twisted.TwistedDayNight" />
+          <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
+                     android:resource="@id/twisted_daynight" />
+      			</activity>
+
+
+
+
         <!-- Keep compatibility with old shortcuts. -->
         <activity-alias android:name="Settings$SoundSettingsActivity"
                 android:label="@string/notification_settings"
@@ -2422,6 +2533,9 @@
             <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
                 android:value="true" />
         </activity>
+
+        <activity android:name=".notificationlight.NotificationLightSettings" />
+        <activity android:name=".notificationlight.BatteryLightSettings" />
 
         <receiver android:name=".widget.SettingsAppWidgetProvider"
                 android:label="@string/gadget_title"
@@ -2574,6 +2688,12 @@
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.applications.WriteSettingsDetails" />
         </activity>
-
+        <!-- Twisted Tweaks -->
+        <activity android:name=".twisted.TwistedSettings" />
+        <activity android:name=".twisted.TwistedDisplaySettings" />
+        <activity android:name=".twisted.BatterySettings" />
+        <activity android:name=".twisted.StatusBarSettings" />
+        <activity android:name=".twisted.NotificationDrawerSettings" />
+        <activity android:name=".twisted.RecentsSettings" />
     </application>
 </manifest>

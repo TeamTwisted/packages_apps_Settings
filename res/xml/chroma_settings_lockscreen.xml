@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2012 The CyanogenMod Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/power_menu_title"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+    <PreferenceCategory
+        android:key="lockscreen_settings"
+        android:title="@string/lockscreen_settings_title" >
+   
+    <PreferenceScreen
+         android:fragment="com.android.settings.chroma.CarrierLabel"
+         android:key="carrier_options"
+         android:title="@string/carrier_title"
+         android:summary="@string/carrier_options_summary" />
+
+    <PreferenceScreen
+         android:key="lockscreen_shortcuts"
+         android:fragment="com.android.settings.slim.dslv.ActionListViewSettings"
+         android:summary="@string/lockscreen_shortcuts_summary"
+         android:title="@string/lockscreen_shortcuts_title">
+         <extra android:name="actionMode" android:value="4" />
+         <extra android:name="maxAllowedActions" android:value="20" />
+         <extra android:name="disableLongpress" android:value="true" />
+         <extra android:name="useAppPickerOnly" android:value="true" />
+         <extra android:name="fragment" android:value="com.android.settings.slim.fragments.LockscreenShortcutFragment" />
+     </PreferenceScreen>
+
+    <com.android.settings.chroma.SystemSettingSwitchPreference
+        android:key="double_tap_sleep_lock_screen"
+        android:title="@string/double_tap_to_sleep_lockscreen_title"
+        android:summary="@string/double_tap_to_sleep_lockscreen_summary"
+        android:defaultValue="false" />
+
+        <com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="keyguard_toggle_torch"
+            android:title="@string/keyguard_torch_title"
+            android:summary="@string/keyguard_torch_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="lockscreen_weather_cat"
+        android:title="@string/lockscreen_weather_title" >
+
+        <PreferenceScreen
+                android:key="lockscreen_weather"
+                android:title="@string/lock_screen_weather_settings_title"
+                android:fragment="com.android.settings.benzo.LockScreenWeatherSettings" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="lockscreen_wallpaper"
+        android:title="@string/lockscreen_wallpaper_title" >
+
+        <Preference
+            android:key="lockscreen_wallpaper_set"
+            android:title="@string/lockscreen_wallpaper_set_title"
+            android:persistent="false"/>
+
+        <Preference
+            android:key="lockscreen_wallpaper_clear"
+            android:title="@string/lockscreen_wallpaper_clear_title"
+            android:persistent="false"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

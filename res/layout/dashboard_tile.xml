@@ -48,7 +48,6 @@
                 <TextView android:id="@+id/title"
                           android:layout_width="wrap_content"
                           android:layout_height="wrap_content"
-                          android:singleLine="true"
                           android:textAppearance="@style/TextAppearance.TileTitle"
                           android:ellipsize="marquee"
                           android:fadingEdge="horizontal" />
@@ -68,7 +67,7 @@
         <View android:id="@+id/tile_divider"
               android:layout_width="match_parent"
               android:layout_height="1dp"
-              android:background="?android:attr/dividerVertical" />
+              android:background="@color/dashboard_tile_divider" />
 
     </LinearLayout>
 

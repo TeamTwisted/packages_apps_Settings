@@ -24,12 +24,10 @@ import com.android.settings.DevelopmentSettings;
 import com.android.settings.DeviceInfoSettings;
 import com.android.settings.DisplaySettings;
 import com.android.settings.HomeSettings;
-import com.android.settings.LegalSettings;
 import com.android.settings.PrivacySettings;
 import com.android.settings.R;
 import com.android.settings.ScreenPinningSettings;
 import com.android.settings.SecuritySettings;
-import com.android.settings.WallpaperTypeSettings;
 import com.android.settings.WifiCallingSettings;
 import com.android.settings.WirelessSettings;
 import com.android.settings.accessibility.AccessibilitySettings;
@@ -133,13 +131,6 @@ public final class SearchIndexableResources {
                         Ranking.getRankForClassName(DisplaySettings.class.getName()),
                         NO_DATA_RES_ID,
                         DisplaySettings.class.getName(),
-                        R.drawable.ic_settings_display));
-
-        sResMap.put(WallpaperTypeSettings.class.getName(),
-                new SearchIndexableResource(
-                        Ranking.getRankForClassName(WallpaperTypeSettings.class.getName()),
-                        NO_DATA_RES_ID,
-                        WallpaperTypeSettings.class.getName(),
                         R.drawable.ic_settings_display));
 
         sResMap.put(NotificationSettings.class.getName(),
@@ -287,13 +278,6 @@ public final class SearchIndexableResources {
                         Ranking.getRankForClassName(DeviceInfoSettings.class.getName()),
                         NO_DATA_RES_ID,
                         DeviceInfoSettings.class.getName(),
-                        R.drawable.ic_settings_about));
-
-        sResMap.put(LegalSettings.class.getName(),
-                new SearchIndexableResource(
-                        Ranking.getRankForClassName(LegalSettings.class.getName()),
-                        NO_DATA_RES_ID,
-                        LegalSettings.class.getName(),
                         R.drawable.ic_settings_about));
 
         sResMap.put(WifiCallingSettings.class.getName(),

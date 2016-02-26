@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ** 080615 DASHBOARD CATEGORY TEST - STEP 2 
+	NAME: twisted_header.xml
+-->
+<FrameLayout
+
+android:gravity="center_vertical"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:minHeight="34dp"
+xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<RelativeLayout
+android:gravity="center"
+android:paddingTop="10.0dip"
+android:paddingBottom="10.0dip"
+android:paddingLeft="10dp"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+
+	>
+
+<TextView
+android:textAppearance="@style/TextAppearance.CategoryTitle"
+android:ellipsize="marquee"
+android:textStyle="normal"
+android:textAlignment="textStart"
+android:textAllCaps="true"
+android:id="@android:id/title"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:singleLine="true"
+android:maxLines="1"
+android:textSize="12sp"
+android:freezesText="false"
+	android:elegantTextHeight="false"
+	android:typeface="sans" />
+</RelativeLayout>
+
+</FrameLayout>
+
+

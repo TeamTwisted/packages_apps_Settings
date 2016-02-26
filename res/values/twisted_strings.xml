@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<!-- GENERIC STRINGS - START -->
+<!-- Font Sample Text -->
+<string name="font_size_sample">Twisted</string>
+<!-- Bluetooth settings. A checkbox to set if we should accept all the file types regardless of their presence in MIME type whitelist -->
+<string name="bluetooth_accept_all_files">Accept all file types</string>
+
+<!--  TWISTED BUILD INFO - START -->
+
+<!--  Build date of ROM, Twisted Version -->
+<string name="build_date">Twisted build date</string>
+<string name="build_date_default">2015-01-01-0000</string>
+<string name="twisted_version_title">Twisted version</string>
+<string name="twisted_version_default">Unknown</string>
+<!-- GCC version info -->
+<string name="sm_android">Gcc android version</string>
+<string name="sm_android_default">Unknown</string>
+<!-- GCC build flags info -->
+<string name="sm_flags">Optimizations</string>
+<string name="sm_flags_default">None</string>
+
+
+<!-- DASHBOARD CATEGORY TITLES - START -->
+<!-- Twisted Settings -->
+<string name="twisted_settings_title">Twisted Tweaks</string>
+<!-- Twisted Apps -->
+<string name="twistedapps_apps_title">Twisted Apps</string> 
+
+<!-- Changelog -->
+<string name="changelog_crdroid_title">Changelog</string>
+<string name="changelog_crdroid_error">Unable to load changelog</string>
+
+
+<!-- PREFERENCE SCREENS - START -->
+<!-- Twisted Settings - Categories-->
+<string name="nav_bar_setting">Navigation Bar</string>
+<string name="status_bar_setting">Status Bar</string>
+<string name="system_icon_cat">System icons</string>
+<string name="notif_sound_setting">Notifications</string>
+<string name="systemwide_setting">System-Wide</string>
+<string name="misc_setting">Miscellaneous</string>
+
+<!-- Twisted About -->
+<string name="twisted_menu_about">About Twisted Android Project</string> 
+
+<!-- Twisted Apps -->
+<string name="kerneladiutor_title">Kernel Adiutor</string>
+<string name="bitsyko_layers">Layers</string>
+<string name="kantjer_layers_title">Layers Backup</string>
+<string name="adaway_title">AdAway</string>
+<string name="supersu_title">SuperSU</string>
+<string name="lmt_settings">PIE Settings</string>
+
+<!-- Display Settings -->
+<!-- Density changer -->
+<string name="dpi">DPI</string>
+<string name="su_dialog_error_title">Warning</string>
+<string name="su_dialog_error_message">An error occurred.\n\nPlease check for root access. To activate go into superuser settings and enable root access.</string>
+<string name="lcd_density_title">LCD Density</string>
+<string name="lcd_density_category">Options</string>
+<string name="follow_through_summary">Changing your default LCD density can sometimes cause certain apps to not function properly and/or the playstore to show apps being incompatible with your device</string>
+<string name="stock_density_title">Change to stock values</string>
+<string name="stock_density_summary">Tablets generally use 160 dpi while high end devices use 320 or 480 dpi. Older devices use 240 dpi</string>
+<string name="stock_density_changed_summary">"Density set to: "</string>
+<string name="reboot_title">Reboot your device</string>
+<string name="reboot_summary">You need to reboot your device for your change to take effect</string>
+<string name="custom_density_title">Change to whatever you like</string>
+<string name="custom_density_summary_invalid">"INVALID DENSITY!"</string>
+<string name="custom_density">custom</string>
+<string name="set_custom_density_title">Set custom density</string>
+<string name="set_custom_density_set">Set</string>
+<string name="custom_density_dialog_title">WARNING!</string>
+<string name="custom_density_dialog_summary">Changing your default LCD density can sometimes cause certain apps to not function properly and/or the playstore to show apps being incompatible with your device"</string>
+<string name="custom_density_dialog_button_got">Got it!</string>
+<string name="custom_density_dialog_button_reboot">Reboot now</string>
+<string name="ok">Okay</string>
+
+<!-- Doze options -->
+<string name="display_category_doze_options_title">Ambient display</string>
+<string name="doze_settings_title">Advanced doze options</string>
+<string name="doze_timeout_title">Doze pulse timeout</string>
+<string name="doze_timeout_summary">Time that the screen stays on for notification pulse</string>
+<string name="doze_trigger_pickup_title">Pick up gesture trigger</string>
+<string name="doze_trigger_pickup_summary_on">Doze pulse will be triggered by pick up gesture sensor events</string>
+<string name="doze_trigger_pickup_summary_off">Pick up gesture sensor will not be utilized as a triggering mechanism</string>
+<string name="doze_trigger_sigmotion_title">Significant motion trigger</string>
+<string name="doze_trigger_sigmotion_summary_on">Doze pulse will be triggered by significant motion sensor events</string>
+<string name="doze_trigger_sigmotion_summary_off">Significant motion sensor will not be utilized as a triggering mechanism</string>
+<string name="doze_trigger_notification_title">Notification trigger</string>
+<string name="doze_trigger_notification_summary_on">Doze pulse will be triggered by notifications</string>
+<string name="doze_trigger_notification_summary_off">Notifications will not be utilized as a trigger</string>
+<string name="doze_schedule_title">Doze schedule</string>
+<string name="doze_schedule_summary_on">Predefined doze repeat intervals (normally [1s,10s,30s,60s,120s]) will be used (default)</string>
+<string name="doze_schedule_summary_off">Doze will only pulse once per notification</string>
+<string name="doze_brightness_title">Doze brightness level</string>
+<string name="doze_brightness_summary">Brightness level of doze pulse screen (% of max allowed brightness)</string>
+
+<!-- NavigationBar Settings -->
+<string name="navbar_settings_title">Navigation Bar</string>
+<string name="navigationbar_title">Navigation Bar</string>
+<!-- Navigation Bar Menu -->
+<string name="navigation_menu_right">Right</string>
+<string name="navigation_menu_left">Left</string>
+<string name="navigation_menu_both">Both</string>
+<string name="navigation_menu_default_jb_behavior">Show on request (default)</string>
+<string name="navigation_menu_never_show">Never show</string>
+<string name="navigation_menu_always_show">Always show</string>
+
+<!-- StatusBar Settings -->
+<string name="statusbar_title">Status Bar</string>
+<string name="battery_title">Status bar battery</string>
+<string name="battery_summary">Click to see battery style options.</string>
+<string name="battery_style_title">Style</string>
+<string name="battery_percent_title">Show percent</string>
+<string name="battery_percent_none">Never</string>
+<string name="battery_percent_always">Always</string>
+<string name="battery_percent_expanded">Expanded</string>
+
+    <!-- Volume rocker wake -->
+    <string name="volume_rocker_wake_title">Volume rocker wake</string>
+    <string name="volume_rocker_wake_summary">Pressing the volume keys will wake your device</string>
+    <string name="volume_options_title">Volume buttons</string>
+    
+    <!-- Button settings  -->
+    <string name="button_settings_title">Buttons</string>
+    
+    <!-- Volume keys skip track -->
+    <string name="volbtn_music_controls_title">Playback control</string>
+    <string name="volbtn_music_controls_summary">When the screen is off, long pressing the volume keys will seek music tracks</string>
+
+    <!-- SuperSU header name - the app hides itself from launcher based on this resource name being present in com.android.settings -->
+    <string name="supersu_title">SuperSU</string>
+    <!-- Bluetooth settings. A checkbox to set if we should accept all the file types regardless of their presence in MIME type whitelist -->
+    <string name="bluetooth_accept_all_files">Accept all file types</string>
+
+
+				<!-- Twisted Device Information -->
+    <!-- About phone screen, build date of ROM, Twisted Version -->
+    <string name="build_date">Twisted build date</string>
+    <string name="build_date_default">2015-01-01-0000</string>
+    <string name="twisted_version_title">Twisted version</string>
+    <string name="twisted_version_default">Unknown</string>
+    <!-- GCC version info -->
+    <string name="sm_android">Gcc android version</string>
+    <string name="sm_android_default">Unknown</string>
+    <!-- GCC build flags info -->
+    <string name="sm_flags">Optimizations</string>
+    <string name="sm_flags_default">None</string>
+
+			 <!-- Twisted Settings Dashboard -->
+				<!-- Twisted Settings Title -->
+    <string name="twisted_settings_title">Twisted Settings</string>
+    <!-- Twisted Tweaks Title -->
+    <string name="twisted_tweak_title">Twisted</string>
+    <!-- Twisted UI Title -->
+    <string name="twisted_ui_title">Twisted User Interface</string>
+    <!-- Twisted About -->
+    <string name="twisted_about_title">About Team Twisted</string>
+    <string name="twisted_about_summary">Click to learn more about TeamTwisted</string>
+    <!-- Twisted Apps -->
+    <string name="twisted_apps_title">Preloaded Apps</string>
+    <string name="twisted_apps_summary">Click to view the preloaded apps we find useful</string>
+    <!-- Twisted OTA -->
+    <string name="twisted_ota_title">Twisted OTA</string>
+    <string name="twisted_ota_summary">Click to view and download Twisted updates</string>
+    <!-- Twisted Changelog -->
+    <string name="twisted_changelog_title">Changelog</string>
+    <string name="twisted_changelog_summary">Click to view the recent Twisted changes</string>
+    <!-- Twisted Wallpapers -->
+    <string name="twisted_wallpapers_title">Wallpapers</string>
+    <string name="twisted_wallpapers_summary">Click to view and apply preloaded Twisted wallpapers.</string>
+    <!-- StatusBar -->
+    <string name="statusbar_tweak_title">Status Bar</string>
+    <string name="statusbar_tweak_summary">Customize: Battery, Clock/Date, etc.</string>
+    <!-- Display -->
+    <string name="display_tweak_title">Display</string>
+    <string name="display_tweak_summary">Customize: DPI, DayNight mode, etc.</string>
+    <!-- NavBar -->
+    <string name="navbar_tweak_title">Navigation Bar</string>
+    <string name="navbar_tweak_summary">Customize: Height, Width, Actions, etc.</string>
+    <!-- Misc -->
+    <string name="misc_tweak_title">Misc. Options</string>
+    <string name="misc_tweak_summary">Customize: Wakelock, Hardware Buttons, etc.</string>
+    <!-- NotificationDrawer -->
+    <string name="statusbar_notificationdrawer_title">Notification Drawer</string>
+    <string name="notificationdrawer_tweak_summary">Customize: Quick Settings, etc.</string>
+    <string name="twisted_daynight_header_title">Theme User Interface</string>
+    <string name="twisted_daynight_header_summary">Remember this is a wip.. so enable at your own risk</string>
+    <string name="twisted_daynight_title">Theme User Interface</string>
+    <string name="twisted_daynight_summary">Click to open options to switch to light or dark theme. #whiteuimustdie</string>
+
+				<!-- Twisted Settings SubSettings -->
+    <!-- Battery Tweaks -->
+    <string name="battery_title">Battery</string>
+    <string name="battery2_summary">Customize battery icons and percentage</string>
+    <string name="status_bar_battery_style_title">Battery status style</string>
+    <string name="status_bar_battery_style_icon_portrait">Icon portrait</string>
+    <string name="status_bar_battery_style_icon_landscape">Icon landscape</string>
+    <string name="status_bar_battery_style_circle">Circle</string>
+    <string name="status_bar_battery_style_dotted_circle">Dotted circle</string>
+    <string name="status_bar_battery_style_text">Text</string>
+    <string name="status_bar_battery_style_hidden">Hidden</string>
+    <string name="status_bar_battery_percentage_title">Show battery percentage</string>
+    <string name="status_bar_battery_percentage_dialog_title">Battery percentage</string>
+    <string name="status_bar_battery_percentage_default">Hidden (default)</string>
+    <string name="status_bar_battery_percentage_text_inside">Inside the icon</string>
+    <string name="status_bar_battery_percentage_text_next">Next to the icon</string>
+
+    <!-- Font size sample text -->
+    <string name="font_size_sample">Font Size</string>
+
+    <!-- SlimDim -->
+    <string name="dim_nav_buttons_category">SlimDim</string>
+    <string name="dim_nav_buttons_title">Dim buttons after inactivity</string>
+    <string name="dim_nav_buttons_summary">Dim navigation bar buttons after not interacting with navigation bar for a specified time</string>
+    <string name="dim_nav_buttons_timeout_title">Timeout before dimming</string>
+    <string name="dim_nav_buttons_timeout_summary">Time (in milliseconds) to wait before dimming buttons</string>
+    <string name="dim_nav_buttons_alpha_title">Dim alpha</string>
+    <string name="dim_nav_buttons_alpha_summary">Alpha value to dim buttons to</string>
+    <string name="dim_nav_buttons_animate_title">Dim animation</string>
+    <string name="dim_nav_buttons_animate_summary">Animate the alpha fade</string>
+    <string name="dim_nav_buttons_animate_duration_title">Animation duration</string>
+    <string name="dim_nav_buttons_animate_duration_summary">Duration (in milliseconds) of the alpha animation</string>
+
+    <string name="dim_nav_buttons_touch_anywhere_title">Listen for touches on entire screen</string>
+    <string name="dim_nav_buttons_touch_anywhere_summary_on">Touching anywhere on the screen will cause buttons to un-dim</string>
+    <string name="dim_nav_buttons_touch_anywhere_summary_off">Only touches on the navbar will cause buttons to un-dim</string>
+
+    <!-- Double Tap Navbar to Sleep -->
+    <string name="double_tap_sleep_nav_bar_title">Double-tap to sleep</string>
+    <string name="double_tap_sleep_nav_bar_summary">Double tap nav bar to put the device to sleep</string>
+
+    <string name="help">Help</string>
+    <string name="reset_message">Reset all entries to default?</string>
+    <string name="attention">Attention</string>
+    <string name="reset">Reset</string>   
+    
+    <!-- Slim DSLV -->
+    <string name="shortcut_action_none">None</string>
+    <string name="shortcut_action_longpress">Longpress:</string>
+    <string name="shortcut_action_select_action_longpress">Choose longpress action:</string>
+    <string name="shortcut_action_select_action">Choose action:</string>
+    <string name="shortcut_action_select_action_newaction">Choose new action:</string>
+    <string name="shortcut_action_reset">Reset</string>
+    <string name="shortcut_action_add">Add</string>
+    <string name="shortcut_action_reset_message">Reset all entries to default?</string>
+    <string name="shortcut_action_max">Maximum entries size has been reached</string>
+    <string name="shortcut_action_warning">Warning</string>
+    <string name="shortcut_action_warning_message">It is not possible to delete last entry</string>
+    <string name="shortcut_action_disable_message">Disabled\nAdd an entry to enable this feature</string>
+    <string name="shortcut_image_not_valid">The chosen app did not return a valid icon or does not support image cropping. Use another app.</string>
+    <string name="shortcut_duplicate_entry">The chosen action cannot be added twice</string>
+    <string name="shortcut_action_help_shortcut">shortcut</string>
+    <string name="shortcut_action_help_button">button</string>
+    <string name="shortcut_action_help_app">app</string>
+    <string name="shortcut_action_help_icon">, while selecting the icon will bring up customization options</string>
+    <string name="shortcut_action_help_main">To add a %1$s, select the Add icon. Once a %1$s is added, selecting the row will change the target%2$s\n\nTo remove a %1$s, swipe the row horizontally left or right. Re-order a %1$s in the list by vertically dragging the anchor on the left.\n\nTo clear or reset to defaults, select the Reset icon.</string>
+    <string name="shortcut_action_help_delete_last_entry">Removing every %1$s in the list will disable the feature entirely.</string>
+    <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Removing every %1$s in the list will disable the second pie layer entirely.</string>
+
+
+    <string name="shortcuts_applications">Applications</string>
+    <string name="shortcuts_select_custom_app_title">Select custom application</string>
+    <string name="shortcuts_icon_picker_type">Select icon type:</string>
+    <string name="shortcuts_icon_default">Default</string>
+    <string name="shortcuts_icon_presets">System icons</string>
+    <string name="shortcuts_icon_custom">Gallery</string>
+    <string name="shortcuts_icon_picker_choose_icon_title">Choose icon</string>
+
+    <string name="shortcuts_icon_picker_alarm">Alarm</string>
+    <string name="shortcuts_icon_picker_andy">Andy</string>
+    <string name="shortcuts_icon_picker_battery">Battery</string>
+    <string name="shortcuts_icon_picker_browser">Browser</string>
+    <string name="shortcuts_icon_picker_calendar">Calendar</string>
+    <string name="shortcuts_icon_picker_camera">Camera</string>
+    <string name="shortcuts_icon_picker_cloud">Cloud</string>
+    <string name="shortcuts_icon_picker_contact">Contact</string>
+    <string name="shortcuts_icon_picker_directdial">Direct Dial</string>
+    <string name="shortcuts_icon_picker_directmessage">Direct Message</string>
+    <string name="shortcuts_icon_picker_drive">Drive</string>
+    <string name="shortcuts_icon_picker_dropbox">Dropbox</string>
+    <string name="shortcuts_icon_picker_email">Email</string>
+    <string name="shortcuts_icon_picker_email2">Email Alternate</string>
+    <string name="shortcuts_icon_picker_evernote">Evernote</string>
+    <string name="shortcuts_icon_picker_facebook">Facebook</string>
+    <string name="shortcuts_icon_picker_favorite">Favorite</string>
+    <string name="shortcuts_icon_picker_file_browser">File Browser</string>
+    <string name="shortcuts_icon_picker_file_browser2">File Browser Alternate</string>
+    <string name="shortcuts_icon_picker_fitness">Fitness</string>
+    <string name="shortcuts_icon_picker_gallery">Gallery</string>
+    <string name="shortcuts_icon_picker_gears">Gears</string>
+    <string name="shortcuts_icon_picker_google_small">Google</string>
+    <string name="shortcuts_icon_picker_gplus">Google Plus</string>
+    <string name="shortcuts_icon_picker_gtalk">Hangouts</string>
+    <string name="shortcuts_icon_picker_help">Help</string>
+    <string name="shortcuts_icon_picker_joystick">Joystick</string>
+    <string name="shortcuts_icon_picker_key">Keys/Accounts</string>
+    <string name="shortcuts_icon_picker_laptop">Laptop</string>
+    <string name="shortcuts_icon_picker_notes">Notes</string>
+    <string name="shortcuts_icon_picker_luggage">Travel</string>
+    <string name="shortcuts_icon_picker_maps">Maps</string>
+    <string name="shortcuts_icon_picker_market">Market</string>
+    <string name="shortcuts_icon_picker_movie">Movies</string>
+    <string name="shortcuts_icon_picker_music">Music</string>
+    <string name="shortcuts_icon_picker_nav">Navigation</string>
+    <string name="shortcuts_icon_picker_phone">Phone</string>
+    <string name="shortcuts_icon_picker_package">Package</string>
+    <string name="shortcuts_icon_picker_pinterest">Pinterest</string>
+    <string name="shortcuts_icon_picker_play">Play</string>
+    <string name="shortcuts_icon_picker_pocket">Pocket</string>
+    <string name="shortcuts_icon_picker_quicksettings">Quick Settings</string>
+    <string name="shortcuts_icon_picker_rss">RSS Feed</string>
+    <string name="shortcuts_icon_picker_sdcard">SDCard</string>
+    <string name="shortcuts_icon_picker_search">Search</string>
+    <string name="shortcuts_icon_picker_sms">Messaging</string>
+    <string name="shortcuts_icon_picker_tasks">Tasks</string>
+    <string name="shortcuts_icon_picker_terminal">Terminal</string>
+    <string name="shortcuts_icon_picker_transit">Transit</string>
+    <string name="shortcuts_icon_picker_tv">TV</string>
+    <string name="shortcuts_icon_picker_twitter">Twitter</string>
+    <string name="shortcuts_icon_picker_unlock">Unlock</string>
+
+    <string name="add">Add</string>
+    <string name="enabled">Enabled</string>
+    <string name="choose_app">Choose application</string>
+
+    <!-- Network traffic -->
+    <string name="network_traffic_title">Network traffic</string>
+    <string name="show_network_traffic_state">Status bar traffic monitor</string>
+    <string name="show_network_traffic_unit">Display unit</string>
+    <string name="show_network_traffic_frequency">Update interval</string>
+    <string name="show_network_traffic_disable">Disabled</string>
+    <string name="show_network_traffic_up">Outgoing</string>
+    <string name="show_network_traffic_down">Incoming</string>
+    <string name="show_network_traffic_all">Outgoing and incoming</string>
+    <string name="show_network_traffic_bit">Bits per second</string>
+    <string name="show_network_traffic_byte">Bytes per second</string>
+    <string name="show_network_traffic_500">500 ms</string>
+    <string name="show_network_traffic_1000">1000 ms</string>
+    <string name="show_network_traffic_1500">1500 ms</string>
+    <string name="show_network_traffic_2000">2000 ms</string>
+    <string name="network_traffic_autohide">Auto hide</string>
+    <string name="network_traffic_autohide_summary">Hide the traffic monitor when there is no activity</string>
+    <string name="network_traffic_autohide_threshold">Inactivity threshold</string>
+    
+    <!-- Lockscreen shortcuts -->
+    <string name="lockscreen_settings_title">Lockscreen Settings</string>
+    <string name="lockscreen_shortcuts_category">Shortcuts</string>
+    <string name="lockscreen_shortcuts_title">Lockscreen Shortcuts</string>
+    <string name="lockscreen_shortcuts_summary">Change the shortcuts on lockscreen to whatever you want</string>
+    <string name="lockscreen_shorcuts_longpress_title">Shortcuts longpress</string>
+    <string name="lockscreen_shorcuts_longpress_summary">Open custom lock screen shortcuts on longpress</string>
+
+    <string name="shortcut_action_none">None</string>
+    <string name="shortcut_action_app">Custom app</string>
+    <string name="shortcut_action_home">Home</string>
+    <string name="shortcut_action_back">Back</string>
+    <string name="shortcut_action_menu">Menu</string>
+    <string name="shortcut_action_ime">Open IME Switcher</string>
+    <string name="shortcut_action_power_menu">Power menu</string>
+    <string name="shortcut_action_recent">Recents</string>
+    <string name="shortcut_action_power">Screen Off</string>
+    <string name="shortcut_action_search">Search in app</string>
+    <string name="shortcut_action_ring_vib">Ring/Vib</string>
+    <string name="shortcut_action_ring_silent">Ring/Silent</string>
+    <string name="shortcut_action_ring_vib_silent">Ring/Vib/Silent</string>
+    <string name="shortcut_action_camera">Camera</string>
+    <string name="shortcut_action_media_next">Music - next track</string>
+    <string name="shortcut_action_media_play_pause">Music - play/pause</string>
+    <string name="shortcut_action_media_previous">Music - previous track</string>
+    <string name="shortcut_action_wake_device">Wake up device</string>
+
+    <string name="shortcut_action_longpress">Longpress:</string>
+    <string name="shortcut_action_select_action_longpress">Choose longpress action:</string>
+    <string name="shortcut_action_select_action">Choose action:</string>
+    <string name="shortcut_action_select_action_newaction">Choose new action:</string>
+    <string name="shortcut_action_reset">Reset</string>
+    <string name="shortcut_action_add">Add</string>
+    <string name="shortcut_action_reset_message">Reset all entries to default?</string>
+    <string name="shortcut_action_max">Maximum entries size has been reached</string>
+    <string name="shortcut_action_warning">Warning</string>
+    <string name="shortcut_action_warning_message">It is not possible to delete last entry</string>
+    <string name="shortcut_action_disable_message">Disabled\nAdd an entry to enable this feature</string>
+    <string name="shortcut_image_not_valid">The chosen app did not return a valid icon or does not support image cropping. Use another app.</string>
+    <string name="shortcut_duplicate_entry">The chosen action cannot be added twice</string>
+    <string name="shortcut_action_help_shortcut">shortcut</string>
+    <string name="shortcut_action_help_button">button</string>
+    <string name="shortcut_action_help_app">app</string>
+    <string name="shortcut_action_help_icon">, while selecting the icon will bring up customization options</string>
+    <string name="shortcut_action_help_main">To add a %1$s, select the Add icon. Once a %1$s is added, selecting the row will change the target%2$s\n\nTo remove a %1$s, swipe the row horizontally left or right. Re-order a %1$s in the list by vertically dragging the anchor on the left.\n\nTo clear or reset to defaults, select the reset option.</string>
+    <string name="shortcut_action_help_delete_last_entry">Removing every %1$s in the list will disable the feature entirely.</string>
+    <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Removing every %1$s in the list will disable the second pie layer entirely.</string>
+
+    <!-- Breathing Notifications -->
+    <string name="breathing_notifications_title">Breathing notifications</string>
+    <string name="breathing_notifications_summary">Select what notifications you want to breath in the status bar</string>
+    <string name="sms_breath_title">Breathing SMS</string>
+    <string name="sms_breath_summary">Will give your sms notifications a breathing effect in the statusbar</string>
+    <string name="missed_call_breath_title">Breathing Missed Call</string>
+    <string name="missed_call_breath_summary">Will give your missed call notifications a breathing effect in the statusbar</string>
+    <string name="voicemail_breath_title">Breathing Voicemail</string>
+    <string name="voicemail_breath_summary">Will give your voicemail notifications a breathing effect in the statusbar</string>
+
+    <!-- Show/Hide Search Bar -->
+    <string name="recents_show_searchbar">Recents panel Search bar</string>
+    <string name="recents_searchbar_summary_enabled">Search bar in recents menu is enabled</string>
+    <string name="recents_searchbar_summary_disabled">Search bar in recents menu is disabled</string>
+
+    <!-- Heads up -->
+    <string name="headsup_section_header">Heads up notifications</string>
+    <string name="heads_up_notifications">Heads up</string>
+    <string name="summary_heads_up_enabled">Pop-up notifications are enabled</string>
+    <string name="summary_heads_up_disabled">Pop-up notifications are disabled</string>
+
+    <!-- Scramble PIN Layout on Lockscreen -->
+    <string name="unlock_scramble_pin_layout_title">Scramble layout</string>
+    <string name="unlock_scramble_pin_layout_summary">Scramble PIN layout when unlocking device</string>
+
+    <!-- Double tap-to-sleep -->
+    <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
+    <string name="double_tap_to_sleep_summary">Double-tap on the status bar to put the device to sleep</string>
+
+    <string name="notification_drawer_title">Notification Drawer Settings</string>
+
+    <!-- Status bar quick qs pulldown -->
+    <string name="title_quick_pulldown">Quick pulldown</string>
+    <string name="summary_quick_pulldown">%1$s edge of the status bar pulls down Quick Settings</string>
+    <string name="quick_pulldown_off">Off</string>
+    <string name="quick_pulldown_left">Left</string>
+    <string name="quick_pulldown_right">Right</string>
+
+    <!-- Advanced Location tile -->
+    <string name="qs_advanced_location_title">Advanced location quick settings</string>
+    <string name="qs_advanced_location_summary">Enable advanced settings for location in quick settings</string>
+
+    <!-- Full Screen recents -->
+    <string name="immersive_recents_title">Immersive Recents</string>
+    <string name="immersive_recents_summary">Change the view of the recents screen</string>
+    <string name="immersive_recents_default">Default</string>
+    <string name="immersive_recents_fullscreen">Fullscreen</string>
+    <string name="immersive_recents_statusbar">Statusbar only</string>
+    <string name="immersive_recents_navbar">Navbar only</string>
+
+    <!-- Recent panel -->
+    <string name="recent_panel_category">Recent apps panel</string>
+    <string name="use_slim_recents_title">Slim recents</string>
+    <string name="show_running_tasks_title">Only show running apps</string>
+    <string name="recents_max_apps_title">Max allowed apps</string>
+    <string name="recent_panel_scale_title">Size</string>
+    <string name="recent_panel_expanded_mode_title">Expanded mode</string>
+    <string name="recent_panel_expanded_mode_summary">Recent tasks expanded preview mode</string>
+    <string name="recent_panel_expanded_mode_auto">Auto (default)</string>
+    <string name="recent_panel_expanded_mode_always">Always</string>
+    <string name="recent_panel_expanded_mode_never">Never</string>
+    <string name="recent_panel_show_topmost_title">Show topmost task</string>
+    <string name="recent_panel_show_topmost_summary">Don\'t exclude the topmost task in recents view</string>
+    <string name="recent_panel_bg_color_title">Panel background color</string>
+    <string name="recent_card_bg_color_title">Card background color</string>
+    <string name="recent_card_text_color_title">Card text color</string>
+
+    <!-- ATTENTION: RTL languages need to replace left with right -->
+    <string name="recent_panel_lefty_mode_title">Show on the left edge</string>
+    <string name="recent_panel_lefty_mode_summary">Show recent apps panel on the left edge</string>
+
+    <string name="default_string">Default</string>
+
+    <!-- Recent panel settings -->
+    <string name="recents_tweak_title">Recent Panel</string>
+    <string name="recents_tweak_summary">Customize: SlimRecents, Search bar, etc.</string>
+
+    <string name="volbtn_down_zen_title">Volume down in silent</string>
+    <string name="volbtn_down_zen_summary">allow volume down to enter do not disturb mode</string>
+    <string name="volbtn_up_zen_title">Volume up in do not disturb</string>
+    <string name="volbtn_up_zen_summary">allow volume up to exit do not disturb mode</string>
+
+    <!-- Fingerprint vibration -->
+    <string name="fprint_sucess_vib_title">Fingerprint authentication vibration</string>
+
+    <!-- QS shade transparency -->
+    <string name="qs_transparent_shade">QS shade transparency</string>
+
+    <!-- QS header transparency -->
+    <string name="qs_transparent_header">QS header transparency</string>
+
+    <!-- Volume dialog transparency -->
+    <string name="volume_dialog_transparency">Volume dialog transparency</string>
+    
+    <!-- Power menu and dialogs transparency -->
+    <string name="power_menu_transparency">Power menu transparency</string>
+
+    <!-- Power/reboot dialogs dim amount -->
+    <string name="power_menu_dialog_dim">Power/reboot dialog dim background amount</string>
+    
+    <string name="transparency_title">Transparency</string>
+
+   <!-- Navigation bar -->
+   <string name="navigation_bar_category">Navigation bar</string>
+   <string name="navigation_other_category">Options</string>
+
+   <!-- Navbar cursor buttons -->
+   <string name="show_ime_arrows_title">Show arrow keys while typing</string>
+   <string name="show_ime_arrows_summary">Display left and right cursor buttons for IME.</string>
+
+   <string name="navbar_menu">Menu</string>
+   <string name="transparency">Transparency</string>
+
+</resources>

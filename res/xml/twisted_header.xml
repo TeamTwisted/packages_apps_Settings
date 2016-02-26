@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/twisted_header"
+android:title="@string/contexual_header_title">
+
+<PreferenceCategory
+	android:key="category_header_options"
+	android:title="@string/contexual_header_title" >
+
+<com.android.settings.chroma.SystemSettingSwitchPreference
+	android:key="status_bar_custom_header"
+	android:title="@string/status_bar_custom_header_title"
+	android:summary="@string/status_bar_custom_header_summary"
+	android:defaultValue="false"/>
+
+<com.android.settings.chroma.SystemSettingSwitchPreference
+	android:key="status_bar_custom_header_default"
+	android:title="@string/status_bar_custom_header_default_title"
+	android:summary="@string/status_bar_custom_header_default_summary"
+	android:dependency="status_bar_custom_header"
+	android:defaultValue="false"/>
+
+</PreferenceCategory>
+</PreferenceScreen>

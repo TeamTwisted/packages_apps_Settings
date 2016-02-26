@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="twisted_start_shadow">#37000000</color>
+    <color name="twisted_center_shadow">#10000000</color>
+    <color name="twisted_end_shadow">#37000000</color>
+
+    <color name="theme_primary">#212121</color><!-- Twisted Theme - Change 10/03 -->
+    <color name="theme_primary_dark">#212121</color><!-- Twisted Theme - Change 10/03 -->
+    <color name="background_material_twisted">#00000000</color><!-- Twisted Theme - Change 10/03 -->
+</resources>            

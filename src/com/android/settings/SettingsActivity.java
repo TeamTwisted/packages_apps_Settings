@@ -78,10 +78,17 @@ import com.android.settings.applications.ProcessStatsSummary;
 import com.android.settings.applications.ProcessStatsUi;
 import com.android.settings.applications.UsageAccessDetails;
 import com.android.settings.applications.WriteSettingsDetails;
+import com.android.settings.blacklist.BlacklistSettings;
 import com.android.settings.bluetooth.BluetoothSettings;
 import com.android.settings.dashboard.DashboardCategory;
 import com.android.settings.dashboard.DashboardSummary;
 import com.android.settings.dashboard.DashboardTile;
+import com.android.settings.twisted.TwistedSettings;
+import com.android.settings.twisted.TwistedDisplaySettings;
+import com.android.settings.twisted.TwistedDayNightSettings;
+import com.android.settings.twisted.TwistedNavBarSettings;
+import com.android.settings.twisted.TwistedMiscSettings;
+import com.android.settings.twisted.StatusBarSettings;
 import com.android.settings.dashboard.NoHomeDialogFragment;
 import com.android.settings.dashboard.SearchResultsSummary;
 import com.android.settings.deviceinfo.PrivateVolumeForget;
@@ -278,7 +285,13 @@ public class SettingsActivity extends Activity
             R.id.print_settings,
             R.id.nfc_payment_settings,
             R.id.home_settings,
-            R.id.dashboard
+            R.id.dashboard,
+            R.id.twisted_settings,
+            R.id.twisted_statusbar,
+            R.id.twisted_display,
+            R.id.twisted_navbar,
+            R.id.twisted_misc,
+            R.id.twisted_daynight
     };
 
     private static final String[] ENTRY_FRAGMENTS = {
@@ -354,6 +367,14 @@ public class SettingsActivity extends Activity
             ProcessStatsSummary.class.getName(),
             DrawOverlayDetails.class.getName(),
             WriteSettingsDetails.class.getName(),
+            TwistedSettings.class.getName(),
+												TwistedDisplaySettings.class.getName(),
+												TwistedDayNightSettings.class.getName(),
+												TwistedNavBarSettings.class.getName(),
+												TwistedMiscSettings.class.getName(),
+												StatusBarSettings.class.getName(),
+            com.android.settings.cyanogenmod.PrivacySettings.class.getName(),
+            BlacklistSettings.class.getName()
     };
 
 
@@ -1221,7 +1242,7 @@ public class SettingsActivity extends Activity
     private void updateTilesList(List<DashboardCategory> target) {
         final boolean showDev = mDevelopmentPreferences.getBoolean(
                 DevelopmentSettings.PREF_SHOW,
-                android.os.Build.TYPE.equals("eng"));
+                android.os.Build.TYPE.equals("eng") || android.os.Build.TYPE.equals("userdebug") || android.os.Build.TYPE.equals("user"));
 
         final UserManager um = (UserManager) getSystemService(Context.USER_SERVICE);
 
@@ -1297,6 +1318,16 @@ public class SettingsActivity extends Activity
                 } else if (id == R.id.development_settings) {
                     if (!showDev || um.hasUserRestriction(
                             UserManager.DISALLOW_DEBUGGING_FEATURES)) {
+                        removeTile = true;
+                    }
+                } else if (id == R.id.supersu_settings) {
+                    // Embedding into Settings is supported from SuperSU v1.85 and up
+                    boolean supported = false;
+                    try {
+                        supported = (getPackageManager().getPackageInfo("eu.chainfire.supersu", 0).versionCode >= 185);
+                    } catch (PackageManager.NameNotFoundException e) {
+                    }
+                    if (!supported) {
                         removeTile = true;
                     }
                 }

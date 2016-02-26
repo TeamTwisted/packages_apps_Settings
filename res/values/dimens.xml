@@ -91,10 +91,10 @@
     <dimen name="dashboard_cell_gap_y">0dp</dimen>
 
     <!-- Dashboard padding in its container -->
-    <dimen name="dashboard_padding_start">0dp</dimen>
-    <dimen name="dashboard_padding_end">0dp</dimen>
-    <dimen name="dashboard_padding_top">0dp</dimen>
-    <dimen name="dashboard_padding_bottom">0dp</dimen>
+    <dimen name="dashboard_padding_start">10dp</dimen>
+    <dimen name="dashboard_padding_end">10dp</dimen>
+    <dimen name="dashboard_padding_top">8dp</dimen>
+    <dimen name="dashboard_padding_bottom">8dp</dimen>
 
     <!-- Dashboard category padding start / end -->
     <dimen name="dashboard_category_padding_start">0dp</dimen>
@@ -242,7 +242,10 @@
     <dimen name="confirm_credentials_security_method_margin">48dp</dimen>
     <dimen name="fab_size">56dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="fab_icon_size">24dp</dimen>
     <dimen name="fab_elevation">12dp</dimen>
+    <dimen name="fab_elevation_normal">8dp</dimen>
+    <dimen name="fab_elevation_pressed">6dp</dimen>
     <dimen name="fab_press_translation_z">9dp</dimen>
 
     <!-- Delete managed profile dialog -->

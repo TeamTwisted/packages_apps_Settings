@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:title="About Twisted Android Project"
+xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+
+<PreferenceScreen 
+android:key="twisted_logo"
+android:layout="@layout/twisted_logo_row" />
+
+<!-- Developers -->
+<PreferenceCategory
+android:layout="@layout/intent_main_header_twistedabout"
+android:key="category_team_twisted"
+android:title="Twisted Core">
+<PreferenceScreen
+android:layout="@layout/intent_top_bottom_spacer_twisted"/>
+
+<PreferenceScreen
+android:layout="@layout/intent_sub_header_twisted"
+android:title="aow1980"
+android:icon="@drawable/allen">
+<intent
+android:action="android.intent.action.VIEW"
+android:data="http://forum.xda-developers.com/member.php?u=5497766" />
+</PreferenceScreen>
+
+<PreferenceScreen
+android:layout="@layout/intent_sub_header_twisted"
+android:title="letmedanz"
+android:icon="@drawable/letmedanz">
+<intent
+android:action="android.intent.action.VIEW"
+android:data="http://forum.xda-developers.com/member.php?u=2888538" />
+</PreferenceScreen>
+
+
+<PreferenceScreen
+android:layout="@layout/intent_sub_header_twisted"
+android:title="xWASABI"
+android:icon="@drawable/xwasabi">
+<intent
+android:action="android.intent.action.VIEW"
+android:data="https://plus.google.com/u/0/101729058057775926785/posts" />
+</PreferenceScreen>
+<PreferenceScreen
+android:layout="@layout/intent_top_bottom_spacer_twisted"/>
+</PreferenceCategory>
+
+<PreferenceCategory
+android:layout="@layout/intent_main_header_twistedabout"
+android:key="category_support_twisted"
+android:title="Twisted Support System">
+
+<PreferenceScreen
+android:layout="@layout/intent_sub_header_twisted"
+android:summary="ezio84"
+android:icon="@drawable/ezio">
+<intent
+android:action="android.intent.action.VIEW"
+android:data="http://forum.xda-developers.com/member.php?u=2095315" />
+</PreferenceScreen>
+
+<PreferenceScreen
+android:layout="@layout/intent_sub_header_twisted"
+android:summary="garrykd"
+android:icon="@drawable/garry">
+<intent
+android:action="android.intent.action.VIEW"
+android:data="http://forum.xda-developers.com/member.php?u=2640853" />
+</PreferenceScreen>
+
+<PreferenceScreen
+android:layout="@layout/intent_sub_header_twisted"
+android:summary="midnightrider"
+android:icon="@drawable/jerry">
+<intent
+android:action="android.intent.action.VIEW"
+android:data="http://forum.xda-developers.com/member.php?u=4518483" />
+</PreferenceScreen>    
+
+<PreferenceScreen
+android:layout="@layout/intent_sub_header_twisted"
+android:summary="ralpheboyo"
+android:icon="@drawable/ralph">
+<intent
+android:action="android.intent.action.VIEW"
+android:data="http://forum.xda-developers.com/member.php?u=264345" />
+</PreferenceScreen>    
+
+</PreferenceCategory>
+<PreferenceScreen
+android:layout="@layout/intent_top_bottom_spacer_twisted"/>
+<PreferenceCategory
+android:layout="@layout/intent_main_header_twistedabout"
+android:key="category_team_walls"
+android:title="Twisted Walls">
+
+<PreferenceScreen
+android:layout="@layout/intent_sub_header_twisted"
+android:summary="customworx"
+android:icon="@drawable/custom">
+<intent
+android:action="android.intent.action.VIEW"
+android:data="https://plus.google.com/collection/82YaV" />
+</PreferenceScreen> 
+
+</PreferenceCategory>
+<PreferenceScreen
+android:layout="@layout/intent_top_bottom_spacer_twisted"/>
+<PreferenceCategory
+android:layout="@layout/intent_main_header_twistedabout"
+android:key="category_testers"
+android:title="Twisted Testers">
+
+<PreferenceScreen
+android:layout="@layout/intent_sub_header_twisted"
+android:key="category_team_testers"
+android:summary="a g bell, aoaleman, bobby janow, CalvinS, f100cleveland, gambit07, gtctsiamp, hooliganx, JaKe, ifwillems, Maybelle, Mistertac, mrminor13, peikojose, raycaster3, renny083, skripka, theesotericone" />
+
+</PreferenceCategory>
+
+</PreferenceScreen>

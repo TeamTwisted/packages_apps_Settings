@@ -1,0 +1,85 @@
+<!--
+/*
+** Copyright 2015 TeamTwisted Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<PreferenceScreen
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+android:title="@string/notification_drawer_title">
+
+    <PreferenceCategory
+        android:key="category_quicksettings_options"
+        android:title="Quick Settings Option" >
+
+    <PreferenceScreen
+        android:title="@string/quick_settings_title"
+        android:summary="@string/quick_settings_summary" >
+        <intent android:action="android.intent.action.MAIN"
+        android:targetPackage="com.android.systemui"
+        android:targetClass="com.android.systemui.tuner.QsActivity" />
+        </PreferenceScreen>
+
+    <com.android.settings.chroma.SecureSettingSwitchPreference
+        android:key="sysui_qs_main_tiles"
+        android:title="@string/qs_main_tiles_title"
+        android:summaryOn="@string/qs_main_tiles_summary_on"
+        android:summaryOff="@string/qs_main_tiles_summary_off"
+        android:defaultValue="true" />
+
+    <com.android.settings.chroma.SecureSettingSwitchPreference
+        android:key="qs_use_four_columns"
+        android:title="@string/qs_four_columns_title"
+        android:defaultValue="false" />
+
+    <com.android.settings.chroma.SecureSettingSwitchPreference
+        android:key="qs_location_advanced"
+        android:title="@string/qs_advanced_location_title"
+        android:summary="@string/qs_advanced_location_summary"
+        android:defaultValue="false" />
+
+    <com.android.settings.chroma.SecureSettingSwitchPreference
+	android:key="qs_show_brightness_slider"
+	android:title="@string/qs_brightness_slider_title_eos"
+	android:summary="@string/qs_brightness_slider_summary"
+	android:defaultValue="true" />
+
+    <ListPreference
+        android:key="quick_pulldown"
+        android:title="@string/title_quick_pulldown"
+        android:entries="@array/quick_pulldown_entries"
+        android:entryValues="@array/quick_pulldown_values"
+        android:persistent="false" />
+
+    <com.android.settings.chroma.SystemSettingSwitchPreference
+	android:key="status_bar_show_weather"
+	android:title="@string/status_bar_show_weather_title"
+	android:summary="@string/status_bar_show_weather_summary"
+	android:defaultValue="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+ 	android:key="category_header_options"
+ 	android:title="@string/contexual_header_title" >
+
+    <PreferenceScreen
+        android:key="category_header_options"
+        android:fragment="com.android.settings.twisted.TwistedHeader"
+        android:title="@string/contexual_header_title"
+        android:summary="@string/status_bar_custom_header_summary" />
+
+</PreferenceCategory>
+
+</PreferenceScreen>

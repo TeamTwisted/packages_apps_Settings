@@ -32,6 +32,7 @@
   <string-array name="screen_timeout_entries">
     <item msgid="3342301044271143016">"15 sekund"</item>
     <item msgid="8881760709354815449">"30 sekund"</item>
+    <item msgid="45SecondsScreenXXXX">"45 sekund"</item>
     <item msgid="7589406073232279088">"1 minuta"</item>
     <item msgid="7001195990902244174">"2 minuty"</item>
     <item msgid="7489864775127957179">"5 minut"</item>
@@ -42,6 +43,7 @@
     <item msgid="3149294732238283185">"Nikdy"</item>
     <item msgid="2194151041885903260">"15 sekund"</item>
     <item msgid="5892295237131074341">"30 sekund"</item>
+    <item msgid="45SecondsDreamXXXXX">"45 sekund"</item>
     <item msgid="3538441365970038213">"1 minuta"</item>
     <item msgid="412343871668955639">"2 minuty"</item>
     <item msgid="5076853889688991690">"5 minut"</item>
@@ -53,6 +55,7 @@
     <item msgid="6736512735606834431">"5 sekund"</item>
     <item msgid="8044619388267891375">"15 sekund"</item>
     <item msgid="1822002388249545488">"30 sekund"</item>
+    <item msgid="45SecondsLockXXXXXX">"45 sekund"</item>
     <item msgid="8538071621211916519">"1 minutu"</item>
     <item msgid="5663439580228932882">"2 minuty"</item>
     <item msgid="49888496216106852">"5 minut"</item>
@@ -443,7 +446,9 @@
   </string-array>
   <string-array name="window_animation_scale_entries">
     <item msgid="8134156599370824081">"Animace je vypnuta"</item>
+    <item>"Měřítko animace 0,25x"</item>
     <item msgid="6624864048416710414">"Měřítko animace 0,5x"</item>
+    <item>"Měřítko animace 0,75x"</item>
     <item msgid="2219332261255416635">"Měřítko animace 1x"</item>
     <item msgid="3544428804137048509">"Měřítko animace 1,5x"</item>
     <item msgid="3110710404225974514">"Měřítko animace 2x"</item>
@@ -452,7 +457,9 @@
   </string-array>
   <string-array name="transition_animation_scale_entries">
     <item msgid="8464255836173039442">"Animace je vypnuta"</item>
+    <item>"Měřítko animace 0,25x"</item>
     <item msgid="3375781541913316411">"Měřítko animace 0,5x"</item>
+    <item>"Měřítko animace 0,75x"</item>
     <item msgid="1991041427801869945">"Měřítko animace 1x"</item>
     <item msgid="4012689927622382874">"Měřítko animace 1,5x"</item>
     <item msgid="3289156759925947169">"Měřítko animace 2x"</item>
@@ -461,7 +468,9 @@
   </string-array>
   <string-array name="animator_duration_scale_entries">
     <item msgid="6039901060648228241">"Animace je vypnuta"</item>
+    <item>"Měřítko animace 0,25x"</item>
     <item msgid="1138649021950863198">"Měřítko animace 0,5x"</item>
+    <item>"Měřítko animace 0,75x"</item>
     <item msgid="4394388961370833040">"Měřítko animace 1x"</item>
     <item msgid="8125427921655194973">"Měřítko animace 1,5x"</item>
     <item msgid="3334024790739189573">"Měřítko animace 2x"</item>
