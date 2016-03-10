@@ -85,14 +85,8 @@
                 style="?android:preferenceInformationStyle"
                 android:title="@string/build_number"
                 android:summary="@string/device_info_default"/>
+
         <!-- GCC build info -->
-
-        <Preference android:key="sm_android"
-                style="?android:preferenceInformationStyle"
-                android:title="@string/sm_android"
-                android:summary="@string/sm_android_default"
-                android:selectable="false" />
-
         <Preference android:key="dtc_version"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/dtc_version"
