@@ -5362,8 +5362,10 @@
     <!-- Label displaying current network data usage limit threshold. [CHAR LIMIT=18] -->
     <string name="data_usage_sweep_limit"><font size="21"><xliff:g id="number" example="128">^1</xliff:g></font> <font size="9"><xliff:g id="unit" example="KB">^2</xliff:g></font>\n<font size="12">limit</font></string>
 
+    <!-- TODO: Remove it once the same entry in SettingsLib is translated. -->
     <!-- Title of data usage item that represents all uninstalled applications. [CHAR LIMIT=48] -->
     <string name="data_usage_uninstalled_apps">Removed apps</string>
+    <!-- TODO: Remove it once the same entry in SettingsLib is translated. -->
     <!-- Title of data usage item that represents all uninstalled applications or removed users. [CHAR LIMIT=48] -->
     <string name="data_usage_uninstalled_apps_users">Removed apps and users</string>
     <!-- Combination of total network bytes sent and received by an application. [CHAR LIMIT=NONE] -->
@@ -5634,6 +5636,7 @@
     <string name="user_delete_user_description">Delete user</string>
     <!-- Delete button text [CHAR LIMIT=25] -->
     <string name="user_delete_button">Delete</string>
+    <!-- TODO: Remove it once the same entry in SettingsLib is translated. -->
     <!-- Title for Guest user [CHAR LIMIT=35] -->
     <string name="user_guest">Guest</string>
     <!-- Label for item to exit guest mode [CHAR LIMIT=35] -->
@@ -5999,7 +6002,7 @@
     <string name="keywords_display_night_mode">dark theme night mode dim screen invert brightness</string>
     <string name="keywords_display_wallpaper">background personalize customize display</string>
     <string name="keywords_display_font_size">text size</string>
-    <string name="keywords_display_cast_screen">project</string>
+    <string name="keywords_display_cast_screen">project cast</string>
     <string name="keywords_storage">space disk hard drive device usage</string>
     <string name="keywords_battery">power usage charge</string>
     <string name="keywords_spell_checker">spelling dictionary spellcheck auto-correct</string>
@@ -6025,6 +6028,7 @@
     <string name="keywords_default_apps">apps default</string>
     <string name="keywords_ignore_optimizations">ignore optimizations doze app standby</string>
     <string name="keywords_color_mode">vibrant rgb srgb color natural standard</string>
+    <string name="keywords_color_temperature">color temperature D65 D73 white yellow blue warm cool</string>
     <!-- Search keywords for different screen unlock modes : slide to unlock, password, pattern and PIN [CHAR LIMIT=none] -->
     <string name="keywords_lockscreen">slide password pattern pin</string>
 
@@ -6451,6 +6455,7 @@
     <!-- [CHAR LIMIT=60] Unlock setting for screen pinning -->
     <string name="screen_pinning_unlock_none">Lock device when unpinning</string>
 
+    <!-- TODO: Remove it once the same entry in SettingsLib is translated. -->
     <!-- Title for a work profile. [CHAR LIMIT=25] -->
     <string name="managed_user_title">Work profile</string>
     <!-- Opening string on the dialog that prompts the user to confirm that they really want to delete their existing work profile. The administration app icon and name appear after the final colon. [CHAR LIMIT=NONE] -->
@@ -7120,4 +7125,13 @@
     <string name="quick_settings_summary">Configure quick settings tiles</string>
     <string name="status_bar_icon_blacklist_title">Status bar icons</string>
     <string name="status_bar_icon_blacklist_summary">Configure what icons are shown on status bar</string>
+
+    <!-- Name of the setting to change the display's color temperature -->
+    <string name="color_temperature">Cool color temperature</string>
+
+    <!-- Description of the setting to change the display's color temperature -->
+    <string name="color_temperature_desc">Use cooler display colors</string>
+
+    <!-- Toast message letting the user know the color temperature setting is not immediate -->
+    <string name="color_temperature_toast">To apply color change, turn off screen</string>
 </resources>
