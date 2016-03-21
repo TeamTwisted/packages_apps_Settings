@@ -86,19 +86,13 @@
                 android:title="@string/build_number"
                 android:summary="@string/device_info_default"/>
 
-        <!-- GCC build info -->
+        <!-- DTC build info -->
         <Preference android:key="dtc_version"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/dtc_version"
                 android:summary="@string/dtc_version_default"
                 android:selectable="false" />
 
-        <Preference android:key="sm_flags"
-                style="?android:preferenceInformationStyle"
-                android:title="@string/sm_flags"
-                android:summary="@string/sm_flags_default"
-                android:selectable="false" />
-                
         <!-- Twisted firmware version -->
         <Preference android:key="twisted_version"
                 style="?android:preferenceInformationStyle"
