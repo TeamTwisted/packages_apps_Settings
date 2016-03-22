@@ -38,7 +38,7 @@ android:action="android.intent.action.MAIN"
 android:targetClass="com.android.twistedabout.ScrollingActivity"
 android:targetPackage="com.android.twistedabout" />
 </PreferenceScreen>
-<!-- Twisted OTA -->
+<!-- Twisted OTA 
 <PreferenceScreen
 android:layout="@layout/twisted_preference_screen"
 android:icon="@drawable/ic_twisted_ota"
@@ -49,6 +49,7 @@ android:action="android.intent.action.MAIN"
 android:targetPackage="com.fusionjack.slimota"
 android:targetClass="com.fusionjack.slimota.MainActivity" />
 </PreferenceScreen>
+-->
 <!-- Twisted Changelog -->
 <PreferenceScreen
 android:layout="@layout/twisted_preference_screen"
@@ -57,7 +58,7 @@ android:key="twisted_changelog"
 android:fragment="com.android.settings.crdroid.Changelog"
 android:title="@string/twisted_changelog_title"
 android:summary="@string/twisted_changelog_summary"/>
-<!-- Twisted Apps -->
+<!-- Twisted Apps 
 <PreferenceScreen
 android:key="twisted_apps"
 android:layout="@layout/twisted_preference_screen"
@@ -65,6 +66,7 @@ android:icon="@drawable/ic_twisted_apps"
 android:fragment="com.android.settings.twisted.TwistedApps"
 android:title="@string/twisted_apps_title"
 android:summary="@string/twisted_apps_summary"/>
+-->
 </PreferenceCategory>
 
 <!-- Twisted UI Cat -->
