@@ -1,5 +1,7 @@
 package com.android.settings.twisted;
 
+import com.android.internal.logging.MetricsLogger;
+
 import android.app.ActivityManagerNative;
 import android.app.IActivityManager;
 import android.app.ProgressDialog;
@@ -36,26 +38,26 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import java.util.List;
 
-public class TwistedDisplaySettings extends PreferenceFragment implements
+public class TwistedDisplaySettings extends SettingsPreferenceFragment implements
          Preference.OnPreferenceChangeListener { 
-         private static final String TAG = "TwistedDisplaySettings";
 
-	 public TwistedDisplaySettings(){}
-
+    private static final String TAG = "TwistedDisplaySettings";
     private static final String DASHBOARD_COLUMNS = "dashboard_columns";
-
     private static final String KEY_LCD_DENSITY = "lcd_density";
 
     private ListPreference mDashboardColumns;
     private ListPreference mLcdDensityPreference;
 
-    private ContentResolver mResolver;
+    public TwistedDisplaySettings(){}
+
+   @Override
+    protected int getMetricsCategory() {
+        return MetricsLogger.DISPLAY;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mResolver = getActivity().getContentResolver();
-
         addPreferencesFromResource(R.xml.twisted_display);
 
         mLcdDensityPreference = (ListPreference) findPreference(KEY_LCD_DENSITY);
@@ -94,7 +96,7 @@ public class TwistedDisplaySettings extends PreferenceFragment implements
          
            mDashboardColumns = (ListPreference) findPreference(DASHBOARD_COLUMNS);
            mDashboardColumns.setValue(String.valueOf(Settings.System.getInt(
-               mResolver, Settings.System.DASHBOARD_COLUMNS, DashboardContainerView.mDashboardValue)));
+               getContentResolver(), Settings.System.DASHBOARD_COLUMNS, DashboardContainerView.mDashboardValue)));
            mDashboardColumns.setSummary(mDashboardColumns.getEntry());
            mDashboardColumns.setOnPreferenceChangeListener(this);
         }
@@ -180,13 +182,13 @@ public class TwistedDisplaySettings extends PreferenceFragment implements
             } catch (NumberFormatException e) {
                 Log.e(TAG, "could not persist display density setting", e);
             }
+        }
         if (preference == mDashboardColumns) {
-            Settings.System.putInt(mResolver, Settings.System.DASHBOARD_COLUMNS,
+            Settings.System.putInt(getContentResolver(), Settings.System.DASHBOARD_COLUMNS,
                     Integer.valueOf((String) objValue));
             mDashboardColumns.setValue(String.valueOf(objValue));
             mDashboardColumns.setSummary(mDashboardColumns.getEntry());
             return true;
-        }
         }
         return true;
     }
