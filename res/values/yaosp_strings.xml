@@ -229,5 +229,8 @@
     <string name="nav_button_color_mode_dialog_title">Colorize</string>
     <string name="nav_button_color_mode_summary">Change the navigation bar button color mode</string>
     <string name="navigation_bar_glow_tint_title">Button glow color</string>
+    <string name="doze_wakeup_doubletap_title">Double-tap to wake on doze</string>
+    <string name="doze_wakeup_doubletap_summary_on">Require a double-tap to wake the device on a doze pulse screen</string>
+    <string name="doze_wakeup_doubletap_summary_off">Require a simple-tap to wake the device on a doze pulse screen (default)</string>
 
 </resources>
