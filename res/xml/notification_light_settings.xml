@@ -32,8 +32,8 @@
             android:dependency="notification_light_pulse" />
 
         <com.android.settings.preference.SystemSettingSwitchPreference
-            android:key="notification_light_pulse_custom_enable"
-            android:title="@string/notification_light_use_custom"
+            android:key="notification_light_screen_on_enable"
+            android:title="@string/notification_light_screen_on"
             android:dependency="notification_light_pulse" />
 
         <!-- Whether to allow notification lights in zen mode -->
@@ -42,6 +42,11 @@
             android:key="allow_lights"
             android:title="@string/allow_lights_title"
             android:defaultValue="true" />
+
+        <com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="notification_light_pulse_custom_enable"
+            android:title="@string/notification_light_use_custom"
+            android:dependency="notification_light_pulse" />
 
     </PreferenceCategory>
 
