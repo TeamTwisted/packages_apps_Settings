@@ -62,5 +62,8 @@
     <string name="display_rotation_180_title">180 degrees</string>
     <string name="display_rotation_270_title">270 degrees</string>
 
+    <!-- Hostname setting -->
+    <string name="device_hostname">Device hostname</string>
+
 </resources>
 
